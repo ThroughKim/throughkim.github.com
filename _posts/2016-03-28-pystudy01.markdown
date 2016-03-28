@@ -1,0 +1,105 @@
+---
+layout: post
+title: Python study - Dictionary
+---
+
+####[위대한 dict 이해하고 사용하기](http://www.pycon.kr/2014/program/2)-PyCon 발표자료
+####[PyCon: 위대한 dict 이해하고 사용하기](http://khanrc.tistory.com/entry/PyCon-위대한-dict-이해하고-사용하기)-참고 포스팅
+
+
+> 지금 진행하고 있는 Django프로젝트에는 Dict자료형으로 데이터를 주고받는 경우가 많다. Dict를 처음 접해본 나로서는 헤매고,  구글링 하며 여러 자료를 찾아보곤 했었는데, 마침 좋은 자료가 있어서 이렇게 정리해 본다.
+
+
+##Dictionary
+딕셔너리는 사전형 자료구조로 key와 value사이의 관계를 저장한다.
+`dict = {key: value}`
+
+##생성하기
+```python
+>>> d = {'jan': 1, 'feb': 2, 'mar': 3}
+>>> print d['jan'], d['feb'], c['mar']
+1, 2, 3
+```
+
+위 예시에서 `'jan', 'feb', 'mar'`는 `d`라는 딕셔너리의 **Key**에 해당하고,  `1, 2, 3`은 **Value**에 해당한다.
+
+
+```python
+>>> d = dict(jan=1, feb=2, mar=3)
+{'feb': 2, 'jan': 1, 'mar': 3}
+```
+위와 같이 dict()의 키워드 인자로 자료를 넘겨줘서 딕셔너리를 생성할수도 있다.
+
+
+```python
+>>> d = [('jan', 1), ('feb', 2), ('mar', 3)]
+>>> prind(d)
+{'feb': 2, 'jan': 1, 'mar': 3}
+```
+(key, value)의 리스트를 이용해 딕셔너리를 생성하는 방법도 있다.
+
+
+##탐색
+
+```python
+>>> months = {'jan': 1, 'feb': 2, 'mar': 3}
+>>> months['jan']
+1
+>>> months['apr']
+KeyError: apr
+```
+기본적으로 `dictonary이름[key]`를 입력하면 value값을 반환한다. 없는 key를 넘겨주게 되면 KeyError를 반환한다.
+
+```python
+>>> 'apr' in months
+False
+>>> 'jan' in months
+True
+```
+
+key가 해당 딕셔너리에 있는지 여부를 검사하기 위해서는 `key in dict`를 사용하면 된다.
+
+```python
+>>> months.get('jan')
+1
+>>> months.get('apr')
+None
+>>> months.get('apr', 4)
+4
+```
+
+위와 같이 `get()`메소드를 이용해 value를 불러올 수 있다. 딕셔너리에 없는 key를 이용해 호출을 하게 되면 기본적으로 None을 반환하고, `get()`메소드의 두번째 인자를 설정해주면, 해당 키가 없는 경우 설정한 인자를 반환한다.
+
+```python
+>>> months['apr']
+KeyError: apr
+>>> months.setdefault('apr', 4)
+4
+>>> months
+{'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4}
+```
+
+`setdefault()`를 활용할 수도 있다.
+
+##삭제
+
+```python
+>>> del months['apr']
+>>> months
+{'jan': 1, 'feb':2, 'mar':3}
+```
+
+삭제는 `del()`메소드를 이용해 간단하게 할 수 있다.
+
+##순회
+
+```python
+>>> months.keys()
+dict_keys(['mar', 'feb', 'jan'])
+>>> months.values()
+dict_values([3, 2, 1])
+>>> months.items()
+dict_items([('mar', 3), ('feb', 2), ('jan', 1)])
+```
+
+`keys()`메소드를 이용해 딕셔너리의 key만 불러올 수 있다. `dict_keys`객체를 반환한다. 마찬가지로 `values(), items()`함수를 사용해 해당 객체를 불러올 수 있다.
