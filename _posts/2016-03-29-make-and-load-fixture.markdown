@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: Django fixture json 파일 만들고 불러오기
 ---
 
