@@ -17,9 +17,9 @@ Java, JSP, Python
 2015.12 ~ 모바일 대학사회 [Twenty](https://www.facebook.com/withtwenty/)(스타트업)
 
 ---
-[sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)  
+[sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)
 
-[Facebook](https://www.facebook.com/seulwoo.kim.9)  
+[Facebook](https://www.facebook.com/seulwoo.kim.9)
 
-[Github](https://github.com/ThroughKim)  
+[Github](https://github.com/ThroughKim)
 
