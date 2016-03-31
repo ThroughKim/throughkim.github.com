@@ -12,7 +12,7 @@ permalink: /about/
 
 동국대학교 경영정보 11
 
-Java, JSP, Python
+Java, JSP, Python/Django, PHP, Mysql, HTML, CSS
 
 2015.12 ~ 모바일 대학사회 [Twenty](https://www.facebook.com/withtwenty/)(스타트업)
 
