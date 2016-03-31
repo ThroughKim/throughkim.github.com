@@ -36,7 +36,7 @@ user$ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 ```bash
 user$ pyenv version
 system (set by /Users/username/.pyenv/version)
-user $ pyenv versions
+user$ pyenv versions
 * system
   3.4.0
   3.4.1
