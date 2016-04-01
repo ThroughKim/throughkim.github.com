@@ -1,7 +1,6 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About me 
 ---
 
 ##김슬우
@@ -22,4 +21,3 @@ Java, JSP, Python/Django, PHP, Mysql, HTML, CSS
 [Facebook](https://www.facebook.com/seulwoo.kim.9)
 
 [Github](https://github.com/ThroughKim)
-

@@ -3,9 +3,6 @@ layout: post
 title: Python study - Dictionary
 ---
 
-####[위대한 dict 이해하고 사용하기](http://www.pycon.kr/2014/program/2)-PyCon 발표자료
-####[PyCon: 위대한 dict 이해하고 사용하기](http://khanrc.tistory.com/entry/PyCon-위대한-dict-이해하고-사용하기)-참고 포스팅
-
 
 > 지금 진행하고 있는 Django프로젝트에는 Dict자료형으로 데이터를 주고받는 경우가 많다. Dict를 처음 접해본 나로서는 헤매고,  구글링 하며 여러 자료를 찾아보곤 했었는데, 마침 좋은 자료가 있어서 이렇게 정리해 본다.
 
@@ -103,3 +100,11 @@ dict_items([('mar', 3), ('feb', 2), ('jan', 1)])
 ```
 
 `keys()`메소드를 이용해 딕셔너리의 key만 불러올 수 있다. `dict_keys`객체를 반환한다. 마찬가지로 `values(), items()`함수를 사용해 해당 객체를 불러올 수 있다.
+
+
+
+- - -
+
+
+[위대한 dict 이해하고 사용하기](http://www.pycon.kr/2014/program/2)-PyCon 발표자료
+[PyCon: 위대한 dict 이해하고 사용하기](http://khanrc.tistory.com/entry/PyCon-위대한-dict-이해하고-사용하기)-참고 포스팅

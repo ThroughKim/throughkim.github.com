@@ -1,13 +1,15 @@
-# Site settings
-title: 스루의 개발로그
-email: sulewoo58@gmail.com
-description: "스루의 개발 블로그"
-baseurl: ""
-url: "http://throughkim.github.io"
-facebook_username: sulewoo@naver.com
-github_username:  throughkim
-highlighter: pygments
+name: 스루의 개발로그
+description: 
+meta_description: "스루의 개발 블로그"
 
-# Build settings
 markdown: redcarpet
-permalink: pretty
+highlighter: pygments
+logo: false
+paginate: 15
+baseurl: /
+domain_name: 'http://throughkim.github.io'
+gems: [jekyll-paginate]
+
+# Details for the RSS feed generator
+url:            'throughkim.github.io'
+author:         'SeulWoo Kim'
