@@ -14,7 +14,7 @@ title: Python study - Dictionary
 ##생성하기
 ```python
 >>> d = {'jan': 1, 'feb': 2, 'mar': 3}
->>> print d['jan'], d['feb'], c['mar']
+>>> print d['jan'], d['feb'], d['mar']
 1, 2, 3
 ```
 
