@@ -9,9 +9,9 @@ title: About me
 
 1992.10.15
 
-동국대학교 경영정보 11
-
 Java, JSP, Python/Django, PHP, Mysql, HTML, CSS
+
+2011.03 ~ 동국대학교 경영정보학과
 
 2015.12 ~ 모바일 대학사회 [Twenty](https://www.facebook.com/withtwenty/)(스타트업)
 
