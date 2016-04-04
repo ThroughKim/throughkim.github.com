@@ -88,7 +88,7 @@ pyenv-virtualenv: activate my_project_pyenv_3.4.1
 (my_project_pyenv_3.4.1) user$
 ```
 
-`pyenv shell`명령어를 통해 가상환경을 실행할 수 있다. 성공적으로 실행이 되었다면 입력 라인의 괄호 안에 가상환경의 이름이 입력되게 된다.`(VIRTUAL_ENV_NAME)user$ ` 여기서 부터 `pip install'등의 명령어를 이용해 파이썬 패키지를 설치해주면 개발을 위한 가상환경 setup이 완료되게 된다.
+`pyenv shell`명령어를 통해 가상환경을 실행할 수 있다. 성공적으로 실행이 되었다면 입력 라인의 괄호 안에 가상환경의 이름이 입력되게 된다.`(VIRTUAL_ENV_NAME)user$ ` 여기서 부터 `pip install`등의 명령어를 이용해 파이썬 패키지를 설치해주면 개발을 위한 가상환경 setup이 완료되게 된다.
 
 
 
