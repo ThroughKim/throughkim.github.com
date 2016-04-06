@@ -45,6 +45,7 @@ soup = BeautifulSoup(source, "lxml")
 print(soup)
 ```
 아까 프린트해보았던 `source`를 `BeautifulSoup`에 넣고 그 내용을 출력해보면, 이전보다는 정제된 모습을 출력해주는 것을 확인할 수 있다. `lxml`을 인자로 넘겨주면, 해당 페이지 HTML 파싱을 `lxml parser`로 한다는 것을 의미한다.
+(`pip install lxml` 필요)
 
 - - -
 
