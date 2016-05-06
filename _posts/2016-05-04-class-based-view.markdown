@@ -44,7 +44,7 @@ Class-based view에서는 다음과 같다.
 
 ```python
 from django.http import HttpResponse
-from django.views.generic inport Vuew
+from django.views.generic import View
 
 class myView(View):
 	def get(self, request):
