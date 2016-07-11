@@ -20,4 +20,10 @@ title: 카카오톡 자동응답 API로 학식봇 구현
 
 우선 시작을 하기 위해선 옐로아이디 등록과 카카오 앱 등록이 필요한데, 이는 다른 블로그에도 많이 나와있으므로 생략한다.  
   
-카카오 옐로아이디 앱을 등록하고, API형 자동응답을 하기 위해서는 일단 기본적으로 카카오 API중에서 /keyboard/요청에 알맞게 반응하도록 해야한다. 
+카카오 옐로아이디 앱을 등록하고, API형 자동응답을 하기 위해서는 일단 기본적으로 카카오 API중에서 `https://your.server.adress:port/keyboard/`요청에 알맞게 반응하도록 해야한다.  
+
+구현을 한 뒤에 [옐로아이디 페이지](https://yellowid.kakao.com/)에서 `API TEST`버튼을 클릭하면 다음과 같이 나타난다.
+
+![카카오 API TEST 성공한 모습](/images/kakaoapitest.png)
+
+Required되는 내용은 /keyboard/요청에 대한 응답이고, Optional에 해당하는 부분은 구현하지 않았기 때문에 오류가 발생한 것을 확인할 수 있다.
