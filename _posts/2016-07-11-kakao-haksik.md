@@ -65,10 +65,9 @@ Django를 이용해 `https://서버주소/keyboard/`로 요청이 오면 위와 
 이어서 장고의 settings.py파일에 dguhaksik이라는 앱을 추가해준다.  
   
 ```python
-
 ~/myproject/settings.py
 
-~~~
+~~
 
 # Application definition
 
@@ -82,7 +81,7 @@ INSTALLED_APPS = [
     'dguhaksik',
 ]
 
-~~~
+~~
 
 ```  
   
