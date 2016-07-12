@@ -59,6 +59,7 @@ Django를 이용해 `https://서버주소/keyboard/`로 요청이 오면 위와 
   
 이어서 장고의 settings.py파일에 dguhaksik이라는 앱을 추가해준다.
 ```python
+
 ~/myproject/settings.py
 
 ~~~
@@ -79,7 +80,8 @@ INSTALLED_APPS = [
 
 ```
   
-그리고 urls.py에 요청받을 주소를 만들어준다. 여기서는 `https://서버주소/keyboard/`가 된다.
+그리고 urls.py에 요청받을 주소를 만들어준다. 여기서는 `https://서버주소/keyboard/`가 된다.  
+  
 ```python
 ~/myproject/urls.py
 
@@ -89,8 +91,9 @@ urlpatterns = [
     url(r'^keyboard/', 'dguhaksik.views.keyboard'),
 ]
 ```
+  
 `~/keyboard/` 주소로 요청이 오면 dguhaksik앱의 view파일의 keyboard와 연결을 하겠다는 의미로 보면 된다.  
-이제 실제로 dguhaksik앱의 views.py를 편집하여 알맞은 값을 return하도록 코딩해주면 된다.
+이제 실제로 dguhaksik앱의 views.py를 편집하여 알맞은 값을 return하도록 코딩해주면 된다.  
 
 ```python
 ~/dguhaksik/views.py
