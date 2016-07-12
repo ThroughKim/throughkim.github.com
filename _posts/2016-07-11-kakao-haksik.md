@@ -28,7 +28,7 @@ Required되는 내용은 /keyboard/요청에 대한 응답이고, Optional에 �
   
 이제부터 Python과 Django를 이용해 해당 API 요청에 제대로 응답할 수 있도록 만들어주면 된다. 처음에는 REST Framework를 이용해 구현해보려 했지만, 단순 JSON Response만 해주면 되기 때문에 Django만을 이용해 구현했다.  
   
-[옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에 따르면 
+[옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에 따르면  
 ```bash
 curl -XGET 'https://:your_server_url/keyboard/'
 ```
