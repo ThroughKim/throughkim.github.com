@@ -132,7 +132,7 @@ API형 자동응답 서비스를 시작 뒤에 자신이 등록한 옐로아이�
 ###버튼에 따른 Response구현하기
 
 원하는 결과는 버튼을 클릭했을 때 해당 학생식당의 식단이 출력되는 것이지만, 아직 크롤러를 구현하지 않았기 때문에 단순히 _"'~~'식당의 0월0일 식단입니다."_ 라는 메세지만 우선 출력해보도록 한다.  
-[옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에 따르면 사용자가 버튼을 클릭하면 POST방식으로 요청내용을 JSON형태로 담아서 보내는 것을 볼 수 있다.  
+[옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에 따르면 사용자가 버튼을 클릭하면 POST방식으로 요청내용을 JSON에 담아서 보내는 것을 볼 수 있다.  
   
 ```bash
 curl -XPOST 'https://:your_server_url/message' -d '{
@@ -155,6 +155,62 @@ urlpatterns = [
 ]
 ```  
   
+message뒤에 '/'가 붙지 않아야 한다. 이어서 dguhaksik앱에서 views.py파일에 answer라는 함수를 만들어야 하는데, 그에 앞서 [옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에서 reponse의 유형을 확인해야 한다.  
+  
+```bash
+{
+  "message": {
+    "text": "귀하의 차량이 성공적으로 등록되었습니다. 축하합니다!",
+    "photo": {
+      "url": "https://photo.src",
+      "width": 640,
+      "height": 480
+    },
+    "message_button": {
+      "label": "주유 쿠폰받기",
+      "url": "https://coupon/url"
+    }
+  },
+  "keyboard": {
+    "type": "buttons",
+    "buttons": [
+      "처음으로",
+      "다시 등록하기",
+      "취소하기"
+    ]
+  }
+}
+```  
+  
+문서에 따르면 message부분은 Required이고, Keyboard부분은 Optional이다. 그러나 Keyboard를 설정해주지 않으면, 한 곳의 식당을 확인하면, 버튼들이 더이상 나타나지 않는 문제가 생기므로, keyboard부분에 앞서 작성했던 키보드 버튼 내용들을 작성해주어야 할 것이다. 그리고 message부분에 text형식으로 원하는 내용을 입력해주면 된다.  
+  
+```python
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+import json, datetime
+
+def keyboard(request):
+
+    .....
+
+@csrf_exempt
+def answer(request):
+    json_str = ((request.body).decode('utf-8'))
+    received_json_data = json.loads(json_str)
+    cafeteria_name = received_json_data['content']
+    today_date = datetime.date.today().strftime("%m월 %d일")
+    
+    return JsonResponse({
+            'message': {
+                'text': today_date + '의 교직원식당 중식 메뉴입니다.'
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons': ['상록원', '그루터기', '아리수', '기숙사식당', '교직원식당']
+            }
+
+        })
+```
 
 
 
