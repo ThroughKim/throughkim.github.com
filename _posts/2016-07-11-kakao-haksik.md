@@ -121,15 +121,41 @@ user$ curl -XGET 'https://:your_server_url/keyboard/'
 
 ![카카오 API TEST 성공한 모습](/images/kakaoapitest.png)
 
-Required되는 내용은 방금 작성한 /keyboard/요청에 대한 응답이고, Optional에 해당하는 부분은 구현하지 않았기 때문에 오류가 발생한 것을 확인할 수 있다. 하단에 서비스 시작 버튼을 클릭하여 API형 자동응답을 실행할 수 있다.  
+Required되는 내용은 방금 작성한 /keyboard/요청에 대한 응답이고, Optional에 해당하는 부분은 구현하지 않았기 때문에 오류가 발생한 것을 확인할 수 있다. API테스트의 Required부분을 통과했기 때문에, 하단에 서비스 시작 버튼을 클릭하여 API형 자동응답을 실행할 수 있다.  
 
 ![카카오 키보드 구현모습](/images/kakaokeyboard.png)
 
-API형 자동응답 서비스를 시작 뒤에 자신이 등록한 옐로아이디와의 대화창에 들어가보면 위와 같이 등록한 키보드 버튼들이 나타나는 것을 확인할 수 있다.  
+API형 자동응답 서비스를 시작 뒤에 자신이 등록한 옐로아이디와의 대화창에 들어가보면 위와 같이 등록한 키보드 버튼들이 나타나는 것을 확인할 수 있다. 하지만 아직 버튼을 눌렀을때의 반응에 대해 세팅해주지 않았기 때문에 버튼을 클릭해도 오류만 발생하는 것을 볼 수 있을 것이다.  
   
 ---
 
 ###버튼에 따른 Response구현하기
+
+원하는 결과는 버튼을 클릭했을 때 해당 학생식당의 식단이 출력되는 것이지만, 아직 크롤러를 구현하지 않았기 때문에 단순히 _"'~~'식당의 0월0일 식단입니다."_ 라는 메세지만 우선 출력해보도록 한다.  
+[옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에 따르면 사용자가 버튼을 클릭하면 POST방식으로 요청내용을 JSON형태로 담아서 보내는 것을 볼 수 있다.  
+  
+```bash
+curl -XPOST 'https://:your_server_url/message' -d '{
+  "user_key": "encryptedUserKey",
+  "type": "text",
+  "content": "상록원"
+}'
+```  
+  
+필요로 하는 내용은 `content`에 해당하는 부분이며 내용에 따라 분기처리를 하여 답변을 할 수 있도록 해주면 된다. 우선 요청이 `https://:your_server_url/message`로 오기 때문에 urls.py를 수정해주도록 하자.  
+  
+```python
+~/myproject/urls.py
+
+from django.conf.urls import url
+
+urlpatterns = [
+    url(r'^keyboard/', 'dguhaksik.views.keyboard'),
+    url(r'^message', 'dguhaksik.views.answer'),
+]
+```  
+  
+
 
 
 
