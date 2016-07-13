@@ -224,7 +224,7 @@ user$ curl -XPOST 'http://your_server_url/message' -d '{"user_key": "encryptedUs
   
 저장해 준뒤에 터미널 창에서 CURL을 이용해 요청을 보내면 위와같은 결과가 나타날 것이다.  
 
-![response 완성된 모습](/images/kakaoresponse.png)
+![response 완성된 모습](/images/kakaoresponse.jpg)
 
 카카오톡에서 테스트해보면 위 스크린샷과 같은 결과가 나타난다.
 
