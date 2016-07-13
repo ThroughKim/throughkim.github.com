@@ -19,12 +19,6 @@ title: 카카오톡 자동응답 API로 학식봇 구현
 우선 시작을 하기 위해선 옐로아이디 등록과 카카오 앱 등록이 필요한데, 이는 다른 블로그에도 많이 나와있으므로 생략한다.  
   
 카카오 옐로아이디 앱을 등록하고, API형 자동응답을 하기 위해서는 일단 기본적으로 카카오 API중에서 `https://your_server_url/keyboard/`요청에 알맞게 반응하도록 해야한다.  
-
-구현을 한 뒤에 [옐로아이디 페이지](https://yellowid.kakao.com/)에서 `API TEST`버튼을 클릭하면 다음과 같이 나타난다.
-
-![카카오 API TEST 성공한 모습](/images/kakaoapitest.png)
-
-Required되는 내용은 /keyboard/요청에 대한 응답이고, Optional에 해당하는 부분은 구현하지 않았기 때문에 오류가 발생한 것을 확인할 수 있다.  
   
 이제부터 Python과 Django를 이용해 해당 API 요청에 제대로 응답할 수 있도록 만들어주면 된다. 처음에는 REST Framework를 이용해 구현해보려 했지만, 단순 JSON Response만 해주면 되기 때문에 Django만을 이용해 구현했다.  
   
@@ -122,7 +116,16 @@ user$ curl -XGET 'https://:your_server_url/keyboard/'
 {"buttons": ["\uc0c1\ub85d\uc6d0", "\uadf8\ub8e8\ud130\uae30", "\uc544\ub9ac\uc218", "\uae30\uc219\uc0ac\uc2dd\ub2f9", "\uad50\uc9c1\uc6d0\uc2dd\ub2f9"], "type": "buttons"}
 ```  
   
-이렇게 키보드 값이 리턴되는 것을 볼 수 있다. 다시 [옐로아이디 페이지](https://yellowid.kakao.com/)에서 `API TEST`버튼을 클릭해보면 Required의 keyboard부분이 성공했다는 메세지를 확인할 수 있고, 하단에 서비스 시작 버튼을 클릭하여 API형 자동응답을 실행할 수 있다. 자신이 등록한 옐로아이디와의 대화창에 들어가보면 등록한 키보드 버튼들이 나타나는 것을 확인할 수 있다. 버튼을 클릭해보면 아직 버튼에 따른 Response를 구현하지 않았기 때문에 에러가 발생하는 것을 볼 수 있을 것이다.  
+이렇게 키보드 값이 리턴되는 것을 볼 수 있다.  
+이 상태에서 [옐로아이디 페이지](https://yellowid.kakao.com/)에 접속하여 `API TEST`버튼을 클릭하면 다음과 같이 나타난다.
+
+![카카오 API TEST 성공한 모습](/images/kakaoapitest.png)
+
+Required되는 내용은 방금 작성한 /keyboard/요청에 대한 응답이고, Optional에 해당하는 부분은 구현하지 않았기 때문에 오류가 발생한 것을 확인할 수 있다. 하단에 서비스 시작 버튼을 클릭하여 API형 자동응답을 실행할 수 있다.  
+
+![카카오 키보드 구현모습](/images/kakaokeyboard.png)
+
+API형 자동응답 서비스를 시작 뒤에 자신이 등록한 옐로아이디와의 대화창에 들어가보면 위와 같이 등록한 키보드 버튼들이 나타나는 것을 확인할 수 있다.  
   
 ---
 
