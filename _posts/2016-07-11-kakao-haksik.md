@@ -193,7 +193,6 @@ from django.http import JsonResponse
 import json, datetime
 
 def keyboard(request):
-
     .....
 
 @csrf_exempt
@@ -227,6 +226,81 @@ user$ curl -XPOST 'http://your_server_url/message' -d '{"user_key": "encryptedUs
 ![response 완성된 모습](/images/kakaoresponse.jpg)
 
 카카오톡에서 테스트해보면 위 스크린샷과 같은 결과가 나타난다.
+  
+---
+  
+### 크롤러 구현 및 완성하기
+
+이제 남은 내용은 식당 이름에 맞추어 식단을 출력해주는 것이다. 그러기위해서 식단표를 크롤링하고 DB에 저장한 뒤, 사용자의 요청이 오면 해당식당의 DB내용을 출력해주는 방식으로 구현했다. 크롤러를 만드는 방식은 다음 참고 문서를 확인해보면 될 것이다. ([크롤링 참고](https://throughkim.github.io/2016/04/01/beautifulsoup.html))  
+크롤링해서 나온 결과값을 DB에 저장해야 하는데, 나는 Django의 기본 DB인 Sqlite를 사용했다. 우선 dguhaksik앱의 models.py파일을 수정하여 DB를 생성해주자.  
+  
+```python
+~/dguhaksik/models.py
+
+from django.db import models
+
+class Menu(models.Model):
+    id = models.AutoField(primary_key=True)
+    cafe_name = models.CharField(max_length=30, default="")
+    time = models.CharField(max_length=30, default="")
+    menu = models.CharField(max_length=100, default="")
+```  
+  
+단순히 id와 식당이름, 중식인지 석식인지 여부를 판단할 time, 그리고 메뉴이름과 가격을 저장할 menu필드를 생성했다. 매번 크롤링 될때마다 DB를 Flush하고 최신값만 저장하도록 설정할 것이므로, 시간에 관련된 필드는 만들지 않았다. 모델을 수정했으므로, Django에 적용시켜줘야 한다.  
+  
+```bash
+(myenv) user$ python manage.py makemigrations
+(myenv) user$ python manage.py migrate
+```  
+  
+이제 크롤러를 매일 정해진 시간에 자동으로 작동하도록 해야하는데, 다양한 방법이 있겠지만 나의 경우는 Django의 특정 url로 요청이 오면 크롤러가 작동하도록 하고, 리눅스의 Cron기능을 이용해 매일 정해진 시간에 해당 url을 호출하도록 했다._(별로 좋지 않은 방식인 것 같다 ㅜㅜ)_ 따라서 장고의 urls.py를 수정해주도록 한다.  
+  
+```python
+~/myproject/urls.py
+
+from django.conf.urls import url
+
+urlpatterns = [
+    url(r'^keyboard/', 'dguhaksik.views.keyboard'),
+    url(r'^message', 'dguhaksik.views.answer'),
+    url(r'^crawl/', 'dguhaksik.views.crawl'),
+]
+```  
+  
+이제 url호출에 맞춰서 크롤러를 작동시킬 수 있도록 views.py를 수정해주도록 한다.  
+  
+```python
+~/dguhaksik/views.py
+
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from dguhaksik.models import Menu
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import json, datetime
+
+def keyboard(request):
+    .....
+
+@csrf_exempt
+def answer(request):
+	.....
+    
+def crawl(request):
+	menu_db = Menu.objects.all()
+    menu_db.delete()
+    
+    (크롤러 구현 부분 - 너무 길어 생략)
+    
+def create_menu_db(cafe_name, time, menu):
+	Menu.objects.create(
+        cafe_name=cafe_name,
+        time=time,
+        menu=menu
+        )
+```  
+  
+url을 통해 crawl()을 호출하면 우선 Menu모델을 불러와 안에 내용을 모두 지운다(항상 최신상태만 유지하기 위해). 이어서 크롤러를 구현하고, 해당 식당의 이름, 중식 or 석식, 메뉴와 가격을 표시하는 String을 create_menu_db라는 메소드에 인자로 넘겨주고, 해당 메소드에서 DB에 저장하도록 했다.
 
 
 
