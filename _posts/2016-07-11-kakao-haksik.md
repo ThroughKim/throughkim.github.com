@@ -155,7 +155,7 @@ urlpatterns = [
 ]
 ```  
   
-message뒤에 '/'가 붙지 않아야 한다. 이어서 dguhaksik앱에서 views.py파일에 answer라는 함수를 만들어야 하는데, 그에 앞서 [옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에서 reponse의 유형을 확인해야 한다.  
+message뒤에 '/'가 붙지 않아야 한다. 이어서 dguhaksik앱에서 views.py파일에 answer라는 함수를 만들어야 하는데, 그에 앞서 [옐로아이디 API Documentation](https://github.com/plusfriend/auto_reply)에서 response의 유형을 확인해야 한다.  
   
 ```bash
 {
@@ -182,9 +182,12 @@ message뒤에 '/'가 붙지 않아야 한다. 이어서 dguhaksik앱에서 views
 }
 ```  
   
-문서에 따르면 message부분은 Required이고, Keyboard부분은 Optional이다. 그러나 Keyboard를 설정해주지 않으면, 한 곳의 식당을 확인하면, 버튼들이 더이상 나타나지 않는 문제가 생기므로, keyboard부분에 앞서 작성했던 키보드 버튼 내용들을 작성해주어야 할 것이다. 그리고 message부분에 text형식으로 원하는 내용을 입력해주면 된다.  
+문서에 따르면 message부분은 Required이고, Keyboard부분은 Optional이다. 그러나 Keyboard를 설정해주지 않으면, 한 곳의 식당을 확인한 뒤에 버튼들이 더이상 나타나지 않는 문제가 생기므로, keyboard부분에 앞서 작성했던 키보드 버튼 내용들을 작성해주어야 할 것이다. 그리고 message부분에 text형식으로 원하는 내용을 입력해주면 된다.  
+이제 dguhaksik 앱의 views.py파일을 수정한다.
   
 ```python
+~/dguhaksik/views.py
+
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 import json, datetime
@@ -202,7 +205,7 @@ def answer(request):
     
     return JsonResponse({
             'message': {
-                'text': today_date + '의 교직원식당 중식 메뉴입니다.'
+                'text': today_date + '의 ' + cafeteria_name + ' 중식 메뉴입니다.'
             },
             'keyboard': {
                 'type': 'buttons',
@@ -210,7 +213,20 @@ def answer(request):
             }
 
         })
-```
+```  
+  
+POST 방식을 사용하기 때문에 Django에서는 CSRF Token 에러가 발생하며, `@csrf_exempt`를 이용해 에러가 발생하지 않도록 해야 한다. 이어서, 요청에서 JSON 객체를 추출하여 원하는 값을 얻어내야 한다. python의 json모듈을 사용하면 쉽게 할 수 있다. `request.body`를 utf-8로 디코딩 해주고, json을 로딩한 뒤에 content에 해당하는 내용을 따로 분리하면, 사용자가 클릭한 버튼의 내용을 얻어낼 수 있다. 날짜를 나타내는 부분은 datetime모듈을 이용해 쉽게 구현할 수 있다.  
+  
+```bash
+user$ curl -XPOST 'http://your_server_url/message' -d '{"user_key": "encryptedUserKey", "type": "text", "content": "상록원"}'
+{"message": {"text": "07\uc6d4 13\uc77c\uc758 \uc0c1\ub85d\uc6d0 \uc911\uc2dd \uba54\ub274\uc785\ub2c8\ub2e4."}, "keyboard": {"type": "buttons", "buttons": ["\uc0c1\ub85d\uc6d0", "\uadf8\ub8e8\ud130\uae30", "\uc544\ub9ac\uc218", "\uae30\uc219\uc0ac\uc2dd\ub2f9", "\uad50\uc9c1\uc6d0\uc2dd\ub2f9"]}}
+```  
+  
+저장해 준뒤에 터미널 창에서 CURL을 이용해 요청을 보내면 위와같은 결과가 나타날 것이다.  
+
+![response 완성된 모습](/images/kakaoresponse.png)
+
+카카오톡에서 테스트해보면 위 스크린샷과 같은 결과가 나타난다.
 
 
 
