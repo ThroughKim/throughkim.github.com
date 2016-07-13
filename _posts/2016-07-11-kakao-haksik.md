@@ -300,7 +300,75 @@ def create_menu_db(cafe_name, time, menu):
         )
 ```  
   
-url을 통해 crawl()을 호출하면 우선 Menu모델을 불러와 안에 내용을 모두 지운다(항상 최신상태만 유지하기 위해). 이어서 크롤러를 구현하고, 해당 식당의 이름, 중식 or 석식, 메뉴와 가격을 표시하는 String을 create_menu_db라는 메소드에 인자로 넘겨주고, 해당 메소드에서 DB에 저장하도록 했다.
+url을 통해 `crawl()`을 호출하면 우선 Menu모델을 불러와 안에 내용을 모두 지운다(항상 최신상태만 유지하기 위해). 이어서 크롤러를 구현하고, 해당 식당의 이름, 중식 or 석식, 메뉴와 가격을 표시하는 String을 `create_menu_db()`라는 메소드에 인자로 넘겨주고, 해당 메소드에서 DB에 저장하도록 했다.  
+  
+마지막으로 DB에 저장된 식단을 사용자 요청에 맞춰 출력해주도록 세팅해주면 된다. 계속해서 views.py를 수정하자.  
+  
+```python
+~/dguhaksik/views.py
+
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from dguhaksik.models import Menu
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import json, datetime
+
+def keyboard(request):
+    .....
+
+@csrf_exempt
+def answer(request):
+	json_str = ((request.body).decode('utf-8'))
+    received_json_data = json.loads(json_str)
+    cafeteria_name = received_json_data['content']
+    today_date = datetime.date.today().strftime("%m월 %d일")
+    
+    return JsonResponse({
+            'message': {
+                'text': today_date + '의 ' + cafeteria_name + ' 중식 메뉴입니다. \n \n' + get_menu(cafeteria_name)
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons': ['상록원', '그루터기', '아리수', '기숙사식당', '교직원식당']
+            }
+
+        })
+    
+def crawl(request):
+	.....
+    
+def create_menu_db(cafe_name, time, menu):
+	.....
+```  
+  
+answer부분에서 리턴하는 값에 `get_menu()`라는 메소드를 호출하도록 하고, 학생식당의 이름을 인자로 넘겨 해당 식당의 메뉴를 가져올 수 있도록 했다. 계속해서 views.py에 `get_menu()`라는 메소드를 추가해준다.(`\n`은 줄바꿈을 의미한다)  
+  
+```python
+~/dguhaksik/views.py
+
+.....
+
+def get_menu(cafeteria_name):
+	if cafeteria_name == '상록원':
+        sang_bek = Menu.objects.get(cafe_name='백반코너').menu
+        sang_ill = Menu.objects.get(cafe_name='일품코너').menu
+        sang_yang = Menu.objects.get(cafe_name='양식코너').menu
+        sang_dduk = Menu.objects.get(cafe_name='뚝배기코너').menu
+
+        return "------------\n" +  "백반코너 \n" + sang_bek \
+               + "------------\n" + "일품코너 \n" + sang_ill \
+               + "------------\n" + "양식코너 \n" + sang_yang \
+               + "------------\n" + "뚝배기코너 \n" + sang_dduk
+
+	elif cafeteria_name == '아리수':
+    	.....
+
+```  
+  
+이런식으로 학생식당의 이름에 맞게 분기처리를 하여 식당의 메뉴를 불러올 수 있도록 해주면 된다. 저장해준 뒤 카카오톡에서 실행 해보면 아래 사진과 같이 식당의 메뉴들이 잘 출력되는 것을 확인할 수 있다.
+
+![완성](/images/kakaocomplete.png)
 
 
 
