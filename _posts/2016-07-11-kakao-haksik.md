@@ -49,7 +49,6 @@ Django를 이용해 `https://서버주소/keyboard/`로 요청이 오면 위와 
   
 ```bash
 (myenv) user$ django-admin startproject myproject .
-(myenv) user$ cd myproject
 (myenv) user$ python manage.py startapp dguhaksik
 ```  
   
@@ -342,7 +341,7 @@ def create_menu_db(cafe_name, time, menu):
 	.....
 ```  
   
-answer부분에서 리턴하는 값에 `get_menu()`라는 메소드를 호출하도록 하고, 학생식당의 이름을 인자로 넘겨 해당 식당의 메뉴를 가져올 수 있도록 했다. 계속해서 views.py에 `get_menu()`라는 메소드를 추가해준다.(`\n`은 줄바꿈을 의미한다)  
+answer부분에서 리턴하는 값에 `get_menu()`라는 메소드를 호출하도록 하고, 학생식당의 이름을 인자로 넘겨 해당 식당의 메뉴를 가져올 수 있도록 했다. 계속해서 views.py에 `get_menu()`라는 메소드를 추가해준다.  
   
 ```python
 ~/dguhaksik/views.py
