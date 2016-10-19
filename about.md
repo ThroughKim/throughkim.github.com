@@ -1,23 +1,58 @@
 ---
 layout: page
-title: About me 
+title: 김슬우
 ---
+(Seul Woo Kim / ThroughKim)
 
-##김슬우
-
----
-
-1992.10.15
-
-Java, JSP, Python/Django, PHP, Mysql, HTML, CSS
-
-2011.03 ~ 동국대학교 경영정보학과
-
-2015.12 ~ 모바일 대학사회 [Twenty](https://www.facebook.com/withtwenty/)(스타트업)
+![profile](/images/profile_image.png)
 
 ---
-[sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)
+##CONTACTS
 
-[Facebook](https://www.facebook.com/seulwoo.kim.9)
+* Website - [https://throughkim.github.io](https://throughkim.github.io)
+* Email - [sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)
+* Phone - +82 10-8783-3451
+* Github - [ThroughKim](https://github.com/ThroughKim)
+* Facebook - [https://www.facebook.com/seulwoo.kim.9](https://www.facebook.com/seulwoo.kim.9)
+* Instagram - [https://www.instagram.com/trough_kim/](https://www.instagram.com/trough_kim/)
 
-[Github](https://github.com/ThroughKim)
+---
+
+##BIOGRAPHY
+
+* 1992.10.15 : 부산 출생
+* 2008.03 ~ 2011.02  : 울산고등학교 졸업
+* 2011.03 ~  : 동국대학교 경영정보학과
+* 2015.12 ~ 2016.03  : 모바일 대학사회 [Twenty](https://www.facebook.com/withtwenty/)(스타트업) 인턴 근무
+
+---
+##SKILLS
+
+* Languages: Java, JSP, Python, SQL, HTML, CSS
+* Frameworks: Django
+* Servers: Ubuntu, Raspbian
+* Web Servers: Apache Tomcat
+* ETC: Vim, Git, TDD
+
+---
+##PROJECTS
+
+* 트웬티 CMS   
+    -Python/Django, MySQL  
+    -데이터 분석 툴 개발, 콘텐츠 관리 시스템 개발  
+    -대학생을 위한 미디어 플랫폼(뉴스, 공모전, 공지사항, 학식, 도서관)  
+
+* 페이스북 및 카카오 학식 봇  
+    -Python/Django, Sqlite, FackbookSDK, KakaoAPI  
+    -학생들이 교내 학생식당의 메뉴를 더 쉽게 알 수 있게 하려고 제작  
+
+* 사진블로그  
+    -Java/JSP, MySQL, CSS  
+    -교내 웹프로그래밍 강좌의 프로젝트로 제작  
+    -Instagram을 모방한 사진 중심 마이크로 블로그  
+
+---
+## Myself
+
+* 생활의 사소한 불편을 프로그래밍으로 해결하고자 하며, 그것에 성취를 느낍니다.
+* 항상 더 나은 프로그래머가 되고자 학습하며, 새로운 것을 익히는 일을 즐깁니다.

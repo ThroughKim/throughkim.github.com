@@ -34,6 +34,9 @@ a:visited { color: #00cd91; }
   zoom: 1;
 }
 
+img.alignleft{float:left}
+img.alignright{float:right}
+img.aligncenter{display:block;margin:0 auto}
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
