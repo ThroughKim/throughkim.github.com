@@ -41,15 +41,18 @@ title: 김슬우
     -Python/Django, MySQL  
     -데이터 분석 툴 개발, 콘텐츠 관리 시스템 개발  
     -대학생을 위한 미디어 플랫폼(뉴스, 공모전, 공지사항, 학식, 도서관)  
+    -[Link](https://throughkim.github.io/2016/10/18/twentycms.html)
 
 * 페이스북 및 카카오 학식 봇  
     -Python/Django, Sqlite, FackbookSDK, KakaoAPI  
     -학생들이 교내 학생식당의 메뉴를 더 쉽게 알 수 있게 하려고 제작  
+    -Link [Facebook](https://throughkim.github.io/2016/10/18/facebook-haksikbot-pf.html) [Kakao](https://throughkim.github.io/2016/10/18/kakao-haksik-pf.html)
 
 * 사진블로그  
     -Java/JSP, MySQL, CSS  
     -교내 웹프로그래밍 강좌의 프로젝트로 제작  
     -Instagram을 모방한 사진 중심 마이크로 블로그  
+    -[Link](https://throughkim.github.io/2016/10/18/photoblog-pf.html)
 
 ---
 ## MYSELF
