@@ -42,7 +42,7 @@ title: 김슬우
 	-데이터 분석 툴 개발, 콘텐츠 관리 시스템 개발  
     -Language/Framework : Python/Django  
     -DB : MySQL, Django ORM  
-    -Server : uCloud, nCloud / Ubuntu / nginx
+    -Server : uCloud, nCloud / Ubuntu / nginx  
     -기타 : TDD, Git
     
     [Detail](https://throughkim.github.io/2016/10/18/twentycms.html)
@@ -60,10 +60,10 @@ title: 김슬우
 * 사진블로그  
     -교내 웹프로그래밍 강좌의 프로젝트로 제작  
     -Instagram을 모방한 사진 중심 마이크로 블로그  
-    -Language : Java, JSP
-    -DB : MySQL
-    -Server : Apache Tomcat
-    -기타 : Git
+    -Language : Java, JSP  
+    -DB : MySQL  
+    -Server : Apache Tomcat  
+    -기타 : Git  
     
     [Detail](https://throughkim.github.io/2016/10/18/photoblog-pf.html)
 
