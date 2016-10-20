@@ -10,7 +10,7 @@ title: Twenty CMS
 * Language/Framework : Python/Django
 * DB : MySQL, Django ORM
 * Server : nCloud, uCloud, Ubuntu 14.04.4 LTS
-* 그래프 : D3.js
+* Charts : D3.js
 * 기타 : TDD, Git, Vim, PyCharm
 
 ---
