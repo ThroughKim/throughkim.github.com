@@ -32,7 +32,7 @@ title: 김슬우
 * Languages: PHP, Java, JSP, Python, SQL, HTML, CSS
 * Frameworks: Django, Codeigniter
 * Servers: Ubuntu, Raspbian
-* Web Servers: Apache Tomcat
+* Web Servers: Apache Tomcat, Nginx
 * ETC: Vim, Git, TDD, Mercurial
 
 ---
