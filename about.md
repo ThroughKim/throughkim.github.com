@@ -8,7 +8,7 @@ title: 김슬우
 
 ---
 
-##CONTACTS
+## CONTACTS
 
 * Website - [https://throughkim.github.io](https://throughkim.github.io)
 * Email - [sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)
@@ -19,7 +19,7 @@ title: 김슬우
 
 ---
 
-##BIOGRAPHY
+## BIOGRAPHY
 
 * 1992.10.15 : 부산 출생
 * 2008.03 ~ 2011.02  : 울산고등학교 졸업
@@ -29,7 +29,7 @@ title: 김슬우
 
 ---
 
-##SKILLS
+## SKILLS
 
 * Languages: PHP, Java, JSP, Python, SQL, HTML, CSS
 * Frameworks: Django, Codeigniter
@@ -39,7 +39,7 @@ title: 김슬우
 
 ---
 
-##PROJECTS
+## PROJECTS
 
 * 트웬티 CMS
     -대학생을 위한 미디어 플랫폼(뉴스, 공모전, 공지사항, 학식, 도서관)
