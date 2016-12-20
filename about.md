@@ -49,7 +49,7 @@ title: 김슬우
     - Server : uCloud, nCloud / Ubuntu / nginx
     - 기타 : TDD, Git
 
-    [Detail](https://throughkim.github.io/2016/10/18/twentycms.html)
+    - [Detail](https://throughkim.github.io/2016/10/18/twentycms.html)
 
 * 페이스북 및 카카오 학식 봇
 	- 학생들이 교내 학생식당의 메뉴를 더 쉽게 알 수 있게 하려고 제작
@@ -58,8 +58,8 @@ title: 김슬우
     - Server : nCloud / Ubuntu
     - 기타 : Git, Vim
 
-    [Detail-Facebook](https://throughkim.github.io/2016/10/18/facebook-haksikbot-pf.html)
-    [Detail-Kakao](https://throughkim.github.io/2016/10/18/kakao-haksik-pf.html)
+    - [Detail-Facebook](https://throughkim.github.io/2016/10/18/facebook-haksikbot-pf.html)
+    - [Detail-Kakao](https://throughkim.github.io/2016/10/18/kakao-haksik-pf.html)
 
 * 사진블로그
     - 교내 웹프로그래밍 강좌의 프로젝트로 제작
@@ -69,7 +69,7 @@ title: 김슬우
     - Server : Apache Tomcat
     - 기타 : Git
 
-    [Detail](https://throughkim.github.io/2016/10/18/photoblog-pf.html)
+    [- Detail](https://throughkim.github.io/2016/10/18/photoblog-pf.html)
 
 ---
 
