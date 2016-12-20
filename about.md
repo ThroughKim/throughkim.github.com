@@ -69,7 +69,7 @@ title: 김슬우
     - Server : Apache Tomcat
     - 기타 : Git
 
-    [- Detail](https://throughkim.github.io/2016/10/18/photoblog-pf.html)
+    - [Detail](https://throughkim.github.io/2016/10/18/photoblog-pf.html)
 
 ---
 
