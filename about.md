@@ -7,6 +7,7 @@ title: 김슬우
 ![profile](/images/profile_image.png)
 
 ---
+
 ##CONTACTS
 
 * Website - [https://throughkim.github.io](https://throughkim.github.io)
@@ -27,6 +28,7 @@ title: 김슬우
 * 2016.12 ~ : 리눅스웨어 개발팀 근무
 
 ---
+
 ##SKILLS
 
 * Languages: PHP, Java, JSP, Python, SQL, HTML, CSS
@@ -36,6 +38,7 @@ title: 김슬우
 * ETC: Vim, Git, TDD, Mercurial
 
 ---
+
 ##PROJECTS
 
 * 트웬티 CMS
@@ -69,6 +72,7 @@ title: 김슬우
     [Detail](https://throughkim.github.io/2016/10/18/photoblog-pf.html)
 
 ---
+
 ## MYSELF
 
 * 생활의 사소한 불편을 소프트웨어로 해결하고자 하며, 그것에 성취를 느낍니다.
