@@ -1,98 +1,95 @@
-/**
- * Main JS file for Casper behaviours
- */
+/* global window */
+(function (window, document, $) {
+    'use strict';
 
-/* globals jQuery, document */
-(function ($, sr, undefined) {
-    "use strict";
-
-    var $document = $(document),
-
-        // debouncing function from John Hann
-        // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-        debounce = function (func, threshold, execAsap) {
-            var timeout;
-
-            return function debounced () {
-                var obj = this, args = arguments;
-                function delayed () {
-                    if (!execAsap) {
-                        func.apply(obj, args);
-                    }
-                    timeout = null;
-                }
-
-                if (timeout) {
-                    clearTimeout(timeout);
-                } else if (execAsap) {
-                    func.apply(obj, args);
-                }
-
-                timeout = setTimeout(delayed, threshold || 100);
-            };
-        };
-
-    $document.ready(function () {
-
-        var $postContent = $(".post-content");
-        $postContent.fitVids();
-
-        function updateImageWidth() {
-            var $this = $(this),
-                contentWidth = $postContent.outerWidth(), // Width of the content
-                imageWidth = this.naturalWidth; // Original image resolution
-
-            if (imageWidth >= contentWidth) {
-                $this.addClass('full-img');
+    $(function () {
+        // by default, blog menu is active unless page
+        var activeMenu = $('#menu > li.active');
+        if (activeMenu.length === 0) {
+            activeMenu.removeClass('active');
+            if ($(document.body).hasClass('page')) {
+                $('#menu > li:nth-child(2)').addClass('active');
             } else {
-                $this.removeClass('full-img');
+                $('#menu > li:first-child').addClass('active');
             }
         }
 
-        var $img = $("img").on('load', updateImageWidth);
-        function casperFullImg() {
-            $img.each(updateImageWidth);
-        }
-
-        casperFullImg();
-        $(window).smartresize(casperFullImg);
-
-        $(".scroll-down").arctic_scroll();
-
-    });
-
-    // smartresize
-    jQuery.fn[sr] = function(fn) { return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
-
-    // Arctic Scroll by Paul Adam Davis
-    // https://github.com/PaulAdamDavis/Arctic-Scroll
-    $.fn.arctic_scroll = function (options) {
-
-        var defaults = {
-            elem: $(this),
-            speed: 500
-        },
-
-        allOptions = $.extend(defaults, options);
-
-        allOptions.elem.click(function (event) {
-            event.preventDefault();
-            var $this = $(this),
-                $htmlBody = $('html, body'),
-                offset = ($this.attr('data-offset')) ? $this.attr('data-offset') : false,
-                position = ($this.attr('data-position')) ? $this.attr('data-position') : false,
-                toMove;
-
-            if (offset) {
-                toMove = parseInt(offset);
-                $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top + toMove) }, allOptions.speed);
-            } else if (position) {
-                toMove = parseInt(position);
-                $htmlBody.stop(true, false).animate({scrollTop: toMove }, allOptions.speed);
+        $('#menu-toggle').click(function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            if ($('#menu').is(':visible')) {
+                $('#menu').hide();
             } else {
-                $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top) }, allOptions.speed);
+                $('#search').hide();
+                $('#menu').show();
             }
         });
 
-    };
-})(jQuery, 'smartresize');
+        $('#search-toggle').click(function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            if ($('#search').is(':visible')) {
+                $('#search').hide();
+            } else {
+                $('#menu').hide();
+                $('#search').show();
+            }
+        });
+
+        $('#search').submit(function (e) {
+            e.preventDefault();
+            var q = $('#searchQueryEdit').val();
+            var url = 'http://search.daum.net/search?q=' + encodeURIComponent(q + ' site:tech.kakao.com');
+            window.open(url, '', '_blank');
+        });
+
+        $(window).scroll(function () {
+            var viewportTop = $(window).scrollTop();
+            if (viewportTop) {
+                var viewportBottom = viewportTop + $(window).height();
+                var footerTop = $('#footer').offset().top;
+                if ((footerTop <= viewportBottom) && (footerTop >= viewportTop)) {
+                    // footer is visible: static above footer
+                    $('#back-to-top').addClass('static').show();
+                } else {
+                    // footer is invisible: fixed on bottom-right of viewport
+                    $('#back-to-top').removeClass('static').show();
+                }
+            } else {
+                // already top: hide
+                $('#back-to-top').hide();
+            }
+        });
+
+        // show/hide cover videos by browser
+        var coverVideos = $('#cover video');
+        if (/Mobi/.test(window.navigator.userAgent)) {
+            coverVideos.remove();
+        } else {
+            coverVideos.click(function (e) {
+                var v = e.target;
+                if (v.paused) {
+                    v.play();
+                } else {
+                    v.pause();
+                }
+            }).each(function (i, v) {
+                v.play();
+            }).show();
+        }
+
+        // turn img alt into caption
+        $('#post-content > p > img[alt]').replaceWith(function () {
+            return '<figure>'
+                + '<a href="' + $(this).attr('src') + '" class="mg-link">'
+                + '<img src="' + $(this).attr('src') + '"/></a>'
+                + '<figcaption class="caption">' + $(this).attr('alt') + '</figcaption>'
+                + '</figure>';
+        });
+        // and connect magnific popup image viewer
+        $('#post-content .mg-link').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true
+        });
+    });
+}(window, window.document, window.jQuery));

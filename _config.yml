@@ -1,15 +1,62 @@
-name: 스루의 개발로그
-description: 
-meta_description: "스루의 개발 블로그"
+title: 스루 블로그
+email: sulewoo58@gmail.com
+description: |
+  스루의 프로그래밍 학습 블로그
+baseurl: ''
+url: 'sulewoo58.github.io'
+timezone: Asia/Seoul
 
-highlighter: pygments
-logo: false
-paginate: 15
-baseurl: /
-domain_name: 'http://throughkim.github.io'
-gems: [jekyll-paginate]
-google_analytics: 'UA-75917854-1'
+repository: sulewoo58/sulewoo58.github.io
 
-# Details for the RSS feed generator
-url:            'throughkim.github.io'
-author:         'SeulWoo Kim'
+permalink: /:year/:month/:day/:title/
+
+excerpt_separator: <!--more-->
+
+markdown: kramdown
+
+krandown:
+  input: GFM
+  highlighter: rouge
+
+gems:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: '/page/:num/'
+
+collections:
+  authors:
+    output: true
+    permalink: /authors/:path/
+  tags:
+    output: true
+    permalink: /tags/:path/
+
+defaults:
+  - scope:
+      path: ''
+      type: authors
+    values:
+      layout: author
+  - scope:
+      path: ''
+      type: tags
+    values:
+      layout: tag
+
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+keep_files: [assets, files]
+
+# iolo's custom
+author: sulewoo58@gmail.com
+image: '/assets/images/default_blog_cover.jpg'
+asset_url: /assets
+#asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
+#asset_url: //t1.daumcdn.net/osa/blog/assets
+google_analytics:
+  ua: 'UA-75917854-1'
+github:
+  username: sulewoo58
+facebook:
+  username: seulwoo.kim.9
