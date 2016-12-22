@@ -24,4 +24,4 @@ tags: [project]
 카카오톡 자동응답 API를 이용해 파싱되어 DB에 저장된 학식 메뉴를 알려주는 어플리케이션 입니다.  
 Python BeutifulSoup를 이용해 학생식당 메뉴를 파싱하고, DB에 값을 저장한 뒤 URI를 통해 요청이 오면 DB에 저장된 값을 Return하도록 제작했습니다.
 
-제작과정을 상세하게 기록한 [포스팅](https://throughkim.github.io/2016/07/11/kakao-haksik.html)을 작성했습니다.
+제작과정을 상세하게 기록한 [포스팅](http://throughkim.github.io/2016/07/11/kakao-haksik/)을 작성했습니다.
