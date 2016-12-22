@@ -4,6 +4,7 @@ title: 'Python BeautifulSoup 한글 인코딩'
 author: through.kim
 date: 2016-12-08 14:30
 tags: [python]
+image: '/files/covers/python-in-ex-machina.jpg'
 ---
 
 >BeautifulSoup에서 갑자기 한글이 깨지는 오류 발생
