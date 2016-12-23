@@ -4,6 +4,7 @@ title: About ThroughKim
 permalink: /about/
 sitemap: yes
 tags: [about]
+image: '/files/covers/through_programming.jpg'
 ---
 # 김슬우
 (Seul Woo Kim / ThroughKim)
