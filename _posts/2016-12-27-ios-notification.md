@@ -136,7 +136,10 @@ iOS App Development를 선택 후 계속 버튼을 눌러줍니다.
 
 ---
 
-## iOS Application 작성
+## iOS Application 작성  
+
+### 프로젝트 설정
+
 iOS 어플리케이션은 Xcode를 이용해 작성합니다. 최신 iOS의 경우 Xcode구버전은 제대로 지원하지 않는 경우가 있으므로 반드시 Xcode를 최신 버전으로 업데이트 후 진행합니다.  
 우선 Xcode에서 신규 프로젝트를 생성합니다.  
 ![신규 프로젝트 생성](/files/ios_noti_images/21.png)
@@ -152,6 +155,8 @@ iOS 어플리케이션은 Xcode를 이용해 작성합니다. 최신 iOS의 경�
 
 마지막으로 Build Phases 옵션에서 Link Binary With Libaraies를 클릭하고, +버튼을 눌러 'UserNotifications.framework'와 'PushKit.framework'를 추가해줍니다.
 ![라이브러리 추가](/files/ios_noti_images/25.png)
+
+### AppDelegate.swift 수정
 
 이제 `AppDelegate.swift`파일을 수정하여 푸시 알림을 받을 수 있도록 만들어줍니다.  
 
@@ -240,6 +245,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 ```
+
+### 구동 테스트
 
 저장해준 뒤 아이폰을 USB로 연결하고 Run 버튼을 클릭해주면 아이폰에서 어플이 실행된다. 어플이 실행되고, 푸시 알림설정이 제대로 되었다면 다음과 같은 확인창이 팝업됩니다.  
 ![알림 수신 확인창](/files/ios_noti_images/26.png)
