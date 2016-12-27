@@ -8,7 +8,7 @@ image: '/files/covers/ios_app.jpg'
 ---
 
 # iOS Notification 만들기
-> 본 포스팅은 OS X, Xcode 8, ios 10 기반으로 작성되었습니다.
+> 본 포스팅은 OS X, Xcode 8, ios 10, Swift3.0 기반으로 작성되었습니다.
 
 _APNS: Apple Push Notification Service_  
 
@@ -146,6 +146,126 @@ iOS 어플리케이션은 Xcode를 이용해 작성합니다. 최신 iOS의 경�
 
 프로젝트 생성이 완료되면 프로젝트 설정 창이 뜹니다. 상단에서 Build Setting을 클릭 후 우측 검색창에서 code signing을 검색해 준 뒤, Debug 우측 창을 클릭하여, 설정해두었던 Push service인증서를 선택해줍니다. (뒤에 따라오는 identifier로 구분합니다)
 ![Push Service 인증서 선택](/files/ios_noti_images/23.png)
+
+이어서 좌측 패널에서 Targets 밑에 있는 앱이름을 클릭하여 세팅을 해줍니다. 우선 Capability옵션에서 Push Notification기능을 켜줍니다.  
+![Push Notification On](/files/ios_noti_images/24.png)
+
+마지막으로 Build Phases 옵션에서 Link Binary With Libaraies를 클릭하고, +버튼을 눌러 'UserNotifications.framework'와 'PushKit.framework'를 추가해줍니다.
+![라이브러리 추가](/files/ios_noti_images/25.png)
+
+이제 `AppDelegate.swift`파일을 수정하여 푸시 알림을 받을 수 있도록 만들어줍니다.  
+
+```swift
+import UIKit
+import UserNotifications
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        /**************************** Push service start *****************************/
+        // iOS 10 support
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
+            application.registerForRemoteNotifications()
+        }
+            // iOS 9 support
+        else if #available(iOS 9, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+            // iOS 8 support
+        else if #available(iOS 8, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+            // iOS 7 support
+        else {  
+            application.registerForRemoteNotifications(matching: [.badge, .sound, .alert])
+        }
+        /***************************** Push service end ******************************/
+        return true
+    }
+    
+    // Called when APNs has assigned the device a unique token
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // Convert token to string
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        
+        // Print it to console
+        print("APNs device token: \(deviceTokenString)")
+        
+        // Persist it in your backend in case it's new
+    }
+    
+    // Called when APNs failed to register the device for push notifications
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // Print the error to console (you should alert the user that registration failed)
+        print("APNs registration failed: \(error)")
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // Push notification received
+    func application(_ application: UIApplication, didReceiveRemoteNotification data: [AnyHashable : Any]) {
+        // Print notification payload data
+        print("Push notification received: \(data)")
+    }
+
+
+}
+
+```
+
+저장해준 뒤 아이폰을 USB로 연결하고 Run 버튼을 클릭해주면 아이폰에서 어플이 실행된다. 어플이 실행되고, 푸시 알림설정이 제대로 되었다면 다음과 같은 확인창이 팝업됩니다.  
+![알림 수신 확인창](/files/ios_noti_images/26.png)
+
+확인을 클릭하면 Xcode 하단 콘솔창에 Device 토큰이 표시되는 것을 확인할 수 있습니다.  
+![콘솔창에 ID 출력](/files/ios_noti_images/27.png)
+
+
+
+---
+
+## APNS 테스터로 테스트
+웹 상에있는 APNS테스트로 서버없이도 간단하게 푸시 알림을 테스트 해볼 수 있습니다.  
+
+[APNS/GCM Tester](http://apns-gcm.bryantan.info/)  
+  
+위 사이트로 이동하여 방금 수신한 Device 토큰과 메세지, 그라고 APNS용 인증서를 업로드 해주면 간단히 테스트가 가능합니다.  
+![APNS테스터](/files/ios_noti_images/28.png)
+
+제출을 하면 방금 입력한 메세지가 푸시 알림으로 표시되는 것을 확인할 수 있습니다.
+![푸시 알림 확인](/files/ios_noti_images/29.png)
+
+---
+
+## 서버에 업로드
+apns인증서를 Node.js 혹은 Django 또는 다른 어떤 웹서버든 업로드 하여 푸시 알림 서버를 구성할 수 있습니다.
 
 
 ---
