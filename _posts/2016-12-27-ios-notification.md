@@ -3,7 +3,7 @@ layout: post
 title: 'iOS Notification 만들기'
 author: through.kim
 date: 2016-12-27 11:39
-tags: [linux, study]
+tags: [ios, app, study]
 image: '/files/covers/ios_app.jpg'
 ---
 
@@ -72,7 +72,7 @@ Push Notification을 확인해보면 개발용 인증서와 배포용 인증서�
 
 ---
 
-### APNS 서버 인증서 발급하기 
+### 서버용 APNS 인증서 발급  
 키체인을 열어 방금 설치한 Apple Development(or Production) iOS Push Service 인증서를 찾아서 Export를 클릭합니다.
 ![Export하기](/files/ios_noti_images/12.png)
 
@@ -93,7 +93,7 @@ $ openssl pkcs12 -clcerts -nokeys -out cert.pem -in cert.p12
 ```bash
 $ openssl pkcs12 -nocerts -out key.pem -in key.p12
 ```
-cert.pem과는 다르게 또 비밀번호를 설정해주는 단계가 있습니다.  
+cert.pem과는 다르게 비밀번호 체크 후 다른 비밀번호를 설정해주는 단계가 있습니다.  
 
 이제 위에서 만들어준 key.pem을 가지고 key.unencrypted.pem 을 만들어줍니다. 이 단계에서 방금 새로 생성해 준 패스워드가 쓰입니다.  
 
@@ -248,7 +248,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### 구동 테스트
 
-저장해준 뒤 아이폰을 USB로 연결하고 Run 버튼을 클릭해주면 아이폰에서 어플이 실행된다. 어플이 실행되고, 푸시 알림설정이 제대로 되었다면 다음과 같은 확인창이 팝업됩니다.  
+저장해준 뒤 아이폰을 USB로 연결하고 Run 버튼을 클릭해주면 아이폰에서 어플이 실행됩니다. 어플이 실행되고, 푸시 알림설정이 제대로 되었다면 다음과 같은 확인창이 팝업됩니다.  
 ![알림 수신 확인창](/files/ios_noti_images/26.png)
 
 확인을 클릭하면 Xcode 하단 콘솔창에 Device 토큰이 표시되는 것을 확인할 수 있습니다.  
