@@ -10,7 +10,7 @@ tags: [python, study, linux]
 
 ## Python 파일 세팅
 
-우선 실행하고자 하는 파이썬 파일 제일 윗 칸에 파이썬 인터프리터의 경로를 입력해야 한다.
+우선 실행하고자 하는 파이썬 파일 제일 윗 칸에 파이썬 인터프리터의 경로를 입력해야 한다.  
 우분투 기본 환경의 파이썬을 사용하고 있다면 `#!/usr/bin/python`을 입력하면 된다. 나의 경우는 pyenv-virtualenv환경에서 python3.4.1을 사용하고 있으므로 경로를 찾아서 스크립트 제일 위에 입력해주면 된다.
 
 ```python
@@ -20,9 +20,8 @@ python
 ['', '/root/.pyenv/versions/3.4.1/lib/python34.zip', '/root/.pyenv/versions/3.4.1/lib/python3.4' ...]
 >>> exit()
 ```
-bash창에서 `python`을 입력하면 파이썬 스크립트 창으로 들어가진다. (만약 파이썬 가상환경의 path를 얻고자 한다면 가상환경을 실행하고 `python` 스크립트 창으로 들어가야 한다.) `sys`를 `import`하고 `sys.path`를 입력해보면 경로들이 나타난다. 공통적으로 `/root/.pyenv/versions/3.4.1/~`을 가리키고 있다는 것을 볼 수 있다.  
-  
-실제로 그 경로로 찾아가보면 내가 찾던 `python3.4.1`인터프리터는 `/root/.pyenv/versions/3.4.1/bin/python3.4`에 위치한다는 것을 찾아낼 수 있다. 이 값을 실행하고자하는 파이썬 파일의 가장 윗 줄에 입력해주면 된다.  
+
+bash창에서 `python`을 입력하면 파이썬 스크립트 창으로 들어가진다. (만약 파이썬 가상환경의 path를 얻고자 한다면 가상환경을 실행하고 `python` 스크립트 창으로 들어가야 한다.) `sys`를 `import`하고 `sys.path`를 입력해보면 경로들이 나타난다. 공통적으로 `/root/.pyenv/versions/3.4.1/~`을 가리키고 있다는 것을 볼 수 있다. 실제로 그 경로로 찾아가보면 내가 찾던 `python3.4.1`인터프리터는 `/root/.pyenv/versions/3.4.1/bin/python3.4`에 위치한다는 것을 찾아낼 수 있다. 이 값을 실행하고자하는 파이썬 파일의 가장 윗 줄에 다음과 같이 입력해주면 된다.  
 
 ```python
 #!/root/.pyenv/versions/3.4.1/bin/python3.4
