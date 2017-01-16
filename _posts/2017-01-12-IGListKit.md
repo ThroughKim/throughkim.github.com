@@ -23,7 +23,7 @@ image: '/files/covers/ios_app.jpg'
 
 당신은 NASA의 최고 소프트웨어 기술자이며 최신 화성 유인탐사 미션의 스태프이다. 팀은 Marslink라는 앱의 첫번째 버전을 이미 작성했으며, 이곳에서 [다운로드](https://koenig-media.raywenderlich.com/uploads/2016/12/Marslink_Starter.zip)받을 수 있다. 이 앱을 다운로드 받은 뒤 `Marslink.xcworkspace`를 열고 앱을 실행시켜라.
 
-![MarkLink 첫 실행](/files/iglistkit/1.png)
+![MarsLink 첫 실행](/files/iglistkit/1.png)
 
 아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. 프로젝트와 친숙해지기 위해 _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보는 것이 도움이 된다. 만약 당신이 `UICollectionView`를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
 
