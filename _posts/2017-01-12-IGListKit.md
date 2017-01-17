@@ -28,10 +28,10 @@ image: '/files/covers/ios_app.jpg'
 아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. 프로젝트에 익숙해지기 위해 _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보는 것이 도움이 된다. 만약 당신이 _'UICollectionView'_ 를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
 
 - _'ClassicFeedViewController'_ 는 _'UICollectionViewDataSource'_ 를 상속받는 _'UIViewController'_ 의 서브클래스이다.
-- `viewDidLoad()`는 `UICollectionView`를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
-- `loader.entries` 배열은 각 섹션이 두 개의 셀(하나는 날짜, 하나는 텍스트)를 갖도록 설정한다.
+- _'viewDidLoad()'_ 는 _'UICollectionView'_ 를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
+- _'loader.entries'_ 배열은 각 섹션이 두 개의 셀(하나는 날짜, 하나는 텍스트)를 갖도록 설정한다.
 - 날짜 셀은 [Sol date](https://en.wikipedia.org/wiki/Timekeeping_on_Mars)를 가지고 있고, 텍스트 셀은 일지의 텍스트를 가지고 있다.
-- `collectionView(_:layout:sizeForItemAt:)`은 날짜 셀의 고정된 사이즈와 텍스트 양애 맞춰 계산된 텍스트 셀의 사이즈를 반환한다.
+- _'collectionView(_:layout:sizeForItemAt:)'_ 은 날짜 셀의 고정된 사이즈와 텍스트 양애 맞춰 계산된 텍스트 셀의 사이즈를 반환한다.
 
 모두 다 제대로 작동하는 것 같다. 하지만 미션의 관리자가 긴급한 업데이트를 요청해왔다.
 
