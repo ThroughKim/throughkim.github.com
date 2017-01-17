@@ -25,7 +25,7 @@ image: '/files/covers/ios_app.jpg'
 
 ![MarsLink 첫 실행](/files/iglistkit/1.png)
 
-아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. 프로젝트와 친숙해지기 위해 _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보는 것이 도움이 된다. 만약 당신이 `UICollectionView`를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
+아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. 프로젝트에 익숙해지기 위해 _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보는 것이 도움이 된다. 만약 당신이 `UICollectionView`를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
 
 - `ClassicFeedViewController`는 `UICollectionViewDataSource`를 상속받는 `UIViewController`의 서브클래스이다.
 - `viewDidLoad()`는 `UICollectionView`를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
@@ -39,22 +39,22 @@ image: '/files/covers/ios_app.jpg'
 
 ![추가해야 할 기능들](/files/iglistkit/2.png)
 
-[JPL](https://en.wikipedia.org/wiki/Jet_Propulsion_Laboratory)의 엔지니어들은 이미 작동중인 이러한 시스템을 가지고 있었다. 그러나 당신은 이 기능들을 어플리케이션에 집어넣어야 한다. 
+[JPL](https://en.wikipedia.org/wiki/Jet_Propulsion_Laboratory)의 엔지니어들은 이미 작동이 가능한 이러한 종류의 시스템을 가지고 있었다. 당신이 해야할 일은 이 시스템을 어플리케이션 속에 집어넣는 일이다. 
 
 # IGListKit 소개
 
-`UICollectionView`는 강력한 도구이지만, 강력한 힘에는 강력한 의무가 뒤따른다. 데이터소스와 뷰의 동기화가 가장 중요한데, 이 둘 사이의 Disconnection때문에 주로 크래시가 발생하게 된다.  
-IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 `UICollectionView`에 출력할 객체의 배열을 제공할 수 있다. 각각의 객체 타입에 대해 어댑터가 셀을 만드는 데 필요한 모든 정보를 갖고 있는 `section controller`라고 하는 것을 만든다.
+`UICollectionView`는 강력한 도구이지만, 강력한 힘에는 강력한 의무가 뒤따른다. 데이터 소스와 뷰를 동기화 상태로 유지하는 것이 가장 중요하며, 충돌은 일반적으로 여기에서 발생하는 Disconnection으로 인해 발생한다.  
+IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 `UICollectionView`에 출력할 객체의 배열을 제공할 수 있다. 각 유형의 객체에 대해 어댑터는 셀을 작성하기위한 모든 세부 사항을 갖는 `section controller`라는 것을 작성한다.
 
 ![IGListkit의 Flow Chart](/files/iglistkit/3.png)
 
-IGListKit은 객체에 대해 자동으로 diff를 시행하고, 변경사항에 대해 `UICollectionView`상에 animated batch update를 시행한다. 이 방법을 이용하면 batch update를 직접 작성할 필요가 없어지고, [이런](https://www.raizlabs.com/dev/2014/02/animating-items-in-a-uicollectionview/) 이슈들을 피할 수 있다.
+IGListKit은 객체에 대해 자동으로 diff를 시행하고, 변경사항에 대해 `UICollectionView`상에 애니메이션을 포함한 일괄적 업데이트(batch update)를 시행한다. 이 방법을 이용하면 batch update를 직접 작성할 필요가 없어지고, [이런](https://www.raizlabs.com/dev/2014/02/animating-items-in-a-uicollectionview/) 문제들을 예방할 수 있다.
 
 # UICollectionView를 IGListKit으로 대체하기
 
-IGListKit은 Collection에서의 변화를 알아내고, 적절한 행에 애니메이션과 함께 추가하는 역할을 수행한다. 또한 다른 데이터와 UI를 가진 복수의 섹션들을 쉽게 핸들링 할 수 있도록 구성되어 있다. 이러한 점을 미루어 봤을 때, 새로운 요구사항의 배치를 위한 최상의 해결책이다. 이제 implement를 시작하면 된다.
+IGListKit은 Collection에서의 변경 사항을 식별하고, 적절한 행에 애니메이션과 함께 추가하는 역할을 수행한다. 또한 다른 타입의 데이터와 UI를 가진 복수의 섹션들을 쉽게 핸들링 할 수 있도록 구성되어 있다. 이러한 점을 미루어 봤을 때, IGListKit은 새로운 요구사항의 배치를 위한 최상의 해결책이다. 이제 implement를 시작하면 된다.
 
-`Marslink.xcworkspace`를 열어둔 채, `ViewContollers`그룹에서 오른쪽 클릭하여 `New File...`을 선택한다. 이어서 `Cocoa Touch Class`를 선택하고, `UIViewController`를 상속하는 `FeedViewController`를 생성해준다.
+'Marslink.xcworkspace'를 열어둔 채, 'ViewContollers'그룹에서 오른쪽 클릭하여 'New File...'을 선택한다. 이어서 `Cocoa Touch Class`를 선택하고, `UIViewController`를 상속하는 `FeedViewController`를 생성해준다.
 
 `AppDelegate.swift`를 열어 `application(_:didFinishLaunchWithOptions:)`를 찾아준다. ClassicFeedViewController()를 Navigation Controller로 밀어주는 라인을 찾아 다음의 줄로 대체한다.
 
