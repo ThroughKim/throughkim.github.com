@@ -29,7 +29,7 @@ image: '/files/covers/ios_app.jpg'
 
 - `ClassicFeedViewController`는 `UICollectionViewDataSource`를 상속받는 `UIViewController`의 서브클래스이다.
 - `viewDidLoad()`는 `UICollectionView`를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
-- `loader.entries` 배열은 색션의 숫자를 Power(강제?)한다. 각각 두 개의 셀을 갖도록(하나는 날짜, 하나는 텍스트)
+- `loader.entries` 배열은 각 섹션이 두 개의 셀(하나는 날짜, 하나는 텍스트)를 갖도록 설정한다.
 - 날짜 셀은 [Sol date](https://en.wikipedia.org/wiki/Timekeeping_on_Mars)를 가지고 있고, 텍스트 셀은 일지의 텍스트를 가지고 있다.
 - `collectionView(_:layout:sizeForItemAt:)`은 날짜 셀의 고정된 사이즈와 텍스트 양애 맞춰 계산된 텍스트 셀의 사이즈를 반환한다.
 
