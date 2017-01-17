@@ -413,7 +413,7 @@ extension MessageSectionController: IGListSectionType {
 
 우리의 우주인은 모래폭풍과 같은 것들 주변에서 돌아다니기 위해 날씨 정보가 필요하다. JPL은 현재 날씨를 표시해주는 새로운 모듈을 만들어냈다. 정보가 많기 때문에, 탭을 했을 때만 표시되도록 요구하고 있다.
 
-![요구받은 날씨 기능](/files/iglistKit/8.gif)
+![요구받은 날씨 기능](/files/iglistkit/8.gif)
 
 `WeatherSectionController`라는 마지막 section controller를 만들어준다. 생성자와 몇개의 변수를 선언하는 것으로 시작한다.
 
