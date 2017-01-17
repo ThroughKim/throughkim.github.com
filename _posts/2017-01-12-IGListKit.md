@@ -56,7 +56,7 @@ IGListKit은 Collection에서의 변경 사항을 식별하고, 적절한 행에
 
 _'Marslink.xcworkspace'_ 를 열어둔 채, _'ViewContollers'_ 그룹에서 오른쪽 클릭하여 _'New File...'_ 을 선택한다. 이어서 _'Cocoa Touch Class'_ 를 선택하고, _'UIViewController'_ 를 상속하는 _'FeedViewController'_ 를 생성해준다.
 
-_'AppDelegate.swift'_ 를 열어 _'application(:didFinishLaunchWithOptions:)'_ 를 찾아준다. _'ClassicFeedViewController()'_ 를 _'Navigation Controller'_로 밀어주는(push) 라인을 찾아 다음의 내용으로 대체한다.
+_'AppDelegate.swift'_ 를 열어 _'application(:didFinishLaunchWithOptions:)'_ 를 찾아준다. _'ClassicFeedViewController()'_ 를 _'Navigation Controller'_ 로 밀어주는(push) 라인을 찾아 다음의 내용으로 대체한다.
 
 ```swift
 nav.pushViewController(FeedViewController(), animated: false)
