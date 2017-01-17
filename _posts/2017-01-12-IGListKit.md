@@ -194,7 +194,7 @@ IGListKit에서, 다른 타입의 데이터와 행동을 위한 새로운 sectio
 
 네이베이터에서 `Section Controller`를 우클릭 하여 새 파일을 생성해준다. `Cocoa Touch Class`를 선택해주고, IGListSectionController의 서브클래스인 JournalSectionController를 생성해준다.
 
-![JournalSectionController 생성창](/files/Iglistkit/5.png)
+![JournalSectionController 생성창](/files/iglistkit/5.png)
 
 Xcode는 서드파티 프레임워크를 자동으로 임포트해주지 않기 때문에 `JournalSectionController.swift`파일의 최상단에 다음을 추가해준다.
 
@@ -312,7 +312,7 @@ return JournalSectionController()
 
 당신의 Journal Seciton Controller는 이제 메소드가 호출되면 반환을 한다. 앱을 빌드하고 실행해보면 글이 나타나는 것을 확인할 수 있다.
 
-![Journal Entry](/files/Iglistkit/6.png)
+![Journal Entry](/files/iglistkit/6.png)
 
 # 메세지 기능 추가하기
 
@@ -407,13 +407,13 @@ extension MessageSectionController: IGListSectionType {
 
 빌드후 실행시켜보면 메세지 기능이 피드에 잘 합쳐져있는 것을 확인할 수 있다.
 
-![추가된 메세지 기능](/files/Iglistkit/7.png)
+![추가된 메세지 기능](/files/iglistkit/7.png)
 
 # 화성의 날씨
 
 우리의 우주인은 모래폭풍과 같은 것들 주변에서 돌아다니기 위해 날씨 정보가 필요하다. JPL은 현재 날씨를 표시해주는 새로운 모듈을 만들어냈다. 정보가 많기 때문에, 탭을 했을 때만 표시되도록 요구하고 있다.
 
-![요구받은 날씨 기능](/files/IglistKit/8.gif)
+![요구받은 날씨 기능](/files/iglistKit/8.gif)
 
 `WeatherSectionController`라는 마지막 section controller를 만들어준다. 생성자와 몇개의 변수를 선언하는 것으로 시작한다.
 
@@ -569,7 +569,7 @@ if object is Message {
 
 빌드하고 실행해보자. 최상단에 새로운 날씨가 나타나는 것을 확인할 수 있다. 섹션을 탭하면 확장되고 축소시킬 수 있다.
 
-![날씨가 추가된 모습](/files/Iglistkit/9.png)
+![날씨가 추가된 모습](/files/iglistkit/9.png)
 
 # 업데이트 수행하기
 
@@ -600,4 +600,4 @@ extension FeedViewController: PathfinderDelegate {
 
 빌드후 실행을 시켜보면 캡틴의 메세지가 업데이트 되고 있는 것을 확인할 수 있다. 
 
-![실시간 업데이트](/files/Iglistkit/10.png)
+![실시간 업데이트](/files/iglistkit/10.png)
