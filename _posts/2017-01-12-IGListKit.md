@@ -54,9 +54,9 @@ IGListKit은 객체에 대해 자동으로 diff를 시행하고, 변경사항에
 
 IGListKit은 Collection에서의 변경 사항을 식별하고, 적절한 행에 애니메이션과 함께 추가하는 역할을 수행한다. 또한 다른 타입의 데이터와 UI를 가진 복수의 섹션들을 쉽게 핸들링 할 수 있도록 구성되어 있다. 이러한 점을 미루어 봤을 때, IGListKit은 새로운 요구사항의 배치를 위한 최상의 해결책이다. 이제 implement를 시작하면 된다.
 
-'Marslink.xcworkspace'를 열어둔 채, 'ViewContollers'그룹에서 오른쪽 클릭하여 'New File...'을 선택한다. 이어서 `Cocoa Touch Class`를 선택하고, `UIViewController`를 상속하는 `FeedViewController`를 생성해준다.
+_'Marslink.xcworkspace'_ 를 열어둔 채, _'ViewContollers'_ 그룹에서 오른쪽 클릭하여 _'New File...'_ 을 선택한다. 이어서 _'Cocoa Touch Class'_ 를 선택하고, _'UIViewController'_ 를 상속하는 _'FeedViewController'_ 를 생성해준다.
 
-`AppDelegate.swift`를 열어 `application(_:didFinishLaunchWithOptions:)`를 찾아준다. ClassicFeedViewController()를 Navigation Controller로 밀어주는 라인을 찾아 다음의 줄로 대체한다.
+'AppDelegate.swift'를 열어 'application(_:didFinishLaunchWithOptions:)'를 찾아준다. ClassicFeedViewController()를 Navigation Controller로 밀어주는 라인을 찾아 다음의 줄로 대체한다.
 
 ```swift
 nav.pushViewController(FeedViewController(), animated: false)
