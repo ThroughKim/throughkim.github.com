@@ -108,7 +108,7 @@ let collectionView: IGListCollectionView = {
 }()
 ```
 
-1. IGListKit은 몇몇 기능성을 패치하고, [다른 것들을 예방](https://github.com/Instagram/IGListKit/blob/master/Source/IGListCollectionView.h)하는 UICollectionView의 서브클래스인 _'IGListCollectionView'_ 를 사용한다. 
+1. IGListKit은 몇몇 기능성을 패치하고 [다른 것들을 예방](https://github.com/Instagram/IGListKit/blob/master/Source/IGListCollectionView.h)하는 UICollectionView의 서브클래스인 _'IGListCollectionView'_ 를 사용한다. 
 2. 아직 뷰를 생성하지 않았기 때문에 사이즈0의 사각형에서 시작한다. _'ClassicFeedViewController'_ 가 그랬던 것 처럼 _'UICollctionViewFlowLayout'_ 을 사용하게 된다.
 3. 배경의 색깔은 NASA가 승인한 검정색을 사용한다.
 
@@ -129,14 +129,14 @@ override func viewDidLayoutSubviews() {
 }
 ```
 
-_'viewDidLayoutSubviews()'_ 을 오버라이딩 해서 _'collectionView'_ 의 프레임을 View의 경계와 일치하도록 세팅해줍니다.
+_'viewDidLayoutSubviews()'_ 을 오버라이딩 해서 _'collectionView'_ 의 프레임을 View의 경계와 일치하도록 세팅해준.
 
 ## IGListAdapter와 데이터소스
 
 UICollectionView를 사용하기 위해서는 _'UICollectionViewDataSource'_ 를 적용한 데이터 소스들이 필요했다. 섹션과 행의 갯수 그리고 개별 셀을 반환하기 위해 필요한 작업이었다.  
-IGListKit에서는 컬렉션 뷰를 컨트롤하기 위해 _'IGListAdapter'_ 라고 불리는 것을 사용한다. 또한 _'IGListAdapterDataSource'_ 프로토콜을 충족시키는 데이터소스가 필요하다. 이것은 셀의 갯수를 반환하는 대신 배열과 섹션 컨트롤러(section controller, 나중에 더 자세히 다룬다.)를 반환한다는 점이 기존의 _'UICollectionViewDataSource'_ 와는 다르다.
+IGListKit에서는 컬렉션 뷰를 컨트롤하기 위해 _'IGListAdapter'_ 라고 불리는 것을 사용한다. 또한 _'IGListAdapterDataSource'_ 프로토콜을 충족시키는 데이터소스가 필요하다. 이것은 셀의 갯수를 반환하는 대신 배열과 섹션 컨트롤러(Section Controller, 잠시 후에 더 자세히 다룬다.) 를 반환한다는 점이 기존의 _'UICollectionViewDataSource'_ 와는 다르다.
 
-`FeedViewController.swift`파일의 상단에 다음을 추가해준다.
+_'FeedViewController.swift'_ 파일의 상단에 다음을 추가해준다.
 
 ```swift
 lazy var adapter: IGListAdapter = {
@@ -161,7 +161,7 @@ adapter.dataSource = self
 
 컬렉션 뷰를 어댑터로 연결시켜주는 내용이다. 또한 self를 어댑터의 데이터소스로 설정해준다. (아마 컴파일 에러가 발생할 것이다. 아직 IGListAdapterDataSource 프로토콜을 적용시키지 않았기 때문이다.)
 
-_'FeedViewController'_ 에 _'IGListAdapterDataSource'_ 를 적용하여 오류를 고쳐준다. 파일 최하단에 다음 내용을 추가해주면 된다.
+_'FeedViewController'_ 에 _'IGListAdapterDataSource'_ 를 적용하면 오류를 고칠 수 있다. 파일 최하단에 다음 내용을 추가해주면 된다.
 
 ```swift
 extension FeedViewController: IGListAdapterDataSource {
@@ -182,36 +182,36 @@ extension FeedViewController: IGListAdapterDataSource {
 
 _'FeedViewController'_ 는 이제 IGListAdapterDataSource에 부착되었고, 세개의 요구되는 메소드를 상속한다. 
 
-- `objects(for:)`는 컬렉션 뷰에 나타날 데이터 객체의 배열을 반환한다. 여기서는 Journal Entry들을 갖고 있는 `loader.entries`가 제공된다.
-- 각각의 데이터 객체에 대해 `listAdapter(_:sectionControllerFor:)`는  새로운 `section controller`의 인스턴스를 반환해야만 한다. 아직은 컴파일러 에러만 막기 위해 순수한 `IGListSectionController`를 반환해주고 있다. 나중에 이것을 수정하여 커스텀 일지 section을 반환하도록 만들어주어야 한다.
-- `emptyView(for:)`는 출력될 리스트가 비어있을 때 보여줄 뷰를 리턴한다. 여기서는 아직 만들지 않았기 때문에 nil을 반환한다.
+- _'objects(for:)'_ 는 컬렉션 뷰에 나타날 데이터 객체의 배열을 반환한다. 여기서는 Journal Entry들을 갖고 있는 _'loader.entries'_를 넘겨준다.
+- 각각의 데이터 객체에 대해 _'listAdapter(_:sectionControllerFor:)'_ 는  새로운 _'Section Controller'_ 의 인스턴스를 반환해야만 한다. 아직은 컴파일러 에러를 막기 위해 임시 방편으로 순수한 _'IGListSectionController'_ 를 반환해주고 있다. 나중에 이것을 수정하여 커스텀 Journal Section을 반환하도록 만들어주어야 한다.
+- _'emptyView(for:)'_ 는 출력될 리스트가 비어있을 때 보여줄 뷰를 리턴한다. NASA는 시간이 부족하기 때문에 아직 이 기능에 예산을 책정하지 않았다.
 
 ## 첫 Section Controller 만들기
 
-`section controller`는 주어진 데이터 객체를 추상화하고, 컬렉션 뷰의 섹션 내의 셀을 컨트롤하고 구성(configure)해주는 역할을 한다. 이 컨셉은 뷰를 구성하는 view-model과 유사하다: 데이터 객체는 view-model이고, cell은 뷰이다. section controller는 둘 사이의 접착제 역할을 한다.
+_'Section Controller'_ 는 주어진 데이터 객체를 추상화하고, 컬렉션 뷰의 섹션 내의 셀을 컨트롤하고 구성(configure)해주는 역할을 한다. 이 컨셉은 뷰를 구성하는 view-model 방식과 유사하다: 데이터 객체는 view-model이고, cell은 뷰이다. section controller는 둘 사이의 접착제 역할을 한다.
 
-IGListKit에서, 다른 타입의 데이터와 행동을 위한 새로운 section controller를 만들어 보자. JPL 기술자들은 이미 `JournalEntry`모델을 만들었다. 따라서 그것을 다룰 수 있는 section controller를 제작할 필요가 있다.
+IGListKit에서, 다른 타입의 데이터와 행동(Behavior)을 위한 새로운 Section Controller를 만들어 보자. JPL 기술자들은 이미 _'JournalEntry'_ 모델을 만들었다. 따라서 그것을 다룰 수 있는 Section Controller를 제작할 필요가 있다.
 
-네이베이터에서 `Section Controller`를 우클릭 하여 새 파일을 생성해준다. `Cocoa Touch Class`를 선택해주고, IGListSectionController의 서브클래스인 JournalSectionController를 생성해준다.
+네비게이터에서 _'Section Controller'_ 를 우클릭 하여 새 파일을 생성해준다. Cocoa Touch Class 를 선택해주고, IGListSectionController의 서브클래스인 JournalSectionController를 생성해준다.
 
 ![JournalSectionController 생성창](/files/iglistkit/5.png)
 
-Xcode는 서드파티 프레임워크를 자동으로 임포트해주지 않기 때문에 `JournalSectionController.swift`파일의 최상단에 다음을 추가해준다.
+Xcode는 서드파티 프레임워크를 자동으로 임포트해주지 않기 때문에 _'JournalSectionController.swift'_ 파일의 최상단에 다음을 추가해준다.
 
 ```swift
 import IGListKit
 ```
 
-다음 속성을 `JournalSectionController:`의 상단에 추가해준다.
+다음 속성을 _'JournalSectionController:'_ 의 상단에 추가해준다.
 
 ```swift
 var entry: JournalEntry!
 let solFormatter = SolFormatter()
 ```
 
-`JournalEntry`는 데이터 소스를 받아올 떄 사용할 모델 클래스이다. `SolFormatter` 클래스는 날짜를 Sol format으로 변환시켜주는 메소드를 제공한다. 당장은 두가지 모두 필요할 것이다.
+_'JournalEntry'_ 는 데이터 소스를 받아올 떄 사용할 모델 클래스이다. _'SolFormatter'_ 클래스는 날짜를 Sol format으로 변환시켜주는 메소드를 제공한다. 당장은 두가지 모두 필요할 것이다.
 
-또한 `JournalSectionController`내부에 `init()`메소드를 다음과 같이 추가하여 오버라이드 해준다.
+또한 _'JournalSectionController'_ 내부에 _'init()'_ 메소드를 다음과 같이 추가하여 오버라이드 해준다.
 
 ```swift
 override init(){
@@ -222,7 +222,7 @@ override init(){
 
 이 내용이 없으면, 셀 사이의 섹션이 다닥다닥 붙어서 나타날 것이다. 이것을 이용해 15포인트의 padding을 JournalSectionController 객체의 바닥에 추가해준다.
 
-당신의 Section controller는 IGListKit에 사용되기 전에 IGListSectionType의 프로토콜을 충족해야한다. 다음 extension을 파일 하단에 추가해주자.
+당신의 Section Controller는 IGListKit에 사용되기 전에 IGListSectionType의 프로토콜을 충족해야한다. 다음 extension을 파일 하단에 추가해주자.
 
 ```swift
 extension JournalSectionController: IGListSectionType {
@@ -245,19 +245,19 @@ extension JournalSectionController: IGListSectionType {
 }
 ```
 
-`IGListSectionType`프로토콜을 충족하기 위해 4개의 요구되는 메소드를 상속했다. `numberOfItems()`메소드를 제외한 모든 메소드들은 스텁값들이다.
+_'IGListSectionType'_ 프로토콜을 충족하기 위해 4개의 요구되는 메소드를 상속했다. _'numberOfItems()'_ 메소드를 제외한 모든 메소드들은 스텁값들이다.
 
-`didUpdate(:to)`에 다음 내용을 추가해주자.
+_'didUpdate(:to)'_ 에 다음 내용을 추가해주자.
 
 ```swift
 entry = object as? JournalEntry
 ```
 
-`didUpdate(:to)`는 객체를 section controller로 건내주기 위해 사용된다. 이 메소드는 항상 셀 프로토콜 메소드보다 먼저 호출된다. 여기서 전달된 객체를 `entry`에 저장한다.
+_'didUpdate(:to)'_ 는 객체를 Section Controller로 전달하기 위해 사용된다. 이 메소드는 항상 셀 프로토콜 메소드보다 먼저 호출된다. 여기서는 전달된 객체를 _'entry'_ 에 저장한다.
 
-> NOTE: 객체는 section controller의 생애주기동안 수차례 변경될 수 있다. 그런 일은 custome model diffing과 같은 더 고급 기능을 사용할 때 일어날 것이다. 이번 튜토리얼에서는 걱정하지 않아도 된다.
+> NOTE: 객체는 Section Controller의 생애주기동안 수차례 변경될 수 있다. 그런 일은 custome model diffing과 같은 더 고급 기능을 사용할 때 일어날 것이다. 이번 튜토리얼에서는 걱정하지 않아도 된다.
 
-이제 데이터를 가졌으니, 셀을 구성해줄 차례이다. `cellForItem(at:)`의 `return UICollectionViewCell()`를 다음의 내용으로 대체해준다.
+이제 데이터를 가졌으니, 셀을 구성해줄 차례이다. _'cellForItem(at:)'_ 의 _'return UICollectionViewCell()'_ 를 다음의 내용으로 대체해준다.
 
 ```swift
 // 1
@@ -273,13 +273,13 @@ if let cell = cell as? JournalEntryDateCell {
 return cell
 ```
 
-`cellForItem`은 섹션내의 주어진 인덱스에서 셀이 요구될 때 호출된다. 내부에서는 다음과 같은 일들이 일어난다.
+_'cellForItem(at:)'_ 은 섹션내의 주어진 인덱스에서 셀이 요구될 때 호출된다. 내부에서는 다음과 같은 일들이 일어난다.
 
-1. 만약에 첫번째 인덱스일 경우, `JournalEntryDateCell`을 사용한다, 아니면 `JournalEntryCell`을 사용한다. JournalEntry는 항상 날짜와 그 뒤를 따르는 텍스트로 표현된다.
+1. 만약에 첫번째 인덱스일 경우, _'JournalEntryDateCell'_ 을 사용한다, 아니면 _'JournalEntryCell'_ 을 사용한다. 따라서 JournalEntry는 항상 날짜와 그 뒤를 따르는 텍스트로 표현될 것이다.
 2. 셀 클래스, 섹션 컨트롤러와 인덱스를 사용해 재사용 풀(reuse pool)에서 셀을 찾아낸다. 
-3. 셀 타입에 따라 앞에 `didUpdate(:to object)`에서 설정했던 JournalEntry를 사용하도록 설정해준다.
+3. 셀 타입에 따라 앞에 _'didUpdate(:to object)'_ 에서 설정했던 JournalEntry를 사용하도록 설정해준다.
 
-이어서 `sizeForItem(:at)`의 `return UICollectionViewCell()`를 다음 내용으로 대체해준다.
+이어서 _'sizeForItem(:at)'_ 의 _'return UICollectionViewCell()'_를 다음 내용으로 대체해준다.
 
 ```swift
 // 1
@@ -294,23 +294,23 @@ if index == 0 {
 }
 ```
 
-1. `collectionContext`는 weak한 변수이며, null이 가능해야 하지만 nil이어서는 안된다. Swift의 guard를 사용하면 편리하다.
-2. `IGListCollectionContext`는 section controller에서 사용되는 어댑터, 컬렉션  그리고 view controller에 대한 정보를 갖고있는 context 객체이다.  여기서는 컨테이너의 너비에 대한 정보를 얻기위해 필요로 한다.
-3. 만약 첫 인덱스(날짜 셀)이 컨테이너만큼의 너비와 30포인트의 높이를 반환한 것이 아니라면, 셀 헬퍼 메소드를 사용해 텍스트 셀의 사이즈를 동적으로 계산한다.
+1. _'collectionContext'_ 는 weak한 변수이며, null이 가능해야 하지만 nil이어서는 안된다. Swift의 guard를 사용하면 편리하게 구현할 수 있다.
+2. _'IGListCollectionContext'_ 는 Section Controller에서 사용되는 어댑터, 컬렉션  그리고 뷰 컨트롤러에 대한 정보를 갖고있는 context 객체이다. 여기서는 컨테이너의 너비에 대한 정보를 얻기위해 필요로 한다.
+3. 첫 번째 인덱스(날짜 셀)은 컨테이너만큼의 너비와 30포인트의 높이를 반환하고, 그렇지 않으면 셀 헬퍼 메소드를 사용해 텍스트 셀의 사이즈를 동적으로 계산한다.
 
-마지막 메소드는 누군가가 셀을 탭했을 때 호출되는 `didSelectItem(at:)`이다. 기본적으로 요구되는 메소드이기 때문에 반드시 추가해주어야 한다. 하지만 탭에 따른 상호작용이 필요하지 않기 때문에 비워둔다.
+마지막으로 살펴볼메소드는 누군가가 셀을 탭했을 때 호출되는 _'didSelectItem(at:)'_ 이다. 기본적으로 요구되는 메소드이기 때문에 반드시 추가해주어야 한다. 하지만 이 섹션에 대해서는탭에 따른 상호작용이 필요하지 않기 때문에 비워둔다.
 
-이전에 _'UICollectionView'_ 를 사용해본 적이 있다면 서로다른 타입의 셀을 Dequeuing하고, 구성하고, 사이즈를 반환하는 이러한 패턴이 익숙할 것이다. `ClassicFeedViewController`로 돌아가보면 많은 코드들이 비슷한 것을 확인할 수 있다.
+이전에 _'UICollectionView'_ 를 사용해본 적이 있다면 서로다른 타입의 셀을 Dequeuing하고, 구성하고, 사이즈를 반환하는 이러한 패턴이 익숙할 것이다. _'ClassicFeedViewController'_ 로 돌아가보면 많은 코드들이 비슷한 것을 확인할 수 있다.
 
 이제 JournalEntry 객체를 받고, 두 셀의 사이즈를 반환하는 section controller를 만들었기 때문에 다 함께 묶을 시간이다.
 
-`FeedViewController.swift`로 돌아가서 listAdapter(_:sectionControllerFor:)의 내용을 다음으로 대체해준다..
+_'FeedViewController.swift'_ 로 돌아가서 _'listAdapter(_:sectionControllerFor:)'_ 의 내용을 다음으로 대체해준다.
 
 ```swift
 return JournalSectionController()
 ```
 
-당신의 Journal Seciton Controller는 이제 메소드가 호출되면 반환을 한다. 앱을 빌드하고 실행해보면 글이 나타나는 것을 확인할 수 있다.
+당신의 Journal Seciton Controller는 이제 메소드가 호출되면 반환된다. 앱을 빌드하고 실행해보면 글이 나타나는 것을 확인할 수 있다.
 
 ![Journal Entry](/files/iglistkit/6.png)
 
