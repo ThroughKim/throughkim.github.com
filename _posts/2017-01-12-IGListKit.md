@@ -48,11 +48,11 @@ IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistk
 
 ![IGListkit의 Flow Chart](/files/iglistkit/3.png)
 
-IGListKit은 객체에 대해 자동으로 diff를 시행하고, 변경사항에 대해 `UICollectionView`상에 애니메이션을 포함한 일괄적 업데이트(batch update)를 시행한다. 이 방법을 이용하면 batch update를 직접 작성할 필요가 없어지고, [이런](https://www.raizlabs.com/dev/2014/02/animating-items-in-a-uicollectionview/) 문제들을 예방할 수 있다.
+IGListKit은 객체에 대해 자동으로 diff를 시행하고, 변경사항에 대해 _'UICollectionView'_ 상에 애니메이션을 포함한 일괄적 업데이트(batch update)를 시행한다. 이 방법을 이용하면 batch update를 직접 작성할 필요가 없어지고, [이런](https://www.raizlabs.com/dev/2014/02/animating-items-in-a-uicollectionview/) 문제들을 예방할 수 있다.
 
 # UICollectionView를 IGListKit으로 대체하기
 
-IGListKit은 Collection에서의 변경 사항을 식별하고, 적절한 행에 애니메이션과 함께 추가하는 역할을 수행한다. 또한 다른 타입의 데이터와 UI를 가진 복수의 섹션들을 쉽게 핸들링 할 수 있도록 구성되어 있다. 이러한 점을 미루어 봤을 때, IGListKit은 새로운 요구사항의 배치를 위한 최상의 해결책이다. 이제 implement를 시작하면 된다.
+IGListKit은 컬렉션에서의 변경 사항을 식별하고, 적절한 행에 애니메이션과 함께 추가하는 역할을 수행한다. 또한 다른 타입의 데이터와 UI를 가진 복수의 섹션들을 쉽게 핸들링 할 수 있도록 구성되어 있다. 이러한 점을 미루어 봤을 때, IGListKit은 새로운 요구사항의 배치를 위한 최상의 해결책이다. 이제 implement를 시작하면 된다.
 
 _'Marslink.xcworkspace'_ 를 열어둔 채, _'ViewContollers'_ 그룹에서 오른쪽 클릭하여 _'New File...'_ 을 선택한다. 이어서 _'Cocoa Touch Class'_ 를 선택하고, _'UIViewController'_ 를 상속하는 _'FeedViewController'_ 를 생성해준다.
 
@@ -62,32 +62,32 @@ _'AppDelegate.swift'_ 를 열어 _'application(:didFinishLaunchWithOptions:)'_ �
 nav.pushViewController(FeedViewController(), animated: false)
 ```
 
-_'FeedViewController'_ 가 이제 루트 뷰 컨트롤러이다. ClassicFeedViewController.swift를 레퍼런스를 위해 남겨두어도 좋다. 그러나 `FeedViewController`가 IGListKit으로 굴러가는 collection view를 생성할 곳임을 기억하자.
+_'FeedViewController'_ 가 이제 루트 뷰 컨트롤러이다. ClassicFeedViewController.swift는 참고용으로 남겨두어도 좋다. 그러나 _'FeedViewController'_ 가 IGListKit으로 굴러가는 컬렉션 뷰를 생성할 곳임을 기억하자.
 
 빌드후 실행을 하여서, 아래와 같이 빈 뷰컨트롤러가 화면에 나타나는지 확인한다.
 
 ![빈 뷰 컨트롤러](/files/iglistkit/4.png)
 
 ## 일지(Journal) Loader 추가하기
-`FeedController.swift`파일을 열고, 다음 속성을 최상단에 추가해준다.
+_'FeedViewController.swift'_ 파일을 열고, 다음 속성을 최상단에 추가해준다.
 
 ```swift
 let loader = JournalEntryLoader()
 ```
 
-`JournalEntryLoader`는 하드코딩 된 일지를 entries 배열에 로드해주는 클래스이다.
+_'JournalEntryLoader'_ 는 하드코딩 된 일지를 entries 배열에 로드해주는 클래스이다.
 
-다음의 내용을 viewDidLoad()의 제일 밑에 입력해준다.
+다음의 내용을 viewDidLoad()메소드의 제일 밑에 입력해준다.
 
 ```swift
 loader.loadLatest()
 ```
 
-`loadLatest()`는 가장 마지막 일지를 로드해주는 `JournalEntryLoader`의 메소드이다.
+_'loadLatest()'_ 는 가장 마지막 일지를 로드해주는 _'JournalEntryLoader'_ 의 메소드이다.
 
 ## 컬렌션 뷰 추가하기
 
-이제 IGListKit 특유의 컨트롤을 뷰 컨트롤러에 추가해줄 시간이다. 그에 앞서, framework를 임포트해주어야 한다. `FeedViewController`의 상단에 새로운 임포트를 추가해준다.
+이제 IGListKit 특유의 컨트롤을 뷰 컨트롤러에 추가해줄 시간이다. 그에 앞서, framework를 임포트해주어야 한다. _'FeedViewController'_ 의 상단에 새로운 임포트를 추가해준다.
 
 ```swift
 import IGListKit
@@ -95,7 +95,7 @@ import IGListKit
 
 > NOTE: 이 튜토리얼의 프로젝트는 [CocoaPods](https://cocoapods.org/)를 사용해 의존성을 관리한다. IGListKit은 Objectrive-C로 쓰여졌기 때문에, 수동으로 프로젝트에 추가하기를 원한다면 [bridging header](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID156)에 #import를 해주어야 한다.
 
-`FeedViewController`의 상단에 intialize된 collectionView 상수를 추가해준다.
+_'FeedViewController'_ 의 상단에 intialize된 collectionView 상수를 추가해준다.
 
 ```swift
 //1
@@ -108,19 +108,19 @@ let collectionView: IGListCollectionView = {
 }()
 ```
 
-1. IGListKit은 몇몇 기능성을 패치하고, [다른 것들을 예방](https://github.com/Instagram/IGListKit/blob/master/Source/IGListCollectionView.h)하는 UICollectionView의 서브클래스인 `IGListCollectionView`를 사용한다. 
-2. 아직 뷰를 생성하지 않았기 때문에 사이즈0의 사각형에서 시작한다. `ClassicFeedViewController`가 그랬던 것 처럼 `UICollctionViewFlowLayout`을 사용하게 된다.
+1. IGListKit은 몇몇 기능성을 패치하고, [다른 것들을 예방](https://github.com/Instagram/IGListKit/blob/master/Source/IGListCollectionView.h)하는 UICollectionView의 서브클래스인 _'IGListCollectionView'_ 를 사용한다. 
+2. 아직 뷰를 생성하지 않았기 때문에 사이즈0의 사각형에서 시작한다. _'ClassicFeedViewController'_ 가 그랬던 것 처럼 _'UICollctionViewFlowLayout'_ 을 사용하게 된다.
 3. 배경의 색깔은 NASA가 승인한 검정색을 사용한다.
 
-다음 내용을 `viewDidLoad`의 하단에 추가해준다.
+다음 내용을 _'viewDidLoad()'_ 의 하단에 추가해준다.
 
 ```swift
 view.addSubview(collectionView)
 ```
 
-컨트롤러의 뷰에 새로운 `collectionView`를 생성해준다는 의미이다.
+컨트롤러의 뷰에 새로운 _'collectionView'_ 를 생성해준다는 의미이다.
 
-`viewDidLoad`아래에 다음의 내용을 추가해준다.
+_'viewDidLoad()'_ 메소드 바로 아래에 다음의 메소드를 추가해준다.
 
 ```swift
 override func viewDidLayoutSubviews() {
@@ -129,12 +129,12 @@ override func viewDidLayoutSubviews() {
 }
 ```
 
-`viewDidLayoutSubviews`는 `collectionView`프레임을 view의 경계에 맞추어 세팅하기 위해 오버라이딩을 해준다.
+_'viewDidLayoutSubviews()'_ 을 오버라이딩 해서 _'collectionView'_ 의 프레임을 View의 경계와 일치하도록 세팅해줍니다.
 
 ## IGListAdapter와 데이터소스
 
-UICollectionView를 사용하기 위해서는 `UICollectionViewDataSource`를 적용한 데이터 소스들이 필요했다. 섹션과 행의 갯수 그리고 개별 셀을 반환하기 위해 필요한 작업이었다.  
-IGListKit에서는 collection view를 컨트롤하기 위해 `IGListAdapter`라고 불리는 것을 사용한다. 또한 `IGListAdapterDataSource`프로토콜을 충족시키는 데이터소스가 필요하다. 그러나 셀의 갯수를 반환하는 대신 배열과 섹션 컨트롤러(section controller, 나중에 더 자세히 다룬다.)를 반환한다는 점이 다르다.
+UICollectionView를 사용하기 위해서는 _'UICollectionViewDataSource'_ 를 적용한 데이터 소스들이 필요했다. 섹션과 행의 갯수 그리고 개별 셀을 반환하기 위해 필요한 작업이었다.  
+IGListKit에서는 컬렉션 뷰를 컨트롤하기 위해 _'IGListAdapter'_ 라고 불리는 것을 사용한다. 또한 _'IGListAdapterDataSource'_ 프로토콜을 충족시키는 데이터소스가 필요하다. 이것은 셀의 갯수를 반환하는 대신 배열과 섹션 컨트롤러(section controller, 나중에 더 자세히 다룬다.)를 반환한다는 점이 기존의 _'UICollectionViewDataSource'_ 와는 다르다.
 
 `FeedViewController.swift`파일의 상단에 다음을 추가해준다.
 
@@ -159,9 +159,9 @@ adapter.collectionView = collectionView
 adapter.dataSource = self
 ```
 
-collectionView를 adapter로 연결시켜주는 내용이다. 또한 self를 adapter의 dataSource로 설정해준다. (아마 컴파일 에러가 발생할 것이다. 아직 IGListAdapterDataSource 프로토콜을 적용시키지 않았기 때문이다.)
+컬렉션 뷰를 어댑터로 연결시켜주는 내용이다. 또한 self를 어댑터의 데이터소스로 설정해준다. (아마 컴파일 에러가 발생할 것이다. 아직 IGListAdapterDataSource 프로토콜을 적용시키지 않았기 때문이다.)
 
-`FeedViewController`에 `IGListAdapterDataSource`를 적용하여 오류를 고쳐준다. 파일 최하단에 다음 내용을 추가해주면 된다.
+_'FeedViewController'_ 에 _'IGListAdapterDataSource'_ 를 적용하여 오류를 고쳐준다. 파일 최하단에 다음 내용을 추가해주면 된다.
 
 ```swift
 extension FeedViewController: IGListAdapterDataSource {
@@ -180,15 +180,15 @@ extension FeedViewController: IGListAdapterDataSource {
 }
 ```
 
-`FeedViewController`는 이제 IGListAdapterDataSource에 부착되었고, 세개의 요구되는 메소드를 상속한다. 
+_'FeedViewController'_ 는 이제 IGListAdapterDataSource에 부착되었고, 세개의 요구되는 메소드를 상속한다. 
 
-- `objects(for:)`는 collectionView에 나타날 데이터 객체의 배열을 반환한다. 여기서는 Journal Entry들을 갖고 있는 `loader.entries`가 제공된다.
+- `objects(for:)`는 컬렉션 뷰에 나타날 데이터 객체의 배열을 반환한다. 여기서는 Journal Entry들을 갖고 있는 `loader.entries`가 제공된다.
 - 각각의 데이터 객체에 대해 `listAdapter(_:sectionControllerFor:)`는  새로운 `section controller`의 인스턴스를 반환해야만 한다. 아직은 컴파일러 에러만 막기 위해 순수한 `IGListSectionController`를 반환해주고 있다. 나중에 이것을 수정하여 커스텀 일지 section을 반환하도록 만들어주어야 한다.
 - `emptyView(for:)`는 출력될 리스트가 비어있을 때 보여줄 뷰를 리턴한다. 여기서는 아직 만들지 않았기 때문에 nil을 반환한다.
 
 ## 첫 Section Controller 만들기
 
-`section controller`는 주어진 데이터 객체를 추상화하고, collection view의 섹션 내의 셀을 컨트롤하고 구성(configure)해주는 역할을 한다. 이 컨셉은 뷰를 구성하는 view-model과 유사하다: 데이터 객체는 view-model이고, cell은 뷰이다. section controller는 둘 사이의 접착제 역할을 한다.
+`section controller`는 주어진 데이터 객체를 추상화하고, 컬렉션 뷰의 섹션 내의 셀을 컨트롤하고 구성(configure)해주는 역할을 한다. 이 컨셉은 뷰를 구성하는 view-model과 유사하다: 데이터 객체는 view-model이고, cell은 뷰이다. section controller는 둘 사이의 접착제 역할을 한다.
 
 IGListKit에서, 다른 타입의 데이터와 행동을 위한 새로운 section controller를 만들어 보자. JPL 기술자들은 이미 `JournalEntry`모델을 만들었다. 따라서 그것을 다룰 수 있는 section controller를 제작할 필요가 있다.
 
@@ -295,12 +295,12 @@ if index == 0 {
 ```
 
 1. `collectionContext`는 weak한 변수이며, null이 가능해야 하지만 nil이어서는 안된다. Swift의 guard를 사용하면 편리하다.
-2. `IGListCollectionContext`는 section controller에서 사용되는 어댑터, collection view 그리고 view controller에 대한 정보를 갖고있는 context 객체이다.  여기서는 컨테이너의 너비에 대한 정보를 얻기위해 필요로 한다.
+2. `IGListCollectionContext`는 section controller에서 사용되는 어댑터, 컬렉션  그리고 view controller에 대한 정보를 갖고있는 context 객체이다.  여기서는 컨테이너의 너비에 대한 정보를 얻기위해 필요로 한다.
 3. 만약 첫 인덱스(날짜 셀)이 컨테이너만큼의 너비와 30포인트의 높이를 반환한 것이 아니라면, 셀 헬퍼 메소드를 사용해 텍스트 셀의 사이즈를 동적으로 계산한다.
 
 마지막 메소드는 누군가가 셀을 탭했을 때 호출되는 `didSelectItem(at:)`이다. 기본적으로 요구되는 메소드이기 때문에 반드시 추가해주어야 한다. 하지만 탭에 따른 상호작용이 필요하지 않기 때문에 비워둔다.
 
-이전에 `UICollectionView`를 사용해본 적이 있다면 서로다른 타입의 셀을 Dequeuing하고, 구성하고, 사이즈를 반환하는 이러한 패턴이 익숙할 것이다. `ClassicFeedViewController`로 돌아가보면 많은 코드들이 비슷한 것을 확인할 수 있다.
+이전에 _'UICollectionView'_ 를 사용해본 적이 있다면 서로다른 타입의 셀을 Dequeuing하고, 구성하고, 사이즈를 반환하는 이러한 패턴이 익숙할 것이다. `ClassicFeedViewController`로 돌아가보면 많은 코드들이 비슷한 것을 확인할 수 있다.
 
 이제 JournalEntry 객체를 받고, 두 셀의 사이즈를 반환하는 section controller를 만들었기 때문에 다 함께 묶을 시간이다.
 
@@ -328,7 +328,7 @@ let pathfinder = Pathfinder()
 
 `pathfinder` 는 메세징 시스템으로 작동하며, 실제로 화성에 묻혀있는 패스파인더 로버를 상징한다. 
 
-`IGListAdapterDataSource` extension 안에서 `objects(for:)`를 찾아 아래와 같이 내용을 수정해주어라.
+_'IGListAdapterDataSource'_  extension 안에서 `objects(for:)`를 찾아 아래와 같이 내용을 수정해주어라.
 
 ```swift
 var items: [IGListDiffable] = pathfinder.messages
@@ -524,7 +524,7 @@ func didSelectItem(at index: Int) {
 
 `reload()`는 전체 섹션을 새로고침한다. 섹션 컨트롤러의 셀의 숫자나 내용이 바뀌었을 때 언제라도 이것을 사용할 수 있다. `numberOfItems()`를 이용해 확장을 했기 때문에, 이것은 `expanded`플래그에 따라 셀을 더하거나 없애거나 할 것이다.
 
-다시 `FeedViewController.swift`로 돌아와서  `FeedViewController`의 상단 근처에 다음 내용을 작성해준다.
+다시 `FeedViewController.swift`로 돌아와서  _'FeedViewController'_ 의 상단 근처에 다음 내용을 작성해준다.
 
 ```swift
 let wxScanner = WxScanner()
@@ -532,7 +532,7 @@ let wxScanner = WxScanner()
 
 `WxScanner`는 기상 정보를 위한 모델 객체이다.
 
-이어서, `IGListAdapterDataSource` extension안에  `objects(:for)`를 다음과 같이 수정해준다.
+이어서, _'IGListAdapterDataSource'_  extension안에  `objects(:for)`를 다음과 같이 수정해준다.
 
 ```swift
 // 1
@@ -596,7 +596,7 @@ extension FeedViewController: PathfinderDelegate {
 }
 ```
 
-`FeedViewController`는 이제 PathfinderDelegate를 충족한다. performUpdates(animated: completion:)은 `IGListAdapter`에게 자신의 데이터 소스를 새로운 객체로 UI에 추가해줄 것을 요청한다. 이같은 방식으로 객체의 삭제, 수정, 이동, 삽입을 처리할 수 있다. 
+_'FeedViewController'_ 는 이제 PathfinderDelegate를 충족한다. performUpdates(animated: completion:)은 _'IGListAdapter'_ 에게 자신의 데이터 소스를 새로운 객체로 UI에 추가해줄 것을 요청한다. 이같은 방식으로 객체의 삭제, 수정, 이동, 삽입을 처리할 수 있다. 
 
 빌드후 실행을 시켜보면 캡틴의 메세지가 업데이트 되고 있는 것을 확인할 수 있다. 
 
