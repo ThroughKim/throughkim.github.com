@@ -25,7 +25,7 @@ image: '/files/covers/ios_app.jpg'
 
 ![MarsLink 첫 실행](/files/iglistkit/1.png)
 
-아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보며 어떤 프로젝트인지 살퍄보자. 만약 당신이 _'UICollectionView'_ 를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
+아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보며 어떤 프로젝트인지 살펴보자. 만약 당신이 _'UICollectionView'_ 를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
 
 - _'ClassicFeedViewController'_ 는 _'UICollectionViewDataSource'_ 를 상속받는 _'UIViewController'_ 의 서브클래스이다.
 - _'viewDidLoad()'_ 는 _'UICollectionView'_ 를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
