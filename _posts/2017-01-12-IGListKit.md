@@ -31,7 +31,7 @@ image: '/files/covers/ios_app.jpg'
 - _'viewDidLoad()'_ 는 _'UICollectionView'_ 를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
 - _'loader.entries'_ 배열은 각 섹션이 두 개의 셀(하나는 날짜, 하나는 텍스트)를 갖도록 설정한다.
 - 날짜 셀은 [Sol date](https://en.wikipedia.org/wiki/Timekeeping_on_Mars)를 가지고 있고, 텍스트 셀은 일지의 텍스트를 가지고 있다.
-- _'collectionView(_:layout:sizeForItemAt:)'_ 은 날짜 셀의 고정된 사이즈와 텍스트 양애 맞춰 계산된 텍스트 셀의 사이즈를 반환한다.
+- _'collectionView(\_:layout:sizeForItemAt:)'_ 은 날짜 셀의 고정된 사이즈와 텍스트 양에 맞춰 계산된 텍스트 셀의 사이즈를 반환한다.
 
 모두 다 제대로 작동하는 것 같다. 하지만 미션의 관리자가 긴급한 업데이트를 요청해왔다.
 
@@ -39,12 +39,12 @@ image: '/files/covers/ios_app.jpg'
 
 ![추가해야 할 기능들](/files/iglistkit/2.png)
 
-[JPL](https://en.wikipedia.org/wiki/Jet_Propulsion_Laboratory)의 엔지니어들은 이미 작동이 가능한 이러한 종류의 시스템을 가지고 있었다. 당신이 해야할 일은 이 시스템을 어플리케이션 속에 집어넣는 일이다. 
+[JPL](https://en.wikipedia.org/wiki/Jet_Propulsion_Laboratory)의 엔지니어들은 이미 작동이 가능한 이러한 종류의 시스템을 구현해놓았다. 당신이 해야할 일은 이 시스템을 어플리케이션 속에 집어넣는 일이다. 
 
 # IGListKit 소개
 
-`UICollectionView`는 강력한 도구이지만, 강력한 힘에는 강력한 의무가 뒤따른다. 데이터 소스와 뷰를 동기화 상태로 유지하는 것이 가장 중요하며, 충돌은 일반적으로 여기에서 발생하는 Disconnection으로 인해 발생한다.  
-IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 `UICollectionView`에 출력할 객체의 배열을 제공할 수 있다. 각 유형의 객체에 대해 어댑터는 셀을 작성하기위한 모든 세부 사항을 갖는 `section controller`라는 것을 작성한다.
+_'UICollectionView'_ 는 강력한 도구이지만, 강력한 힘에는 강력한 의무가 뒤따른다. 데이터 소스와 뷰를 동기화 상태로 유지하는 것이 가장 중요하며, 충돌(Crash)은 일반적으로 여기에서 발생하는 Disconnection으로 인해 발생한다.  
+IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 _'UICollectionView'_ 에 출력할 객체의 배열을 제공할 수 있다. 각 유형의 객체에 대해 어댑터는 셀을 작성하기위한 모든 세부 사항을 갖는 _'section controller'_ 라는 것을 작성한다.
 
 ![IGListkit의 Flow Chart](/files/iglistkit/3.png)
 
