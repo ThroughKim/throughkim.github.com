@@ -345,7 +345,7 @@ Section Controllers그룹을 우클릭하여 IGListSectionController의 서브�
 import IGListKit
 ```
 
-컴파일 에러를 피하기 위해, 우선은 그대로 놔둔 뒤 _'FeedViewController'_ 로 돌아간다. _'IGListAdapterDataSource'_ extension 안에 _'listAdapter(_:sectionControllerFor:)'_ 를 다음과 같이 업데이트 해준다.
+컴파일 에러를 피하기 위해, 우선은 그대로 놔둔 뒤 _'FeedViewController'_ 로 돌아간다. _'IGListAdapterDataSource'_ extension 안에 _'listAdapter(\_:sectionControllerFor:)'_ 를 다음과 같이 업데이트 해준다.
 
 ```swift
 if object is Message {
@@ -355,15 +355,15 @@ if object is Message {
 }
 ```
 
-위 내용을 통해 만약 데이터 객체가 Message라면 새로운 Message section controller를 반환한다.  
-JPL팀은 `MessageSectionController`에 다음과 같은 요구사항을 원한다.
+수정을 통해 데이터 객체에 따른 분기처리를 해준다. 만약에 객체가 Message라면 새로 만들게 될 Message Section Controller를 반환할 것이다.  
+JPL팀은 _'MessageSectionController'_ 에 다음과 같은 사항을 요구해왔다.
 
 - Message 수신
 - bottom inset 15pt
 - MessageCell.cellSize(width:text:)기능을 이용한 개별 셀 사이징
 - Message 객체의 텍스트와 user.name의 값을 이용해 라벨을 생성하고 MessageCell을 구성함 
 
-JPL팀은 도움이 필요할까봐 솔루션의 초안을 아래와 같이 작성해왔다.
+요구사항을 바탕으로 직접 구현해보자. 솔루션은 아래와 같다.
 
 ```swift
 # MessageSectionController.swift
