@@ -152,7 +152,7 @@ lazy var adapter: IGListAdapter = {
 
 > NOTE: Working Range는 더 어려운 개념이라서 이 튜토리얼에서는 다루지 않는다. 그러나 도큐멘테이션과 예시 어플리케이션이 [IGListKit Repo](https://instagram.github.io/IGListKit/)에 있다.
 
-다음 내용을 `viewDidLoad()`의 하단에 추가해준다.
+다음 내용을 _'viewDidLoad()'_ 의 하단에 추가해준다.
 
 ```swift
 adapter.collectionView = collectionView
@@ -320,15 +320,15 @@ JPL 엔지니어링은 당신의 빠른 리팩토링에 기뻐했다. 하지만 
 
 뷰를 추가하기에 앞서 당신은 우선 데이터가 필요하다.
 
-`FeedViewController.swift`파일을 열어서 상단에 새로운 속성을 추가해준다.
+_'FeedViewController.swift'_ 파일을 열어서 상단에 새로운 속성을 추가해준다.
 
 ```swift
 let pathfinder = Pathfinder()
 ```
 
-`pathfinder` 는 메세징 시스템으로 작동하며, 실제로 화성에 묻혀있는 패스파인더 로버를 상징한다. 
+_'pathfinder'_ 는 메세징 시스템으로 작동하며, 우주인이 화성에서 파낸 실제 패스파인더 로버를 의미한다.
 
-_'IGListAdapterDataSource'_  extension 안에서 `objects(for:)`를 찾아 아래와 같이 내용을 수정해주어라.
+_'IGListAdapterDataSource'_  extension 안에서 _'objects(for:)'_ 를 찾아 아래와 같이 내용을 수정해주어라.
 
 ```swift
 var items: [IGListDiffable] = pathfinder.messages
@@ -336,16 +336,16 @@ items += loader.entries as [IGListDiffable]
 return items
 ```
 
-IGListAdapter에게 데이터 소스 객체를 전달해줄 때 이 메소드를 재호출할 것이다. 이 수정을 통해 
+이 메소드가 IGListAdapter에게 데이터 소스 객체를 전달해준다는 사실을 다시 기억해보자. 이 수정을 통해 
 pathfinder.messages를 아이템에 추가하여 새 섹션 컨트롤러에 대한 메시지를 제공한다.
 
-`Section Controllers`그룹을 우클릭하여 `IGListSectionController`의 서브클래스인 `MessageSectionController`를 생성한 후, 상단에 IGListKit을 임포트 해준다.
+Section Controllers그룹을 우클릭하여 IGListSectionController의 서브클래스인 MessageSectionController를 생성한 후, 상단에 IGListKit을 임포트 해준다.
 
 ```swift
 import IGListKit
-``` 
+```
 
-컴파일 에러를 피하기 위해, 우선은 그대로 놔둔 뒤 `FeedViewController`로 돌아간다. `IGListAdapterDataSource` extension 안에 `listAdapter(_:sectionControllerFor:)` 를 다음과 같이 업데이트 해준다.
+컴파일 에러를 피하기 위해, 우선은 그대로 놔둔 뒤 _'FeedViewController'_ 로 돌아간다. _'IGListAdapterDataSource'_ extension 안에 _'listAdapter(_:sectionControllerFor:)'_ 를 다음과 같이 업데이트 해준다.
 
 ```swift
 if object is Message {
