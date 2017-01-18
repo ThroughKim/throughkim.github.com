@@ -553,7 +553,7 @@ return items.sorted(by: { (left: Any, right: Any) -> Bool in
 1. _'currentWeather'_ 를 항목들 배열에 추가하기
 2. 모든 데이터는 DataSortable 프로토콜을 준수하므로, 이를 사용하여 정렬한다. 이렇게하면 데이터가 시간순으로 표시된다.
 
-마지막으로 _'listAdapter(_:sectionControllerFor:)'_ 를 다음과 같이 바꾸어준다.
+마지막으로 _'listAdapter(\_:sectionControllerFor:)'_ 를 다음과 같이 바꾸어준다.
 
 ```swift
 if object is Message {
