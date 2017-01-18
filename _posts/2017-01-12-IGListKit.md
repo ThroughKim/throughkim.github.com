@@ -44,11 +44,11 @@ image: '/files/covers/ios_app.jpg'
 # IGListKit 소개
 
 _'UICollectionView'_ 는 강력한 도구이지만, 강력한 힘에는 강력한 의무가 뒤따른다. 데이터 소스와 뷰를 동기화 상태로 유지하는 것이 가장 중요하며, 충돌(Crash)은 일반적으로 여기에서 발생하는 Disconnection으로 인해 발생한다.  
-IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 _'UICollectionView'_ 에 출력할 객체의 배열을 제공할 수 있다. 각 유형의 객체에 대해 어댑터는 셀을 작성하기위한 모든 세부 사항을 갖는 _'section controller'_ 라는 것을 작성한다.
+IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 _'UICollectionView'_ 에 출력할 객체의 배열을 제공할 수 있다. 각 유형의 객체에 대해 어댑터는 셀을 작성하기위한 모든 세부 사항을 갖는 _'Section Controller'_ 라는 것을 작성한다.
 
 ![IGListkit의 Flow Chart](/files/iglistkit/3.png)
 
-IGListKit은 객체에 대해 자동으로 diff를 시행하고, 변경사항에 대해 _'UICollectionView'_ 상에 애니메이션을 포함한 일괄적 업데이트(batch update)를 시행한다. 이 방법을 이용하면 batch update를 직접 작성할 필요가 없어지고, [이런](https://www.raizlabs.com/dev/2014/02/animating-items-in-a-uicollectionview/) 문제들을 예방할 수 있다.
+IGListKit은 객체에 대해 자동으로 Diff를 시행하고, 변경사항에 대해 _'UICollectionView'_ 상에 애니메이션을 포함한 일괄적 업데이트(batch update)를 시행한다. 이 방법을 이용하면 batch update를 직접 작성할 필요가 없어지고, [이런](https://www.raizlabs.com/dev/2014/02/animating-items-in-a-uicollectionview/) 문제들을 예방할 수 있다.
 
 # UICollectionView를 IGListKit으로 대체하기
 
@@ -56,7 +56,7 @@ IGListKit은 컬렉션에서의 변경 사항을 식별하고, 적절한 행에 
 
 _'Marslink.xcworkspace'_ 를 열어둔 채, _'ViewContollers'_ 그룹에서 오른쪽 클릭하여 _'New File...'_ 을 선택한다. 이어서 _'Cocoa Touch Class'_ 를 선택하고, _'UIViewController'_ 를 상속하는 _'FeedViewController'_ 를 생성해준다.
 
-_'AppDelegate.swift'_ 를 열어 _'application(:didFinishLaunchWithOptions:)'_ 를 찾아준다. _'ClassicFeedViewController()'_ 를 _'Navigation Controller'_ 로 밀어주는(push) 라인을 찾아 다음의 내용으로 대체한다.
+_'AppDelegate.swift'_ 를 열어 _'application(:didFinishLaunchWithOptions:)'_ 를 찾아준다. 메소드 내에서 _'ClassicFeedViewController()'_ 를 _'Navigation Controller'_ 로 밀어주는(push) 라인을 찾아 다음의 내용으로 대체해준다.
 
 ```swift
 nav.pushViewController(FeedViewController(), animated: false)
