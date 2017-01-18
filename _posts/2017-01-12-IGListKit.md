@@ -13,7 +13,7 @@ image: '/files/covers/ios_app.jpg'
 * TOC  
 {:toc}
 
-대부분의 어플리케이션의 시작은 비슷비슷하다. 몇개의 스크린, 몇개의 버튼 그리고 한두개의 리스트. 하지만 시간이 지나고 어플리케이션의 규모가 커지면 기능들이 넘쳐나게된다(feature-creep). 당신의 깔끔했던 데이터 소스들은 데드라인과 PM의 압박속에 먼지가 되어간다. 잠시후, 당신은 유지보수를 망치는 Massive View Controller(MVC)를 남기게 된다. IGListKit을 적용하면 이같은 압박에서 해방될 수 있을것이다.  
+대부분의 어플리케이션의 시작은 비슷비슷하다. 몇개의 스크린, 몇개의 버튼 그리고 한두개의 리스트. 하지만 시간이 지나고 어플리케이션의 규모가 커지면 기능들이 넘쳐나게된다(feature-creep). 당신의 깔끔했던 데이터 소스들은 데드라인과 PM의 압박에 시달리며 먼지가 되어간다. 잠시후, 당신은 거대한 뷰 컨트롤러(MVC, Massive View Controller)를 유지보수하기 위해 야근을 하게 된다. IGListKit을 적용하면 이같은 압박에서 해방될 수 있을것이다.  
 
 [IGListKit](https://github.com/Instagram/IGListKit)은 feature-creep하며 거대한 ViewController를 대체하기 위해 만들어졌다. IGListKit을 이용해 리스트를 만들면 어플리케이션의 컴포넌트를 각각 분리할 수 있고, 업데이트 속도를 개선할 수 있으며, 어떤 타입의 데이터라도 지원할 수 있게 된다.  
 
@@ -25,7 +25,7 @@ image: '/files/covers/ios_app.jpg'
 
 ![MarsLink 첫 실행](/files/iglistkit/1.png)
 
-아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. 프로젝트에 익숙해지기 위해 _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보는 것이 도움이 된다. 만약 당신이 _'UICollectionView'_ 를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
+아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보며 어떤 프로젝트인지 살퍄보자. 만약 당신이 _'UICollectionView'_ 를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
 
 - _'ClassicFeedViewController'_ 는 _'UICollectionViewDataSource'_ 를 상속받는 _'UIViewController'_ 의 서브클래스이다.
 - _'viewDidLoad()'_ 는 _'UICollectionView'_ 를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
