@@ -415,7 +415,7 @@ extension MessageSectionController: IGListSectionType {
 
 ![요구받은 날씨 기능](/files/iglistkit/8.gif)
 
-`WeatherSectionController`라는 마지막 section controller를 만들어준다. 생성자와 몇개의 변수를 선언하는 것으로 시작한다.
+_'WeatherSectionController'_ 라는 마지막 section controller를 만들어준다. 생성자와 몇개의 변수를 선언하는 것으로 시작해보자.
 
 ```swift
 import IGListKit
@@ -434,8 +434,8 @@ class WeatherSectionController: IGListSectionController {
 }
 ```
 
-1. 이 section controller는 `didUpdate(:to)`를 통해 Wheather객체를 받을 것이다.
-2. `expanded`는 이 날씨 섹션이 확장되었는지 아닌지를 알아내기위한 불린이다. 기본적으로 false로 생성된다.
+1. 이 section controller는 _'didUpdate(:to)'_ 를 통해 Wheather객체를 받을 것이다.
+2. _'expanded'_ 는 이 날씨 섹션이 확장되었는지 아닌지를 알아내기위한 불린이다. 기본적으로 false로 생성된다.
 3. 다른 섹션들과 마찬가지로 bottom inset은 15pt이다.
 
 이제 IGListSectionType을 충족하기 위해 extension과 요구되는 메소드들을 추가해준다.
@@ -465,19 +465,19 @@ extension WeatherSectionController: IGListSectionType {
 }
 ```
 
-1. `didUpdate(:to)`에서 넘겨받은 Wheather객체를 저장한다.
-2. 만약 날씨 섹션이 확장되었다면, `numberOfItems()`는 각각 다른 날씨 정보를 담고 있는 5개의 셀을 반환할 것이다. 확장되지 않았다면, placeholder를 표시해주어야 한다.
+1. _'didUpdate(:to)'_ 에서 넘겨받은 Wheather객체를 저장한다.
+2. 만약 날씨 섹션이 확장되었다면, _'numberOfItems()'_ 는 각각 다른 날씨 정보를 담고 있는 5개의 셀을 반환할 것이다. 확장되지 않았다면, placeholder를 표시해주어야 한다.
 3. 첫 번째 셀은 헤더를 표시하기 때문에 다른 셀들보다 약간 더 커야한다.
 
-다음은 날씨 셀을 구성하기 위해 `cellForItem(at:)`을 추가해주어야 한다. 다음과 같은 세부 요구사항이 있다.
+다음은 날씨 셀을 구성하기 위해 _'cellForItem(at:)'_ 을 추가해주어야 한다. 다음과 같은 세부 요구사항이 있다.
 
-- 첫 번째 셀은 `WheatherSummaryCell`타입이어야 한다. 나머지는 `WeatherDetailCell`타입이다.
-- 날씨 요약 셀을 `cell.setExpanded(_:)`와 함께 구성한다.
+- 첫 번째 셀은 _'WheatherSummaryCell'_ 타입이어야 한다. 나머지는 _'WeatherDetailCell'_ 타입이다.
+- 날씨 요약 셀을 _'cell.setExpanded(_:)'_ 와 함께 구성한다.
 - 네 개의 다른 세부날씨 셀을 구성한다. 각각의 셀은 다음과 같은 세부 라벨을 가진다.
-    1. `weathre.sunrise`를 가지는 "Sunrise"
-    2. `weather.sunset`을 가지는 "Sunset"
-    3. `\(weather.high) C`를 가지는 "High"
-    4. `\(weather.low) C`를 가지는 "Low"
+    1. 'weathre.sunrise' 를 가지는 "Sunrise"
+    2. 'weather.sunset' 을 가지는 "Sunset"
+    3. '\(weather.high) C' 를 가지는 "High"
+    4. '\(weather.low) C' 를 가지는 "Low"
 
 요구사항에 맞는 솔루션은 아래와 같다.
 
@@ -522,17 +522,17 @@ func didSelectItem(at index: Int) {
 }
 ```
 
-`reload()`는 전체 섹션을 새로고침한다. 섹션 컨트롤러의 셀의 숫자나 내용이 바뀌었을 때 언제라도 이것을 사용할 수 있다. `numberOfItems()`를 이용해 확장을 했기 때문에, 이것은 `expanded`플래그에 따라 셀을 더하거나 없애거나 할 것이다.
+_'reload()'_ 는 전체 섹션을 새로고침한다. 섹션 컨트롤러의 셀의 숫자나 내용이 바뀌었을 때 언제라도 이것을 사용할 수 있다. _'numberOfItems()'_ 를 이용해 확장을 구현 했기 때문에, 이것은 _'expanded'_ 플래그에 따라 셀을 더하거나 없애거나 할 것이다.
 
-다시 `FeedViewController.swift`로 돌아와서  _'FeedViewController'_ 의 상단 근처에 다음 내용을 작성해준다.
+다시 _'FeedViewController.swift'_ 로 돌아와서  _'FeedViewController'_ 의 상단 근처에 다음 내용을 작성해준다.
 
 ```swift
 let wxScanner = WxScanner()
 ```
 
-`WxScanner`는 기상 정보를 위한 모델 객체이다.
+_'WxScanner'_ 는 기상 정보를 위한 모델 객체이다.
 
-이어서, _'IGListAdapterDataSource'_  extension안에  `objects(:for)`를 다음과 같이 수정해준다.
+이어서, _'IGListAdapterDataSource'_  extension안에  _'objects(:for)'_ 를 다음과 같이 수정해준다.
 
 ```swift
 // 1
@@ -548,12 +548,12 @@ return items.sorted(by: { (left: Any, right: Any) -> Bool in
 })
 ```
 
-데이터 소스가 `currentWeather`를 포함하도록 업데이트 한 것이다.
+데이터 소스가 _'currentWeather'_ 를 포함하도록 업데이트 한 것이다.
 
-1. `currentWeather`를 항목들 배열에 추가하기
+1. _'currentWeather'_ 를 항목들 배열에 추가하기
 2. 모든 데이터는 DataSortable 프로토콜을 준수하므로, 이를 사용하여 정렬한다. 이렇게하면 데이터가 시간순으로 표시된다.
 
-마지막으로 `listAdapter(_:sectionControllerFor:)`를 다음과 같이 바꾸어준다.
+마지막으로 _'listAdapter(_:sectionControllerFor:)'_ 를 다음과 같이 바꾸어준다.
 
 ```swift
 if object is Message {
@@ -565,7 +565,7 @@ if object is Message {
 }
 ```
 
-이제 만약에 `weather`객체가 나타나면 `WeatherSectionController`를 반환하게 된다.
+이제 만약에 _'weather'_ 객체가 나타나면 _'WeatherSectionController'_를 반환하게 된다.
 
 빌드하고 실행해보자. 최상단에 새로운 날씨가 나타나는 것을 확인할 수 있다. 섹션을 탭하면 확장되고 축소시킬 수 있다.
 
