@@ -34,7 +34,7 @@ image: '/files/covers/through_programming.jpg'
 
 ## SKILLS
 
-* Languages: PHP, Java, JSP, Python, SQL, HTML, CSS
+* Languages: PHP, Java, JSP, Python, Swift, SQL, HTML, CSS
 * Frameworks: Django, Codeigniter
 * Servers: Ubuntu, Raspbian
 * Web Servers: Apache Tomcat, Nginx
