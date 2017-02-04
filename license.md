@@ -1,4 +1,10 @@
-[throughkim.kr](http://throughkim.kr)
+---
+layout: page
+title: Authors
+permalink: /licence/
+sitemap:
+  priority: 0.7
+---
 
 This software is licensed under the Apache 2 license, quoted below.
 
