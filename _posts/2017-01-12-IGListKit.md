@@ -28,8 +28,8 @@ image: '/files/covers/ios_app.jpg'
 아직까지 어플리케이션은 우주인의 일지(Journal)만을 보여주고 있다. 당신이 해야 할 일은 크루가 어떠한 새로운 기능을 원하든지 추가해주는 것이다. _'Marslink/ViewControllers/ClassicFeedViewController.swift'_ 파일을 훑어보며 어떤 프로젝트인지 살펴보자. 만약 당신이 _'UICollectionView'_ 를 사용해 본 적이 없다면, 저 파일이 거의 표준적인 모습이라고 생각하면 된다.  
 
 - _'ClassicFeedViewController'_ 는 _'UICollectionViewDataSource'_ 를 상속받는 _'UIViewController'_ 의 서브클래스이다.
-- _'viewDidLoad()'_ 는 _'UICollectionView'_ 를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, View 계층에 더해준다.
-- _'loader.entries'_ 배열은 각 섹션이 두 개의 셀(하나는 날짜, 하나는 텍스트)를 갖도록 설정한다.
+- _'viewDidLoad()'_ 는 _'UICollectionView'_ 를 생성하고, 셀을 등록하며, 데이터소스를 설정하고, 뷰에 컬렉션뷰를 추가해준다.
+- _'loader.entries'_ 배열은 개별 섹션이 각각 날짜를 나타내는 셀과, 텍스트(일지)를 나타내는 두 개의 셀을 포함하도록 설정해준다.
 - 날짜 셀은 [Sol date](https://en.wikipedia.org/wiki/Timekeeping_on_Mars)를 가지고 있고, 텍스트 셀은 일지의 텍스트를 가지고 있다.
 - _'collectionView(\_:layout:sizeForItemAt:)'_ 은 날짜 셀의 고정된 사이즈와 텍스트 양에 맞춰 계산된 텍스트 셀의 사이즈를 반환한다.
 
@@ -44,7 +44,7 @@ image: '/files/covers/ios_app.jpg'
 # IGListKit 소개
 
 _'UICollectionView'_ 는 강력한 도구이지만, 강력한 힘에는 강력한 의무가 뒤따른다. 데이터 소스와 뷰를 동기화 상태로 유지하는 것이 가장 중요하며, 충돌(Crash)은 일반적으로 여기에서 발생하는 Disconnection으로 인해 발생한다.  
-IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 _'UICollectionView'_ 에 출력할 객체의 배열을 제공할 수 있다. 각 유형의 객체에 대해 어댑터는 셀을 작성하기위한 모든 세부 사항을 갖는 _'Section Controller'_ 라는 것을 작성한다.
+IGListKit은 [Instagram](https://engineering.instagram.com/open-sourcing-iglistkit-3d66f1e4e9aa#.iafykt5q3)팀이 만든 데이터 중심(data-driven) UICollectionView 프레임워크이다. 이 프레임워크를 사용하여 _'UICollectionView'_ 에 출력할 객체의 배열을 제공할 수 있다. 각 유형의 객체에 대해 IGListKit의 어댑터는 셀을 작성하기위한 모든 세부 사항을 갖는 _'Section Controller'_ 라는 것을 참조한다. 아래의 이미지는 IGListKit의 구조이다.
 
 ![IGListkit의 Flow Chart](/files/iglistkit/3.png)
 
@@ -52,9 +52,9 @@ IGListKit은 객체에 대해 자동으로 Diff를 시행하고, 변경사항에
 
 # UICollectionView를 IGListKit으로 대체하기
 
-IGListKit은 컬렉션에서의 변경 사항을 식별하고, 적절한 행에 애니메이션과 함께 추가하는 역할을 수행한다. 또한 다른 타입의 데이터와 UI를 가진 복수의 섹션들을 쉽게 핸들링 할 수 있도록 구성되어 있다. 이러한 점을 미루어 봤을 때, IGListKit은 새로운 요구사항의 배치를 위한 최상의 해결책이다. 이제 implement를 시작하면 된다.
+IGListKit은 컬렉션 데이터의 변경 사항을 식별하고, 적절한 행에 애니메이션과 함께 추가하는 역할을 수행한다. 또한 다른 타입의 데이터와 다른 구조의 UI를 가진 복수의 섹션들을 쉽게 핸들링 할 수 있도록 구성되어 있다. 이러한 점을 미루어 봤을 때, IGListKit은 새로운 요구사항의 배치를 위한 최상의 해결책이다. 이제 implement를 시작해보자.
 
-_'Marslink.xcworkspace'_ 를 열어둔 채, _'ViewContollers'_ 그룹에서 오른쪽 클릭하여 _'New File...'_ 을 선택한다. 이어서 _'Cocoa Touch Class'_ 를 선택하고, _'UIViewController'_ 를 상속하는 _'FeedViewController'_ 를 생성해준다.
+우선 _'Marslink.xcworkspace'_ 에서 계속 작업을 한다. _'ViewContollers'_ 그룹에서 우클릭하여 _'New File...'_ 을 선택한다. 이어서 _'Cocoa Touch Class'_ 를 선택하고, _'UIViewController'_ 를 상속하는 _'FeedViewController'_ 를 생성해준다.
 
 _'AppDelegate.swift'_ 를 열어 _'application(:didFinishLaunchWithOptions:)'_ 를 찾아준다. 메소드 내에서 _'ClassicFeedViewController()'_ 를 _'Navigation Controller'_ 로 밀어주는(push) 라인을 찾아 다음의 내용으로 대체해준다.
 
@@ -62,7 +62,7 @@ _'AppDelegate.swift'_ 를 열어 _'application(:didFinishLaunchWithOptions:)'_ �
 nav.pushViewController(FeedViewController(), animated: false)
 ```
 
-_'FeedViewController'_ 가 이제 루트 뷰 컨트롤러이다. ClassicFeedViewController.swift는 참고용으로 남겨두어도 좋다. 그러나 _'FeedViewController'_ 가 IGListKit으로 굴러가는 컬렉션 뷰를 생성할 곳임을 기억하자.
+위 라인을 설정해줌으로서 _'FeedViewController'_ 가 이제 루트 뷰 컨트롤러가 되었다. ClassicFeedViewController.swift는 참고용으로 남겨두어도 좋다. 그러나 _'FeedViewController'_ 가 IGListKit으로 굴러가는 컬렉션 뷰를 생성할 곳임을 기억하자.
 
 빌드후 실행을 하여서, 아래와 같이 빈 뷰컨트롤러가 화면에 나타나는지 확인한다.
 
@@ -83,11 +83,11 @@ _'JournalEntryLoader'_ 는 하드코딩 된 일지를 entries 배열에 로드�
 loader.loadLatest()
 ```
 
-_'loadLatest()'_ 는 가장 마지막 일지를 로드해주는 _'JournalEntryLoader'_ 의 메소드이다.
+_'loadLatest()'_ 는 최신 상태의 일지를 로드해주는 _'JournalEntryLoader'_ 의 메소드이다.
 
 ## 컬렌션 뷰 추가하기
 
-이제 IGListKit 특유의 컨트롤을 뷰 컨트롤러에 추가해줄 시간이다. 그에 앞서, framework를 임포트해주어야 한다. _'FeedViewController'_ 의 상단에 새로운 임포트를 추가해준다.
+이제 IGListKit만의 컨트롤을 뷰 컨트롤러에 추가해줄 시간이다. 그에 앞서, IGListKit Framework를 뷰컨트롤러에 임포트해주어야 한다. _'FeedViewController'_ 의 상단에 새로운 임포트를 추가해준다.
 
 ```swift
 import IGListKit
@@ -95,7 +95,7 @@ import IGListKit
 
 > NOTE: 이 튜토리얼의 프로젝트는 [CocoaPods](https://cocoapods.org/)를 사용해 의존성을 관리한다. IGListKit은 Objectrive-C로 쓰여졌기 때문에, 수동으로 프로젝트에 추가하기를 원한다면 [bridging header](https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID156)에 #import를 해주어야 한다.
 
-_'FeedViewController'_ 의 상단에 intialize된 collectionView 상수를 추가해준다.
+_'FeedViewController'_ 의 상단에 intialize된 collectionView를 추가해준다.
 
 ```swift
 //1
@@ -108,19 +108,17 @@ let collectionView: IGListCollectionView = {
 }()
 ```
 
-1. IGListKit은 몇몇 기능성을 패치하고 [다른 것들을 예방](https://github.com/Instagram/IGListKit/blob/master/Source/IGListCollectionView.h)하는 UICollectionView의 서브클래스인 _'IGListCollectionView'_ 를 사용한다. 
-2. 아직 뷰를 생성하지 않았기 때문에 사이즈0의 사각형에서 시작한다. _'ClassicFeedViewController'_ 가 그랬던 것 처럼 _'UICollctionViewFlowLayout'_ 을 사용하게 된다.
+1. IGListKit은 _'IGListCollectionView'_를 사용하는데, 이것은 UICollectionView의 서브클래스 이며, 기존의 UICollectionView에 비해 몇몇 기능성들이 패치되었고, [다른 것들을 예방](https://github.com/Instagram/IGListKit/blob/master/Source/IGListCollectionView.h)할 수 있도록 구성되어 있다.
+2. 아직 뷰를 생성하지 않았기 때문에 사이즈0의 사각형에서 시작한다. 레이아웃은 _'ClassicFeedViewController'_ 가 그랬던 것 처럼 _'UICollctionViewFlowLayout'_ 을 사용하게 된다.
 3. 배경의 색깔은 NASA가 승인한 검정색을 사용한다.
 
-다음 내용을 _'viewDidLoad()'_ 의 하단에 추가해준다.
+다음 내용을 _'viewDidLoad()'_ 의 하단에 추가하여, 컨트롤러의 뷰에 방금 생성한 collectionView를 부착해준다.
 
 ```swift
 view.addSubview(collectionView)
 ```
 
-컨트롤러의 뷰에 새로운 _'collectionView'_ 를 생성해준다는 의미이다.
-
-_'viewDidLoad()'_ 메소드 바로 아래에 다음의 메소드를 추가해준다.
+이어서, _'viewDidLoad()'_ 메소드 바로 아래에 다음의 메소드를 추가해준다.
 
 ```swift
 override func viewDidLayoutSubviews() {
@@ -129,7 +127,7 @@ override func viewDidLayoutSubviews() {
 }
 ```
 
-_'viewDidLayoutSubviews()'_ 을 오버라이딩 해서 _'collectionView'_ 의 프레임을 View의 경계와 일치하도록 세팅해준.
+_'viewDidLayoutSubviews()'_ 을 오버라이딩 하며 우리가 사용할 _'collectionView'_ 의 프레임을 View의 경계와 일치하도록 세팅해준다.
 
 ## IGListAdapter와 데이터소스
 
