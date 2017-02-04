@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Authors
+title: License
 permalink: /licence/
 sitemap:
   priority: 0.7
