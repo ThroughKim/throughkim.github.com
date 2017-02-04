@@ -132,7 +132,7 @@ _'viewDidLayoutSubviews()'_ 을 오버라이딩 하며 우리가 사용할 _'col
 ## IGListAdapter와 데이터소스
 
 UICollectionView를 사용하기 위해서는 _'UICollectionViewDataSource'_ 를 적용한 데이터 소스들이 필요했다. 섹션과 행의 갯수 그리고 개별 셀을 반환하기 위해 필요한 작업이었다.  
-IGListKit에서는 컬렉션 뷰를 컨트롤하기 위해 _'IGListAdapter'_ 라고 불리는 것을 사용한다. 또한 _'IGListAdapterDataSource'_ 프로토콜을 충족시키는 데이터소스가 필요하다. 이것은 셀의 갯수를 반환하는 대신 배열과 섹션 컨트롤러(Section Controller, 잠시 후에 더 자세히 다룬다.) 를 반환한다는 점이 기존의 _'UICollectionViewDataSource'_ 와는 다르다.
+IGListKit에서는 컬렉션 뷰를 컨트롤하기 위해 _'IGListAdapter'_ 라고 불리는 것을 사용한다. 또한 _'IGListAdapterDataSource'_ 프로토콜을 충족시키는 데이터소스가 필요하다. 이것은 기존의 _'UICollectionViewDataSource'_ 와는 다르게 개별 셀과 셀의 갯수를 반환하는 대신 객체 배열과 섹션 컨트롤러(Section Controller, 잠시 후에 더 자세히 다룬다.) 를 반환한다.
 
 _'FeedViewController.swift'_ 파일의 상단에 다음을 추가해준다.
 
@@ -144,11 +144,11 @@ lazy var adapter: IGListAdapter = {
 
 이것은 lazily-initialized된 변수인 IGListAdapter를 생성한다. 생성자는 세개의 파라미터를 필요로 한다.
 
-1. updater는 행과 섹션 업데이트를 처리하여, IGListUpdatingDelegate를 충족시키기 위한 객체이다. IGListAdapterUpdater를 기본적으로 사용하면 된다.
-2. viewController는 어댑터의 집에 해당하는 UIViewController를 가리킨다. 해당 뷰 컨트롤러는 이후에 다른 뷰컨트롤러로 navigating하기 위해 사용된다.
-3. workingRangeSize는 [working range](https://instagram.github.io/IGListKit/getting-started.html#working-range)의 사이즈를 의미한다. working range는 눈에 보이는 프레임 밖에서 컨텐츠를 로딩할 수 있도록 돕는다.
+1. updater는 행과 섹션의 업데이트를 처리하여 IGListUpdatingDelegate를 충족시키기 위한 객체이다. 기본적으로 IGListAdapterUpdater를 사용하면 된다.
+2. viewController는 어댑터의 집(Home)에 해당하는 UIViewController를 가리킨다. 해당 뷰 컨트롤러는 이후에 다른 뷰컨트롤러로 Navigating하기 위해 사용된다.
+3. workingRangeSize는 [working range](https://instagram.github.io/IGListKit/getting-started.html#working-range)의 사이즈를 의미한다. working range는 사용자가 현재 보고 있는 프레임 밖에서 컨텐츠를 로딩할 수 있도록 돕는다.
 
-> NOTE: Working Range는 더 어려운 개념이라서 이 튜토리얼에서는 다루지 않는다. 그러나 도큐멘테이션과 예시 어플리케이션이 [IGListKit Repo](https://instagram.github.io/IGListKit/)에 있다.
+> NOTE: Working Range는 더 어려운 개념이라서 이 튜토리얼에서는 다루지 않는다. 그러나 도큐멘테이션과 예시 어플리케이션이 [IGListKit Repo](https://instagram.github.io/IGListKit/)에 있으니 사용하고 싶다면 참고하면 된다. 
 
 다음 내용을 _'viewDidLoad()'_ 의 하단에 추가해준다.
 
@@ -178,36 +178,36 @@ extension FeedViewController: IGListAdapterDataSource {
 }
 ```
 
-_'FeedViewController'_ 는 이제 IGListAdapterDataSource에 부착되었고, 세개의 요구되는 메소드를 상속한다. 
+이제 _'FeedViewController'_ 에 IGListAdapterDataSource를 부착했고, 세개의 요구되는 메소드를 상속한다. 
 
 - _'objects(for:)'_ 는 컬렉션 뷰에 나타날 데이터 객체의 배열을 반환한다. 여기서는 Journal Entry들을 갖고 있는 _'loader.entries'_를 넘겨준다.
-- 각각의 데이터 객체에 대해 _'listAdapter(_:sectionControllerFor:)'_ 는  새로운 _'Section Controller'_ 의 인스턴스를 반환해야만 한다. 아직은 컴파일러 에러를 막기 위해 임시 방편으로 순수한 _'IGListSectionController'_ 를 반환해주고 있다. 나중에 이것을 수정하여 커스텀 Journal Section을 반환하도록 만들어주어야 한다.
+- _'listAdapter(_:sectionControllerFor:)'_ 메소드는 각각의 데이터 객체 타입에 상응하는 _'Section Controller'_ 의 인스턴스를 반환해준다. 아직은 컴파일 에러를 막기 위해 임시 방편으로 순수한 _'IGListSectionController'_ 를 반환해주고 있다. 나중에 이것을 수정하여 커스텀 Journal Section을 반환하도록 만들어주어야 한다.
 - _'emptyView(for:)'_ 는 출력될 리스트가 비어있을 때 보여줄 뷰를 리턴한다. NASA는 시간이 부족하기 때문에 아직 이 기능에 예산을 책정하지 않았다.
 
 ## 첫 Section Controller 만들기
 
-_'Section Controller'_ 는 주어진 데이터 객체를 추상화하고, 컬렉션 뷰의 섹션 내의 셀을 컨트롤하고 구성(configure)해주는 역할을 한다. 이 컨셉은 뷰를 구성하는 view-model 방식과 유사하다: 데이터 객체는 view-model이고, cell은 뷰이다. section controller는 둘 사이의 접착제 역할을 한다.
+_'Section Controller'_ 는 주어진 데이터 객체를 추상화하고, 컬렉션 뷰의 섹션 내의 셀을 컨트롤하고 구성(configure)해주는 역할을 한다. 이 컨셉은 뷰를 구성하는 view-model 방식과 유사하다. 데이터 객체는 View-model이고, 셀은 View와 같다. section controller는 둘 사이의 접착제 역할을 한다.
 
-IGListKit에서, 다른 타입의 데이터와 행동(Behavior)을 위한 새로운 Section Controller를 만들어 보자. JPL 기술자들은 이미 _'JournalEntry'_ 모델을 만들었다. 따라서 그것을 다룰 수 있는 Section Controller를 제작할 필요가 있다.
+IGListKit을 사용하여, 다른 타입의 데이터와 행동(Behavior)을 위한 새로운 Section Controller를 만들어 보자. JPL 기술자들은 이미 _'JournalEntry'_ 모델을 만들었다. 따라서 그것을 다룰 수 있는 Section Controller를 제작할 필요가 있다.
 
-네비게이터에서 _'Section Controller'_ 를 우클릭 하여 새 파일을 생성해준다. Cocoa Touch Class 를 선택해주고, IGListSectionController의 서브클래스인 JournalSectionController를 생성해준다.
+네비게이터에서 _'Section Controller'_ 그룹을 우클릭 하여 새 파일을 생성해준다. Cocoa Touch Class 를 선택해주고, IGListSectionController의 서브클래스인 JournalSectionController를 생성해준다.
 
 ![JournalSectionController 생성창](/files/iglistkit/5.png)
 
-Xcode는 서드파티 프레임워크를 자동으로 임포트해주지 않기 때문에 _'JournalSectionController.swift'_ 파일의 최상단에 다음을 추가해준다.
+Xcode는 서드파티 프레임워크를 자동으로 임포트해주지 않기 때문에 _'JournalSectionController.swift'_ 파일의 최상단에 다음을 추가해주어야 한다.
 
 ```swift
 import IGListKit
 ```
 
-다음 속성을 _'JournalSectionController:'_ 의 상단에 추가해준다.
+다음 속성들을 _'JournalSectionController:'_ 의 상단에 추가해준다.
 
 ```swift
 var entry: JournalEntry!
 let solFormatter = SolFormatter()
 ```
 
-_'JournalEntry'_ 는 데이터 소스를 받아올 떄 사용할 모델 클래스이다. _'SolFormatter'_ 클래스는 날짜를 Sol format으로 변환시켜주는 메소드를 제공한다. 당장은 두가지 모두 필요할 것이다.
+_'JournalEntry'_ 는 데이터 소스를 받아올 떄 사용할 모델 클래스이다. _'SolFormatter'_ 클래스는 날짜를 Sol format으로 변환시켜주는 메소드를 제공한다.
 
 또한 _'JournalSectionController'_ 내부에 _'init()'_ 메소드를 다음과 같이 추가하여 오버라이드 해준다.
 
@@ -218,9 +218,9 @@ override init(){
 }
 ```
 
-이 내용이 없으면, 셀 사이의 섹션이 다닥다닥 붙어서 나타날 것이다. 이것을 이용해 15포인트의 padding을 JournalSectionController 객체의 바닥에 추가해준다.
+이 내용이 없으면, 섹션들이 다닥다닥 붙어서 나타날 것이다. 이것을 이용해 15포인트의 padding을 JournalSectionController 객체의 바닥에 추가해준다.
 
-당신의 Section Controller는 IGListKit에 사용되기 전에 IGListSectionType의 프로토콜을 충족해야한다. 다음 extension을 파일 하단에 추가해주자.
+새로 만든 Section Controller는 IGListKit에서 사용되기 위해 IGListSectionType의 프로토콜을 충족해야한다. 다음 extension을 파일 하단에 추가해주자.
 
 ```swift
 extension JournalSectionController: IGListSectionType {
@@ -253,7 +253,7 @@ entry = object as? JournalEntry
 
 _'didUpdate(:to)'_ 는 객체를 Section Controller로 전달하기 위해 사용된다. 이 메소드는 항상 셀 프로토콜 메소드보다 먼저 호출된다. 여기서는 전달된 객체를 _'entry'_ 에 저장한다.
 
-> NOTE: 객체는 Section Controller의 생애주기동안 수차례 변경될 수 있다. 그런 일은 custome model diffing과 같은 더 고급 기능을 사용할 때 일어날 것이다. 이번 튜토리얼에서는 걱정하지 않아도 된다.
+> NOTE: 객체는 Section Controller의 생애주기동안 수차례 변경될 수 있다. 그런 일은 Custom Model Diffing과 같은 더 고급 기능을 사용할 때 일어날 것이다. 이번 튜토리얼에서는 걱정하지 않아도 된다.
 
 이제 데이터를 가졌으니, 셀을 구성해줄 차례이다. _'cellForItem(at:)'_ 의 _'return UICollectionViewCell()'_ 를 다음의 내용으로 대체해준다.
 
@@ -273,7 +273,7 @@ return cell
 
 _'cellForItem(at:)'_ 은 섹션내의 주어진 인덱스에서 셀이 요구될 때 호출된다. 내부에서는 다음과 같은 일들이 일어난다.
 
-1. 만약에 첫번째 인덱스일 경우, _'JournalEntryDateCell'_ 을 사용한다, 아니면 _'JournalEntryCell'_ 을 사용한다. 따라서 JournalEntry는 항상 날짜와 그 뒤를 따르는 텍스트로 표현될 것이다.
+1. 만약에 첫번째 인덱스일 경우, _'JournalEntryDateCell'_ 을 사용한다, 아니면 _'JournalEntryCell'_ 을 사용한다. 따라서 JournalEntry 섹션은 항상 날짜를 나타내는 셀과 그 뒤를 따르는 텍스트를 나타내는 셀로 구성될 것이다.
 2. 셀 클래스, 섹션 컨트롤러와 인덱스를 사용해 재사용 풀(reuse pool)에서 셀을 찾아낸다. 
 3. 셀 타입에 따라 앞에 _'didUpdate(:to object)'_ 에서 설정했던 JournalEntry를 사용하도록 설정해준다.
 
@@ -293,14 +293,14 @@ if index == 0 {
 ```
 
 1. _'collectionContext'_ 는 weak한 변수이며, null이 가능해야 하지만 nil이어서는 안된다. Swift의 guard를 사용하면 편리하게 구현할 수 있다.
-2. _'IGListCollectionContext'_ 는 Section Controller에서 사용되는 어댑터, 컬렉션  그리고 뷰 컨트롤러에 대한 정보를 갖고있는 context 객체이다. 여기서는 컨테이너의 너비에 대한 정보를 얻기위해 필요로 한다.
+2. _'IGListCollectionContext'_ 는 Section Controller에서 사용되는 어댑터, 컬렉션 그리고 뷰 컨트롤러에 대한 정보를 갖고있는 context 객체이다. 여기서는 컨테이너의 너비에 대한 정보를 얻기위해 필요로 한다.
 3. 첫 번째 인덱스(날짜 셀)은 컨테이너만큼의 너비와 30포인트의 높이를 반환하고, 그렇지 않으면 셀 헬퍼 메소드를 사용해 텍스트 셀의 사이즈를 동적으로 계산한다.
 
 마지막으로 살펴볼메소드는 누군가가 셀을 탭했을 때 호출되는 _'didSelectItem(at:)'_ 이다. 기본적으로 요구되는 메소드이기 때문에 반드시 추가해주어야 한다. 하지만 이 섹션에 대해서는탭에 따른 상호작용이 필요하지 않기 때문에 비워둔다.
 
 이전에 _'UICollectionView'_ 를 사용해본 적이 있다면 서로다른 타입의 셀을 Dequeuing하고, 구성하고, 사이즈를 반환하는 이러한 패턴이 익숙할 것이다. _'ClassicFeedViewController'_ 로 돌아가보면 많은 코드들이 비슷한 것을 확인할 수 있다.
 
-이제 JournalEntry 객체를 받고, 두 셀의 사이즈를 반환하는 section controller를 만들었기 때문에 다 함께 묶을 시간이다.
+이제 JournalEntry 객체를 받아와서 두 셀의 사이즈를 반환하는 Section Controller를 만들었기 때문에 다 함께 묶을 시간이다.
 
 _'FeedViewController.swift'_ 로 돌아가서 _'listAdapter(_:sectionControllerFor:)'_ 의 내용을 다음으로 대체해준다.
 
@@ -308,7 +308,7 @@ _'FeedViewController.swift'_ 로 돌아가서 _'listAdapter(_:sectionControllerF
 return JournalSectionController()
 ```
 
-당신의 Journal Seciton Controller는 이제 메소드가 호출되면 반환된다. 앱을 빌드하고 실행해보면 글이 나타나는 것을 확인할 수 있다.
+이제 _'listAdapter(_:sectionControllerFor:)'_ 메소드가 호출되면 방금 만들었던 Journal Seciton Controller를 반환한다. 앱을 빌드하고 실행해보면 글이 나타나는 것을 확인할 수 있다.
 
 ![Journal Entry](/files/iglistkit/6.png)
 
@@ -316,7 +316,7 @@ return JournalSectionController()
 
 JPL 엔지니어링은 당신의 빠른 리팩토링에 기뻐했다. 하지만 그들은 고립된 우주인과의 교신기능이 절실히 필요하다. 그들은 최대한 빨리 메세징 기능을 만들어줄 것을 요구해왔다.
 
-뷰를 추가하기에 앞서 당신은 우선 데이터가 필요하다.
+뷰를 추가하기에 앞서 당신은 데이터가 필요하다.
 
 _'FeedViewController.swift'_ 파일을 열어서 상단에 새로운 속성을 추가해준다.
 
@@ -324,7 +324,7 @@ _'FeedViewController.swift'_ 파일을 열어서 상단에 새로운 속성을 �
 let pathfinder = Pathfinder()
 ```
 
-_'pathfinder'_ 는 메세징 시스템으로 작동하며, 우주인이 화성에서 파낸 실제 패스파인더 로버를 의미한다.
+_'pathfinder'_ 는 메세징 시스템으로 작동하며, 우주인이 화성에서 파낸 실제 패스파인더 로버를 의미한다.(영화 마션 참조)
 
 _'IGListAdapterDataSource'_  extension 안에서 _'objects(for:)'_ 를 찾아 아래와 같이 내용을 수정해주어라.
 
@@ -335,7 +335,7 @@ return items
 ```
 
 이 메소드가 IGListAdapter에게 데이터 소스 객체를 전달해준다는 사실을 다시 기억해보자. 이 수정을 통해 
-pathfinder.messages를 아이템에 추가하여 새 섹션 컨트롤러에 대한 메시지를 제공한다.
+pathfinder.messages를 아이템에 새로이 추가하여 새 섹션 컨트롤러에 대한 메시지를 제공한다.
 
 Section Controllers그룹을 우클릭하여 IGListSectionController의 서브클래스인 MessageSectionController를 생성한 후, 상단에 IGListKit을 임포트 해준다.
 
@@ -357,51 +357,56 @@ if object is Message {
 JPL팀은 _'MessageSectionController'_ 에 다음과 같은 사항을 요구해왔다.
 
 - Message 수신
-- bottom inset 15pt
+- Bottom inset 15pt
 - MessageCell.cellSize(width:text:)기능을 이용한 개별 셀 사이징
 - Message 객체의 텍스트와 user.name의 값을 이용해 라벨을 생성하고 MessageCell을 구성함 
 
 요구사항을 바탕으로 직접 구현해보자. 솔루션은 아래와 같다.
 
-```swift
-# MessageSectionController.swift
+<details>
+  <summary>솔루션</summary>
+  <div class="language-swift highlighter-rouge"><pre class="highlight"><code>
+<span class="cp"># MessageSectionController.swift</span>
 
-import IGListKit
+<span class="kd">import</span> <span class="kt">IGListKit</span>
 
-class MessageSectionController: IGListSectionController {
+<span class="kd">class</span> <span class="kt">MessageSectionController</span><span class="p">:</span> <span class="kt">IGListSectionController</span> <span class="p">{</span>
 
-	var message: Message!
+	<span class="k">var</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Message</span><span class="o">!</span>
 
-	override init() {
-		super.init()
-		inset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
-	}
-}
+	<span class="k">override</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+		<span class="n">inset</span> <span class="o">=</span> <span class="kt">UIEdgeInsets</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">bottom</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-extension MessageSectionController: IGListSectionType {
-	func numberOfItems() -> Int {
-		return 1
-	}
+<span class="kd">extension</span> <span class="kt">MessageSectionController</span><span class="p">:</span> <span class="kt">IGListSectionType</span> <span class="p">{</span>
+	<span class="kd">func</span> <span class="nf">numberOfItems</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="mi">1</span>
+	<span class="p">}</span>
 
-	func sizeForItem(at index: Int) -> CGSize {
-		guard let context = collectionContext else { return .zero }
-		return MessageCell.cellSize(width: context.containerSize.width, text: message.text)
-	}
+	<span class="kd">func</span> <span class="nf">sizeForItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span> <span class="p">{</span>
+		<span class="k">guard</span> <span class="k">let</span> <span class="nv">context</span> <span class="o">=</span> <span class="n">collectionContext</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="n">zero</span> <span class="p">}</span>
+		<span class="k">return</span> <span class="kt">MessageCell</span><span class="o">.</span><span class="nf">cellSize</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="n">context</span><span class="o">.</span><span class="n">containerSize</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+	<span class="p">}</span>
 
-	func cellForItem(at index: Int) -> UICollectionViewCell {
-		let cell = collectionContext?.dequeueReusableCell(of: MessageCell.self, for: self, at: index) as! MessageCell
-		cell.messageLabel.text = message.text
-		cell.titleLabel.text = message.user.name.uppercased()
-		return cell
-	}
+	<span class="kd">func</span> <span class="nf">cellForItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span> <span class="p">{</span>
+		<span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span> <span class="n">collectionContext</span><span class="p">?</span><span class="o">.</span><span class="nf">dequeueReusableCell</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">MessageCell</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="n">index</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">MessageCell</span>
+		<span class="n">cell</span><span class="o">.</span><span class="n">messageLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span>
+		<span class="n">cell</span><span class="o">.</span><span class="n">titleLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="nf">uppercased</span><span class="p">()</span>
+		<span class="k">return</span> <span class="n">cell</span>
+	<span class="p">}</span>
 
-	func didUpdate(to object: Any) {
-		message = object as? Message
-	}
+	<span class="kd">func</span> <span class="nf">didUpdate</span><span class="p">(</span><span class="n">to</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">message</span> <span class="o">=</span> <span class="n">object</span> <span class="k">as?</span> <span class="kt">Message</span>
+	<span class="p">}</span>
 
-	func didSelectItem(at index: Int) {}
-}
-```
+	<span class="kd">func</span> <span class="nf">didSelectItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+</details>
 
 빌드후 실행시켜보면 메세지 기능이 피드에 잘 합쳐져있는 것을 확인할 수 있다.
 
@@ -409,7 +414,7 @@ extension MessageSectionController: IGListSectionType {
 
 # 화성의 날씨
 
-우리의 우주인은 모래폭풍과 같은 것들 주변에서 돌아다니기 위해 날씨 정보가 필요하다. JPL은 현재 날씨를 표시해주는 새로운 모듈을 만들어냈다. 정보가 많기 때문에, 탭을 했을 때만 표시되도록 요구하고 있다.
+우리의 우주인은 모래폭풍과 같은 것들 피하기 위해 날씨 정보가 필요하다. JPL은 현재 날씨를 표시해주는 새로운 모듈을 만들어냈다. 정보가 많기 때문에, 탭을 했을 때만 확장되어 표시되도록 요구하고 있다.
 
 ![요구받은 날씨 기능](/files/iglistkit/8.gif)
 
@@ -477,39 +482,43 @@ extension WeatherSectionController: IGListSectionType {
     3. '\(weather.high) C' 를 가지는 "High"
     4. '\(weather.low) C' 를 가지는 "Low"
 
-요구사항에 맞는 솔루션은 아래와 같다.
+요구사항을 바탕으로 직접 구현해보자. 솔루션은 아래와 같다.
+<details>
+  <summary>솔루션</summary>
 
-```swift
-func cellForItem(at index: Int) -> UICollectionViewCell {
-	let cellClass: AnyClass = index == 0 ? WeatherSummaryCell.self : WeatherDetailCell.self
-	let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
-	if let cell = cell as? WeatherSummaryCell {
-		cell.setExpanded(expanded)
-	} else if let cell = cell as? WeatherDetailCell {
-		let title: String, detail: String
-		switch index {
-			case 1:
-			title = "SUNRISE"
-			detail = weather.sunrise
-			case 2:
-			title = "SUNSET"
-			detail = weather.sunset
-			case 3:
-			title = "HIGH"
-			detail = "\(weather.high) C"
-			case 4:
-			title = "LOW"
-			detail = "\(weather.low) C"
-			default:
-			title = "n/a"
-			detail = "n/a"
-		}
-		cell.titleLabel.text = title
-		cell.detailLabel.text = detail
-	}
-	return cell
-}
-```
+  <div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">cellForItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span> <span class="p">{</span>
+	<span class="k">let</span> <span class="nv">cellClass</span><span class="p">:</span> <span class="kt">AnyClass</span> <span class="o">=</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">?</span> <span class="kt">WeatherSummaryCell</span><span class="o">.</span><span class="nv">self</span> <span class="p">:</span> <span class="kt">WeatherDetailCell</span><span class="o">.</span><span class="k">self</span>
+	<span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span> <span class="n">collectionContext</span><span class="o">!.</span><span class="nf">dequeueReusableCell</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">cellClass</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="n">index</span><span class="p">)</span>
+	<span class="k">if</span> <span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span> <span class="n">cell</span> <span class="k">as?</span> <span class="kt">WeatherSummaryCell</span> <span class="p">{</span>
+		<span class="n">cell</span><span class="o">.</span><span class="nf">setExpanded</span><span class="p">(</span><span class="n">expanded</span><span class="p">)</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span> <span class="n">cell</span> <span class="k">as?</span> <span class="kt">WeatherDetailCell</span> <span class="p">{</span>
+		<span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">detail</span><span class="p">:</span> <span class="kt">String</span>
+		<span class="k">switch</span> <span class="n">index</span> <span class="p">{</span>
+			<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+			<span class="n">title</span> <span class="o">=</span> <span class="s">"SUNRISE"</span>
+			<span class="n">detail</span> <span class="o">=</span> <span class="n">weather</span><span class="o">.</span><span class="n">sunrise</span>
+			<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+			<span class="n">title</span> <span class="o">=</span> <span class="s">"SUNSET"</span>
+			<span class="n">detail</span> <span class="o">=</span> <span class="n">weather</span><span class="o">.</span><span class="n">sunset</span>
+			<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+			<span class="n">title</span> <span class="o">=</span> <span class="s">"HIGH"</span>
+			<span class="n">detail</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="n">weather</span><span class="o">.</span><span class="n">high</span><span class="se">)</span><span class="s"> C"</span>
+			<span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+			<span class="n">title</span> <span class="o">=</span> <span class="s">"LOW"</span>
+			<span class="n">detail</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="n">weather</span><span class="o">.</span><span class="n">low</span><span class="se">)</span><span class="s"> C"</span>
+			<span class="k">default</span><span class="p">:</span>
+			<span class="n">title</span> <span class="o">=</span> <span class="s">"n/a"</span>
+			<span class="n">detail</span> <span class="o">=</span> <span class="s">"n/a"</span>
+		<span class="p">}</span>
+		<span class="n">cell</span><span class="o">.</span><span class="n">titleLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">title</span>
+		<span class="n">cell</span><span class="o">.</span><span class="n">detailLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">detail</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">cell</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+ </details>
 
 마지막으로 해야 할 일은 셀이 탭되었을 때 섹션을 확장하고, 셀을 업데이트 하는 것이다. 마지막 메소드는 다음과 같다.
 
@@ -522,7 +531,7 @@ func didSelectItem(at index: Int) {
 
 _'reload()'_ 는 전체 섹션을 새로고침한다. 섹션 컨트롤러의 셀의 숫자나 내용이 바뀌었을 때 언제라도 이것을 사용할 수 있다. _'numberOfItems()'_ 를 이용해 확장을 구현 했기 때문에, 이것은 _'expanded'_ 플래그에 따라 셀을 더하거나 없애거나 할 것이다.
 
-다시 _'FeedViewController.swift'_ 로 돌아와서  _'FeedViewController'_ 의 상단 근처에 다음 내용을 작성해준다.
+이제 Section Controller에 객체를 넘겨주는 부분을 구현할 시간이다. 다시 _'FeedViewController.swift'_ 로 돌아와서  _'FeedViewController'_ 의 상단 근처에 다음 내용을 작성해준다.
 
 ```swift
 let wxScanner = WxScanner()
@@ -563,7 +572,7 @@ if object is Message {
 }
 ```
 
-이제 만약에 _'weather'_ 객체가 나타나면 _'WeatherSectionController'_를 반환하게 된다.
+이제 만약에 _'Weather'_ 객체가 나타나면 _'WeatherSectionController'_를 반환하게 된다.
 
 빌드하고 실행해보자. 최상단에 새로운 날씨가 나타나는 것을 확인할 수 있다. 섹션을 탭하면 확장되고 축소시킬 수 있다.
 
@@ -599,3 +608,14 @@ _'FeedViewController'_ 는 이제 PathfinderDelegate를 충족한다. performUpd
 빌드후 실행을 시켜보면 캡틴의 메세지가 업데이트 되고 있는 것을 확인할 수 있다. 
 
 ![실시간 업데이트](/files/iglistkit/10.png)
+
+# 마치며
+
+완성된 프로젝트는 [이곳](https://koenig-media.raywenderlich.com/uploads/2016/12/MarsLink_Final.zip)에서 다운로드 받을 수 있다.
+
+고립되었던 우주인을 집으로 데려오는 과정에서, 당신은 IGListKit의 기본적인 기능들을 많이 배울 수 있었다. Supplementary view와 디스플레이 이벤트와 같은 중요한 기능또한 살펴보았다. 
+
+[Realm](https://realm.io/news/tryswift-ryan-nystrom-refactoring-at-scale-lessons-learned-rewriting-instagram-feed/)에서 발표했던 강연에서 Instagram의 IGListKit의 출처에 대해 더 많이 읽고 볼 수 있다. 이 강연에서는 앱이 커질 때 볼 수있는 일반적인 UICollectionView 문제에 대해 다루고, IGListKit이 어떻게 그것을 해결했는지 볼 수 있을 것이다. 
+
+
+IGListKit에 기여하는 데 관심이 있다면, 깃허브에 설정된 [starter-task](https://github.com/Instagram/IGListKit/issues?q=is%3Aissue+is%3Aopen+label%3Astarter-task) 태그를 이용해 쉽게 시작할 수 있을 것이다.
