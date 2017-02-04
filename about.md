@@ -84,6 +84,6 @@ image: '/files/covers/through_programming.jpg'
 
   
 Powered by [GitHub Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com).  
-Template by Kakao
+Template by Kakao  
 [License](/license)
 
