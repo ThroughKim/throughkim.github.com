@@ -6,6 +6,9 @@ sitemap:
   priority: 0.7
 ---
 
+### License
+---
+
 This software is licensed under the Apache 2 license, quoted below.
 
 Copyright 2017 Kakao Corp. http://www.kakaocorp.com
