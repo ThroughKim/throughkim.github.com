@@ -1,7 +1,7 @@
 ---
 layout: page
 title: License
-permalink: /licence/
+permalink: /license/
 sitemap:
   priority: 0.7
 ---
