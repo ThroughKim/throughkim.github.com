@@ -7,7 +7,7 @@ tags: [ios, app, study]
 image: '/files/covers/ios_app.jpg'
 ---
 
-> IGListKit을 이용해 SideMenuf를 구성하는 중에 메뉴에 해당하는 셀을 선택하면 아래의 이미지와 같이 활성화 된 셀의 배경색이 변경되게 구현하고자 한다.
+> IGListKit을 이용해 SideMenu를 구성하는 중에 메뉴에 해당하는 셀을 선택하면 아래의 이미지와 같이 활성화 된 셀의 배경색이 변경되게 구현하고자 한다.
 
 ![사이드 메뉴 구현](/files/iglistkit/sideMenuImg.png)
 
