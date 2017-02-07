@@ -3,7 +3,7 @@ layout: post
 title: 'IGListKit 튜토리얼'
 author: through.kim
 date: 2017-01-12 11:05
-tags: [ios, app, study]
+tags: [ios, app, study, iglistkit]
 image: '/files/covers/ios_app.jpg'
 ---
 출처: [IGListKit Tutorial: Better UICollectionViews](https://www.raywenderlich.com/147162/iglistkit-tutorial-better-uicollectionviews)

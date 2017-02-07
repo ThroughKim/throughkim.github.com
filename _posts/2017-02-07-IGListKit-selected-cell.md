@@ -3,17 +3,17 @@ layout: post
 title: 'IGListKit 셀 선택시 배경 변경하기'
 author: through.kim
 date: 2017-02-07 16:06
-tags: [ios, app, study]
+tags: [ios, app, study, iglistkit]
 image: '/files/covers/ios_app.jpg'
 ---
 
-> IGListKit을 이용해 SideMenu를 구성하는 중에 메뉴에 해당하는 셀을 선택하면 아래의 이미지와 같이 활성화 된 셀의 배경색이 변경되게 구현하고자 한다.
+> IGListKit을 이용해 SideMenu를 구성하는 과정 중, 메뉴에서 해당하는 셀을 선택하면 아래의 이미지와 같이 활성화 된 셀의 배경색이 변경되게 구현하고자 한다.
 
 ![사이드 메뉴 구현](/files/iglistkit/sideMenuImg.png)
 
-처음에 가장 기초적인 형태로만 구현한 상태에서는 탭을 해도 색상이 변하지 않고 해당 셀에 지정된 action만 행할 뿐이었다. 원하는 기능은 탭을 하면 선택된 셀의 배경색이 변하고, 선택되지 않은 셀의 배경들은 투명 혹은 배경과 같은 색깔을 띄는 것이었다. IGListKit의 예제를 보고 응용해보면, 한 섹션의 색은 잘 변하지만, 다른 섹션의 셀 색깔은 개별 섹션컨트롤러에서 변경하는 것이 불가능했다. 결국 Delegate를 만들고, 메뉴의 객체값에 isSelected 값을 넣어 구현할 수 있었다.  
+처음에 기본적 행태만 구현한 상태에서는 탭을 해도 색상이 변하지 않고 해당 셀에 지정된 action만 행할 뿐이었다. 구현하기 원하는 기능은 탭을 하면 선택된 셀의 배경색이 변하고, 선택되지 않은 셀의 배경들은 투명 혹은 배경과 같은 색깔을 띄는 것이었다. IGListKit의 예제를 보고 응용해보면, 한 섹션의 색은 잘 변하지만, 다른 섹션의 셀 색깔은 개별 섹션컨트롤러에서 변경하는 것이 불가능했다. 결국 Delegate를 만들고, 메뉴의 객체값에 isSelected 값을 넣어 구현할 수 있었다.  
   
-구글링을 해보면서 비슷한 [질문글](https://github.com/Instagram/IGListKit/issues/184)을 찾아볼 수 있었다. 이 글에 따르면 두 가지 방법이 존재한다.
+구글링을 하면서 비슷한 [질문글](https://github.com/Instagram/IGListKit/issues/184)을 찾아볼 수 있었다. 이 글에 따르면 두 가지 방법이 존재한다.
 
  - At the VC level, iterate all of your section controllers. Check for your selectable SC type, then check if the SC is marked as selected (again using your custom property)  
  
@@ -22,7 +22,7 @@ image: '/files/covers/ios_app.jpg'
 
 이 내용에서 힌트를 얻어 내가 구현한 방법은 아래의 순서와 같다.
 
- 1. 메뉴 섹션컨트롤러의 didSelected 
+ 1. 메뉴 섹션컨트롤러의 didSelected 에서 트리거
  2. 섹션컨트롤러 delegate로 자신(선택된) 섹션컨트롤러 객체 VC로 전달 
  3. VC의 어댑터에서 갖고있는 섹션컨트롤러 리스트 불러옴 
  4. 선택된 섹션컨트롤러로 전달되는 메뉴 객체에 isSelected = true 

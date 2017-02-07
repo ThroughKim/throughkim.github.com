@@ -3,7 +3,7 @@ layout: post
 title: 'IGListKit segue 시행하기'
 author: through.kim
 date: 2017-02-02 15:46
-tags: [ios, app, study]
+tags: [ios, app, study, iglistkit]
 image: '/files/covers/ios_app.jpg'
 ---
 
