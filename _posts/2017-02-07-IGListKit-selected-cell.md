@@ -150,26 +150,25 @@ extension MenuViewController: IGListAdapterDataSource {
 
 extension MenuViewController: MenuSectionDelegate {
     func menuSelected(selectedMenuSection: MenuSectionController) {
-        let selectedMenuSectionIndex = adapter.section(for: selectedMenuSection)
-        let selectedSectionObject = adapter.object(atSection: selectedMenuSectionIndex) as! Menu
-        selectedSectionObject.isSelected = true
-        
-        let visibleSectionControllers = adapter.visibleSectionControllers()
-        for sectionController in visibleSectionControllers{
-            if sectionController != selectedMenuSection && type(of: sectionController) == MenuSectionController.self{
-                let indexOfSection = adapter.section(for: sectionController)
-                let objectOfSection = adapter.object(atSection: indexOfSection) as! Menu
-                objectOfSection.isSelected = false
+    let selecteMenuIndex = adapter.section(for: selectedMenuSection) - 2    // minus number of sections before menuSection
+        for menuIndex in 0..<menuList.count {
+            if menuIndex != selecteMenuIndex {
+                menuList[menuIndex].isSelected = false
+            } else {
+                menuList[menuIndex].isSelected = true
             }
         }
         adapter.reloadData(completion: nil)
     }
 }
+}
 
 ```
 
 받아온 섹션컨트롤러의 값을 이용해 전달해줄 메뉴 객체의 isSelected값을 적절히 변경시켜주는 부분이다. 
-메뉴 객체를 가져와서는 index를 이용해 값을 조정할 객체를 찾아내기 때문에 비효율적인 것 같고, 리팩토링이 필요할 것으로 보인다.  
+메뉴 객체를 가져와서 해당 객체의 인덱스번호와 뷰컨트롤러가 갖고 있는 메뉴 객체의 인덱스번호를 매칭시켜 준 뒤 해당 객체의 isSelected값을 변경시켜준다.
+
+  
 (아마 선택된 셀과 상호작용 하는 기능은 업데이트 될 듯 하다. [https://github.com/Instagram/IGListKit/pull/449](https://github.com/Instagram/IGListKit/pull/449))
 
 이렇게 수정을 해주면 이제 탭(활성화)된 셀은 배경이 변하고, 다른 셀들의 배경은 투명하게 변할 것이다.
