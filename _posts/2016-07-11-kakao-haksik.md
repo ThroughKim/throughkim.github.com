@@ -233,7 +233,7 @@ user$ curl -XPOST 'http://your_server_url/message' -d '{"user_key": "encryptedUs
   
 ### 크롤러 구현 및 완성하기
 
-이제 남은 내용은 식당 이름에 맞추어 식단을 출력해주는 것이다. 그러기위해서 식단표를 크롤링하고 DB에 저장한 뒤, 사용자의 요청이 오면 해당식당의 DB내용을 출력해주는 방식으로 구현했다. 크롤러를 만드는 방식은 다음 참고 문서를 확인해보면 될 것이다. ([크롤링 참고](https://throughkim.github.io/2016/04/01/beautifulsoup.html))  
+이제 남은 내용은 식당 이름에 맞추어 식단을 출력해주는 것이다. 그러기위해서 식단표를 크롤링하고 DB에 저장한 뒤, 사용자의 요청이 오면 해당식당의 DB내용을 출력해주는 방식으로 구현했다. 크롤러를 만드는 방식은 다음 참고 문서를 확인해보면 될 것이다. ([크롤링 참고](http://throughkim.kr/2016/04/01/beautifulsoup/))  
 크롤링해서 나온 결과값을 DB에 저장해야 하는데, 나는 Django의 기본 DB인 Sqlite를 사용했다. 우선 dguhaksik앱의 models.py파일을 수정하여 DB를 생성해주자.  
   
 ```python
