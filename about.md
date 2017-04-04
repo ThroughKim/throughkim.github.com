@@ -51,7 +51,7 @@ image: '/files/covers/through_programming.jpg'
     - DB : MySQL, Django ORM
     - Server : uCloud, nCloud / Ubuntu / nginx
     - 기타 : TDD, Git
-    - [Detail](https://throughkim.kr/2016/10/18/twentycms.html)
+    - [Detail](http://throughkim.kr/2016/10/18/twentycms.html)
   
 
  * 페이스북 및 카카오 학식 봇
@@ -60,8 +60,8 @@ image: '/files/covers/through_programming.jpg'
     - DB : Sqlite, Django ORM
     - Server : nCloud / Ubuntu
     - 기타 : Git, Vim
-    - [Detail-Facebook](https://throughkim.kr/2016/10/18/facebook-haksikbot-pf.html)
-    - [Detail-Kakao](https://throughkim.kr/2016/10/18/kakao-haksik-pf.html)
+    - [Detail-Facebook](http://throughkim.kr/2016/10/18/facebook-haksikbot-pf.html)
+    - [Detail-Kakao](http://throughkim.kr/2016/10/18/kakao-haksik-pf.html)
   
   
  * 사진블로그
@@ -71,7 +71,7 @@ image: '/files/covers/through_programming.jpg'
     - DB : MySQL
     - Server : Apache Tomcat
     - 기타 : Git
-    - [Detail](https://throughkim.kr/2016/10/18/photoblog-pf.html)
+    - [Detail](http://throughkim.kr/2016/10/18/photoblog-pf.html)
   
 ---
 
