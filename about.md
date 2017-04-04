@@ -13,7 +13,7 @@ image: '/files/covers/through_programming.jpg'
 
 ## CONTACTS
 
-* Website - [https://throughkim.github.io](http://throughkim.kr)
+* Website - [http://throughkim.kr](http://throughkim.kr)
 * Email - [sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)
 * Phone - +82 10-8783-3451
 * Github - [ThroughKim](https://github.com/ThroughKim)
