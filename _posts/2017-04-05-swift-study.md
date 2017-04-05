@@ -362,7 +362,7 @@ let b = a is Int // true
 let a = "abc" as Any    // String > Any 상위 캐스팅
 ```
 
-- 하위캐스팅 
+- 하위캐스팅  
 하위 캐스팅은 연산자 as?를 사용한다.
 
 ```swift
