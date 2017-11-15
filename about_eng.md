@@ -1,16 +1,15 @@
 ---
 layout: page
 title: About ThroughKim
-permalink: /about/
+permalink: /about_eng/
 sitemap: yes
 tags: [about]
 image: '/files/covers/through_programming.jpg'
 ---
-
-# 김슬우
-(Seul Woo Kim / ThroughKim)  
+# Seul Woo Kim
+(김슬우/ 金슬우 / ThroughKim)  
   
-[English version](http://throughkim.kr/about_eng/)
+[Korean version](http://throughkim.kr/about/)
 
 ---
 
@@ -27,11 +26,11 @@ image: '/files/covers/through_programming.jpg'
 
 ## BIOGRAPHY
 
-* 1992.10.15 : 부산 출생
-* 2008.03 ~ 2011.02  : 울산고등학교 졸업
-* 2011.03 ~ 2017.02 : 동국대학교 경영정보학과
-* 2015.12 ~ 2016.03  : 모바일 대학사회 [Twenty](https://www.facebook.com/withtwenty/)(스타트업) 인턴 근무
-* 2016.12 ~ : 리눅스웨어 개발팀 근무
+* 1992.10.15 : Born in Busan, Republic of Korea
+* 2008.03 ~ 2011.02  : Graduated Ulsan High School
+* 2011.03 ~ 2017.02 : Bachelor of Management Information System, Dongguk University
+* 2015.12 ~ 2016.03  : Internship at start-up [Twenty](https://www.facebook.com/withtwenty/)
+* 2016.12 ~ : Working in the Development team, Linuxware.inc
 
 ---
 
@@ -47,50 +46,50 @@ image: '/files/covers/through_programming.jpg'
 
 ## PROJECTS
 
- * 트웬티 CMS
-    - 대학생을 위한 미디어 플랫폼(뉴스, 공모전, 공지사항, 학식, 도서관)
-    - 데이터 분석 툴 개발, 콘텐츠 관리 시스템 개발
+ * Twenty Content Management System
+    - Media platform for University students(News, Contest, Notice, Cafeteria, Library)
+    - Developed data analysis tool and content management system
     - Language/Framework : Python/Django
     - DB : MySQL, Django ORM
-    - Server : uCloud, nCloud / Ubuntu / nginx
-    - 기타 : TDD, Git
+    - Server : KT uCloud, Naver nCloud / Ubuntu / nginx
+    - ETC : TDD, Git
     - [Detail](http://throughkim.kr/2016/10/18/pf-twenty-cms/)
   
 
- * 페이스북 및 카카오 학식 봇
-    - 학생들이 교내 학생식당의 메뉴를 더 쉽게 알 수 있게 하려고 제작
+ * Cafeteria Menu Bot in Facebook and KakaoTalk
+    - Developed to make it easier for students to find menus in the school cafeteria
     - Language/Framework : Python/Django
     - DB : Sqlite, Django ORM
-    - Server : nCloud / Ubuntu
-    - 기타 : Git, Vim
+    - Server : Naver nCloud / Ubuntu
+    - ETC : Git, Vim
     - [Detail-Facebook](http://throughkim.kr/2016/10/18/pf-facebook-haksikbot/)
     - [Detail-Kakao](http://throughkim.kr/2016/10/18/pf-kakao-haksik/)
   
   
- * 사진블로그
-    - 교내 웹프로그래밍 강좌의 프로젝트로 제작
-    - Instagram을 모방한 사진 중심 마이크로 블로그
+ * PhotoBlog
+    - Developed as a project of web-programming class
+    - Photo-oriented micro blogs imitating Instagram
     - Language : Java, JSP
     - DB : MySQL
     - Server : Apache Tomcat
-    - 기타 : Git
+    - ETC : Git
     - [Detail](http://throughkim.kr/2016/10/18/pf-photoblog/)
     
  * MailPlug iOS Applicaation
-    - 리눅스웨어 개발 프로젝트로 제작
-    - iOS사용자를 위한 기업메일 애플리케이션
+    - Developed as project of Linuxwares.inc service
+    - Business mail application for iOS users
     - Language/Framework: Swift, PHP/Codeigniter
     - DB: Sqlite
     - Server: Ubuntu, Nginx
-    - 기타: Mercurial, Firebase
-    - [앱스토어 - 메일플러그](https://itunes.apple.com/us/app/%EB%A9%94%EC%9D%BC%ED%94%8C%EB%9F%AC%EA%B7%B8/id1253780302)
-  
+    - ETC: Mercurial, Firebase
+    - [AppStore - Mailplug](https://itunes.apple.com/us/app/%EB%A9%94%EC%9D%BC%ED%94%8C%EB%9F%AC%EA%B7%B8/id1253780302)
+
 ---
 
 ## MYSELF
 
-* 생활의 사소한 불편을 소프트웨어로 해결하고자 하며, 그것에 성취를 느낍니다.
-* 항상 더 나은 프로그래머가 되고자 학습하며, 새로운 것을 익히는 일을 즐깁니다.
+* I want to solve the minor inconveniences of life with software, and I feel accomplishment to it.
+* I always learn to be a better programmer and enjoy learning new things.
   
   
 
@@ -98,4 +97,3 @@ image: '/files/covers/through_programming.jpg'
 Powered by [GitHub Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com).  
 Template by Kakao  
 [License](/license)
-
