@@ -53,7 +53,7 @@ image: '/files/covers/through_programming.jpg'
     - DB : MySQL, Django ORM
     - Server : KT uCloud, Naver nCloud / Ubuntu / nginx
     - ETC : TDD, Git
-    - [Detail](http://throughkim.kr/2016/10/18/pf-twenty-cms/)
+    - [Detail](http://throughkim.kr/2016/10/18/pf-twenty-cms-eng/)
   
 
  * Cafeteria Menu Bot in Facebook and KakaoTalk
@@ -62,8 +62,8 @@ image: '/files/covers/through_programming.jpg'
     - DB : Sqlite, Django ORM
     - Server : Naver nCloud / Ubuntu
     - ETC : Git, Vim
-    - [Detail-Facebook](http://throughkim.kr/2016/10/18/pf-facebook-haksikbot/)
-    - [Detail-Kakao](http://throughkim.kr/2016/10/18/pf-kakao-haksik/)
+    - [Detail-Facebook](http://throughkim.kr/2016/10/18/pf-facebook-haksikbot-eng/)
+    - [Detail-Kakao](http://throughkim.kr/2016/10/18/pf-kakao-haksik-eng/)
   
   
  * PhotoBlog
@@ -73,7 +73,7 @@ image: '/files/covers/through_programming.jpg'
     - DB : MySQL
     - Server : Apache Tomcat
     - ETC : Git
-    - [Detail](http://throughkim.kr/2016/10/18/pf-photoblog/)
+    - [Detail](http://throughkim.kr/2016/10/18/pf-photoblog-eng/)
     
  * MailPlug iOS Applicaation
     - Developed as project of Linuxwares.inc service
