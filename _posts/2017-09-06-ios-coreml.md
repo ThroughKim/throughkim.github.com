@@ -2,7 +2,7 @@
 layout: post
 title: 'Core ML 과 Vision: iOS11의 머신러닝 튜토리얼'
 author: through.kim
-date: 2017-04-05 13:18
+date: 2017-09-06 16:32
 tags: [ios, app, study, swift]
 image: '/files/covers/ios_app.jpg'
 ---

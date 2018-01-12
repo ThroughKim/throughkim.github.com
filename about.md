@@ -82,9 +82,16 @@ image: '/files/covers/through_programming.jpg'
     - Language/Framework: Swift, PHP/Codeigniter
     - DB: Sqlite
     - Server: Ubuntu, Nginx
-    - 기타: Mercurial, Firebase
+    - 기타: Mercurial, Firebase, Xcode
     - [앱스토어 - 메일플러그](https://itunes.apple.com/us/app/%EB%A9%94%EC%9D%BC%ED%94%8C%EB%9F%AC%EA%B7%B8/id1253780302)
   
+ * 암호화폐 시세조회 앱 
+    - 실시간 암호화폐 시세조회 애플리케이션
+    - Language: Swift
+    - Library: Alamofire, SwiftyJSON, SnapKit
+    - 기타: Xcode, Git
+    - [Detail](http://throughkim.kr/2018/01/12/cryptocurrency-premium-app/)
+     
 ---
 
 ## MYSELF
