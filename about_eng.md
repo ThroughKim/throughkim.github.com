@@ -89,7 +89,7 @@ image: '/files/covers/through_programming.jpg'
     - Language: Swift
     - Library: Alamofire, SwiftyJSON, SnapKit
     - ETC: Xcode, Git
-    - [Detail](http://throughkim.kr/2018/01/12/cryptocurrency-premium-app/)
+    - [Detail](http://throughkim.kr/2018/01/12/cryptocurrency-premium-app-eng/)
       
 ---
 
