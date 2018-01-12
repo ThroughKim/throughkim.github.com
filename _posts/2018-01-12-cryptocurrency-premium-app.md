@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[Project] 암호화 시세조회 앱(iOS)'
+title: '[Project] 암호화 시세조회 앱 (iOS)'
 author: through.kim
 date: 2018-01-12 14:42
 tags: [ios, app, project, swift]

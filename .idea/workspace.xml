@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/about_eng.md" afterPath="$PROJECT_DIR$/about_eng.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app-eng.md" afterPath="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app-eng.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md" afterPath="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md" />
     </list>
     <ignored path="throughkim.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +40,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -48,12 +49,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-01-12-cryptocurrency-premium-app-eng.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2018-01-12-cryptocurrency-premium-app-eng.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app-eng.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="330">
-                <caret line="22" column="115" lean-forward="false" selection-start-line="22" selection-start-column="115" selection-end-line="22" selection-end-column="115" />
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -74,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about_eng.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about_eng.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about_eng.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="664">
+              <first_editor relative-caret-position="1365">
                 <caret line="91" column="77" lean-forward="false" selection-start-line="91" selection-start-column="77" selection-end-line="91" selection-end-column="77" />
                 <folding />
               </first_editor>
@@ -103,9 +104,9 @@
         <option value="$PROJECT_DIR$/_posts/2016-10-18-pf-photoblog-eng.md" />
         <option value="$PROJECT_DIR$/_posts/2017-09-06-ios-coreml.md" />
         <option value="$PROJECT_DIR$/about.md" />
+        <option value="$PROJECT_DIR$/about_eng.md" />
         <option value="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md" />
         <option value="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app-eng.md" />
-        <option value="$PROJECT_DIR$/about_eng.md" />
       </list>
     </option>
   </component>
@@ -259,12 +260,12 @@
       <workItem from="1477311107010" duration="5000" />
       <workItem from="1477379891448" duration="15000" />
       <workItem from="1510719333237" duration="6961000" />
-      <workItem from="1515735202646" duration="2934000" />
+      <workItem from="1515735202646" duration="2957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14829000" />
+    <option name="totallyTimeSpent" value="14852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -636,11 +637,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/about_eng.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1365">
+            <caret line="91" column="77" lean-forward="false" selection-start-line="91" selection-start-column="77" selection-end-line="91" selection-end-column="77" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
             <folding />
           </first_editor>
           <second_editor />
@@ -650,19 +662,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app-eng.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="22" column="115" lean-forward="false" selection-start-line="22" selection-start-column="115" selection-end-line="22" selection-end-column="115" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about_eng.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="664">
-            <caret line="91" column="77" lean-forward="false" selection-start-line="91" selection-start-column="77" selection-end-line="91" selection-end-column="77" />
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
             <folding />
           </first_editor>
           <second_editor />

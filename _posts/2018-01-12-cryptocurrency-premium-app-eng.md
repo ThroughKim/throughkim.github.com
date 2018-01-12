@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[Project] Cryptocurrency Price Ticker App(iOS)'
+title: '[Project] Cryptocurrency Price Ticker App (iOS)'
 author: through.kim
 date: 2018-01-12 14:42
 tags: [ios, app, project, swift]
