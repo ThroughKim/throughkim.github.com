@@ -84,8 +84,8 @@ image: '/files/covers/through_programming.jpg'
     - ETC: Mercurial, Firebase
     - [AppStore - Mailplug](https://itunes.apple.com/us/app/%EB%A9%94%EC%9D%BC%ED%94%8C%EB%9F%AC%EA%B7%B8/id1253780302)
 
- * Cryptocurrency Ticker Application 
-    - Real-time cryptocurrency ticker application
+ * Cryptocurrency Price Ticker Application 
+    - Real-time cryptocurrency price ticker information application
     - Language: Swift
     - Library: Alamofire, SwiftyJSON, SnapKit
     - ETC: Xcode, Git
