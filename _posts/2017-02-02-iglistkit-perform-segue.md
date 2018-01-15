@@ -5,6 +5,7 @@ author: through.kim
 date: 2017-02-02 15:46
 tags: [ios, app, study, iglistkit]
 image: '/files/covers/ios_app.jpg'
+comments: true
 ---
 
 >사이드메뉴를 IGListKit으로 구현하였는데, 기존의 스토리보드 Segue방식으로 뷰컨트롤러를 푸시해줄 수 없었다.

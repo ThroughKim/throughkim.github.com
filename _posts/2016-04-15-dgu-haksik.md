@@ -4,6 +4,7 @@ title: '동국대학교 학식 알림이봇'
 author: through.kim
 date: 2016-04-15 13:56
 tags: [facebook, python]
+comments: true
 ---
 
 > 스크래핑과 페이스북 API를 공부할 겸 동국대학교 학식을 스크랩 해와서 페이스북에 포스팅하는 프로그램을 만들었다.  

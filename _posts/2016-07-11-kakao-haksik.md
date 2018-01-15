@@ -4,6 +4,7 @@ title: '카카오톡 자동응답 API로 학식봇 구현'
 author: through.kim
 date: 2016-07-11 19:08
 tags: [python, django, study, kakao]
+comments: true
 ---
 
 > 카카오톡의 옐로아이디 자동응답 API로 동국대학교 학생식당의 메뉴를 알려주는 봇을 구현해보았다. Python3와 Django를 이용했으며, Mac OS X를 기반으로 작성했다.

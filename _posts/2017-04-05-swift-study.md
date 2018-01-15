@@ -5,6 +5,7 @@ author: through.kim
 date: 2017-04-05 13:18
 tags: [ios, app, study, swift]
 image: '/files/covers/ios_app.jpg'
+comments: true
 ---
 
 출처 : [SWIFTER 블로그](https://swifter.kr/)

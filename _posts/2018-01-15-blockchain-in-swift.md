@@ -5,6 +5,7 @@ author: through.kim
 date: 2018-01-15 13:18
 tags: [swift, blockchain]
 image: '/files/covers/blockchain.png'
+comments: true
 ---
 
 > 요즘 암호 화폐가 이슈이다. 암호 화폐 기술의 근간은 블록체인이며, 이 블록체인은 4차 산업혁명을 이끌어 나갈 기술이라고 평가된다.

@@ -4,6 +4,7 @@ title: 'Python Script를 Crontab으로 실행하기'
 author: through.kim
 date: 2016-04-06 09:45
 tags: [python, study, linux]
+comments: true
 ---
 
 > 학식을 스크래핑해서 페이스북에 포스팅하는 봇을 제작중인데, 서버에 올려놓고 Crontab을 활용해 자동으로 실행되게 하고자 한다. (우분투, Python3.4, Pyenv-virtualenv환경을 기준으로 작성됨)

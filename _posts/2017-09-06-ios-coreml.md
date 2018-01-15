@@ -5,6 +5,7 @@ author: through.kim
 date: 2017-09-06 16:32
 tags: [ios, app, study, swift]
 image: '/files/covers/ios_app.jpg'
+comments: true
 ---
 
 출처 : [Core ML and Vision: Machine Learning in iOS 11 Tutorial](https://www.raywenderlich.com/164213/coreml-and-vision-machine-learning-in-ios-11-tutorial)

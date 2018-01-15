@@ -4,6 +4,7 @@ title: 'Django Class-based View'
 author: through.kim
 date: 2016-05-04 16:26
 tags: [python, django, study]
+comments: true
 ---
 
 > Django에는 Class-based view라는 강력한 기능이 있는데, 이를 공부 하기 위해 [Documentation](https://docs.djangoproject.com/ja/1.9/topics/class-based-views/intro/)을 번역해본다.

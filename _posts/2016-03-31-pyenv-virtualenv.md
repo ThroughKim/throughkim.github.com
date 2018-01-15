@@ -4,6 +4,7 @@ title: 'Pyenv + VirtualEnv로 파이썬 가상 개발환경 구축하기'
 author: through.kim
 date: 2016-03-31 16:25
 tags: [python, study]
+comments: true
 ---
 
 >프로젝트를 진행하다보면 같은 파이썬 프로젝트라도 요구되는 파이썬 버전이나 사용하는 프레임워크의 버전이 다를 수 있다. 이런 문제를 해결해줄 수 있는 것이 pyenv와 Vvrtualenv이다. Mac OS X 기준으로 pyenv와 virtualenv를 setup 하고 설정하는 방법에 대해 기록해본다.

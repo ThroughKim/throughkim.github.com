@@ -4,6 +4,7 @@ title: 'Facebook Page Permanent Access Token 얻기'
 author: through.kim
 date: 2016-04-12 19:25
 tags: [facebook]
+comments: true
 ---
 
 > Facebook 페이지에 자동으로 게시를 하는 봇을 만들다가, Access Token가 일정 시간 뒤에 만료가 되는 문제점이 생겼다. 구글링을 해보니 페이지 Access Token의 경우 영구 Access Token을 발행받을 수 있고, 이 방법을 상세히 설명해놓은 자료가 있어 한글로 번역, 기록해본다.

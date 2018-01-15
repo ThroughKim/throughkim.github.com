@@ -5,6 +5,7 @@ author: through.kim
 date: 2016-12-27 11:39
 tags: [ios, app, study]
 image: '/files/covers/ios_app.jpg'
+comments: true
 ---
 
 # iOS Notification 만들기

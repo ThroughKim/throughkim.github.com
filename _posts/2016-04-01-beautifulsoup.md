@@ -4,6 +4,7 @@ title: 'Beautifulsoup로 학식 테이블 스크래핑하기'
 author: through.kim
 date: 2016-04-01 21:53
 tags: [python, study]
+comments: true
 ---
 
 > 처음 파이썬에 관심을 가지게 된 이유는 크롤러와 스크래퍼 때문이었다. 이번에는 BeutifulSoup를 활용해 동국대학교 학식 식단표를 스크래핑해본다.

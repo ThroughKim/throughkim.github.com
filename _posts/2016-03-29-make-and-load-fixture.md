@@ -4,6 +4,7 @@ title: 'Django fixture json파일 만들고 불러오기'
 author: through.kim
 date: 2016-03-29 13:49
 tags: [python, study, django]
+comments: true
 ---
 
 - app의 post데이터를 fixture로 만들기

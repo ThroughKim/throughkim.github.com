@@ -4,6 +4,7 @@ title: 'Python Facebook SDK를 활용해 페이지에 글 쓰기'
 author: through.kim
 date: 2016-04-04 23:17
 tags: [python, study, facebook]
+comments: true
 ---
 
 Python과 Facebook API를 사용해 글을 써 주는 프로그램을 제작하고자 한다. 일단은 기초적인 API를 사용해 페이지에 '테스트'라고 적힌 포스팅만 게시하는 프로그램을 만들어 보고, 추후에 원래 목적이었던 학식을 파싱해서 올리는 것으로 완성하려고 한다.
