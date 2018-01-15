@@ -74,7 +74,7 @@ Block 객체의 속성들은 다음과 같다.
  - dateCreated: 블록이 생성된 날짜
  - previousHash: 이전 블록의 해시값
  - hash: 현재 블록의 hash값
- - nonce: 자동으로 1씩 증가하는 숫자로 해시 마이닝에서 중요한 역할을 한다.
+ - nonce: 자동으로 1씩 증가하는 숫자로, 해시값을 얻을때까지 수행했던 계산의 횟수를 의미한다.
  - data: 가치있는 자산. 돈, 의료 정보, 부동산 정보등이 들어갈 수 있다.
  - key: 해시함수로 전달되는 계산된 속성값.
 
@@ -220,7 +220,7 @@ Hash : 00a402d2dee753952ca461c79a3fc5bbbfe7838a
 
 <iframe width="750" height="530" src="https://www.youtube.com/embed/0GNurVtlaKk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-
+생성일과 데이터, Nonce값 그리고 이전 블록의 해시값과 현재 블록의 해시값이 출력됨을 볼 수 있다.
 이때까지 작성한 전체 코드는 다음과 같다. 그대로 플레이그라운드에 복사하여 붙여넣기하면 동일한 내용이 실행될 것이다.
 
 ```swift
