@@ -360,4 +360,6 @@ for index in 1...5 {
 이 글의 원작자는 iOS 블록체인 프로그래밍의 강의를 운영하고 있다. 혹시 관심있다면 다음 [링크](https://gumroad.com/l/sFOao/blockchainfree)를 통해 접속할 수 있다.
 원작자의 블로그는 다음의 [링크](http://www.azamsharp.com/courses/)를 통해 접속할 수 있다.
 
+#Reference
+
 원본 : [Blockchain Programming in iOS - Mohammad Azam](https://hackernoon.com/blockchain-programming-in-ios-ffaff9b328cc)
