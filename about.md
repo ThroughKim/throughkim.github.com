@@ -37,8 +37,8 @@ image: '/files/covers/through_programming.jpg'
 
 ## SKILLS
 
-* Languages: PHP, Java, JSP, Python, Swift, SQL, HTML, CSS
-* Frameworks: Django, Codeigniter
+* Languages: PHP, Java, JSP, Python, Swift, Javascript, SQL, HTML, CSS
+* Frameworks: Django, Codeigniter, Vue.js
 * Servers: Ubuntu, Raspbian
 * Web Servers: Apache Tomcat, Nginx
 * ETC: Vim, Git, TDD, Mercurial
@@ -78,19 +78,28 @@ image: '/files/covers/through_programming.jpg'
     
  * MailPlug iOS Applicaation
     - 리눅스웨어 개발 프로젝트로 제작
-    - iOS사용자를 위한 기업메일 애플리케이션
+    - iOS 사용자를 위한 기업메일 애플리케이션
     - Language/Framework: Swift, PHP/Codeigniter
     - DB: Sqlite
     - Server: Ubuntu, Nginx
     - 기타: Mercurial, Firebase, Xcode
     - [앱스토어 - 메일플러그](https://itunes.apple.com/us/app/%EB%A9%94%EC%9D%BC%ED%94%8C%EB%9F%AC%EA%B7%B8/id1253780302)
   
- * 암호화폐 시세조회 앱 
+ * 암호화폐 시세조회 앱 (iOS)
     - 실시간 암호화폐 시세조회 애플리케이션
     - Language: Swift
     - Library: Alamofire, SwiftyJSON, SnapKit
     - 기타: Xcode, Git
     - [Detail](http://throughkim.kr/2018/01/12/cryptocurrency-premium-app/)
+    
+ * 퍼들러 앱 (iOS)
+    - 리눅스웨어 개발 프로젝트로 제작
+    - iOS 사용자를 위한 업무용 메신저 애플리케이션
+    - Language/Framework: Swift, Python/Django, Javascript/Vue.js
+    - DB: PostgreSQL
+    - Server: Ubuntu, Nginx
+    - 기타: Git
+    - [앱스토어 - 퍼들러](https://itunes.apple.com/us/app/%ED%8D%BC%EB%93%A4%EB%9F%AC-be-simple-together/id1211526005?mt=8&uo=4)
      
 ---
 

@@ -3,27 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-27-blog-start.md" afterPath="$PROJECT_DIR$/_posts/2016-03-27-blog-start.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-28-dic-study.md" afterPath="$PROJECT_DIR$/_posts/2016-03-28-dic-study.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-29-make-and-load-fixture.md" afterPath="$PROJECT_DIR$/_posts/2016-03-29-make-and-load-fixture.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-31-pyenv-virtualenv.md" afterPath="$PROJECT_DIR$/_posts/2016-03-31-pyenv-virtualenv.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-01-beautifulsoup.md" afterPath="$PROJECT_DIR$/_posts/2016-04-01-beautifulsoup.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-04-facebook-api.md" afterPath="$PROJECT_DIR$/_posts/2016-04-04-facebook-api.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-06-crontab-pyenv.md" afterPath="$PROJECT_DIR$/_posts/2016-04-06-crontab-pyenv.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-12-permanent-access-token.md" afterPath="$PROJECT_DIR$/_posts/2016-04-12-permanent-access-token.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-15-dgu-haksik.md" afterPath="$PROJECT_DIR$/_posts/2016-04-15-dgu-haksik.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-05-04-class-based-view.md" afterPath="$PROJECT_DIR$/_posts/2016-05-04-class-based-view.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-07-11-kakao-haksik.md" afterPath="$PROJECT_DIR$/_posts/2016-07-11-kakao-haksik.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-12-08-beautifulsoup-korean.md" afterPath="$PROJECT_DIR$/_posts/2016-12-08-beautifulsoup-korean.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-12-27-ios-notification.md" afterPath="$PROJECT_DIR$/_posts/2016-12-27-ios-notification.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" afterPath="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md" afterPath="$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-02-07-IGListKit-selected-cell.md" afterPath="$PROJECT_DIR$/_posts/2017-02-07-IGListKit-selected-cell.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-03-14-Jwt.md" afterPath="$PROJECT_DIR$/_posts/2017-03-14-Jwt.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-04-05-swift-study.md" afterPath="$PROJECT_DIR$/_posts/2017-04-05-swift-study.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-09-06-ios-coreml.md" afterPath="$PROJECT_DIR$/_posts/2017-09-06-ios-coreml.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-01-15-blockchain-in-swift.md" afterPath="$PROJECT_DIR$/_posts/2018-01-15-blockchain-in-swift.md" />
+      <change beforePath="$PROJECT_DIR$/about.md" afterPath="$PROJECT_DIR$/about.md" />
+      <change beforePath="$PROJECT_DIR$/about_eng.md" afterPath="$PROJECT_DIR$/about_eng.md" />
     </list>
     <ignored path="throughkim.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,37 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2016-05-04-class-based-view.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-05-04-class-based-view.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016-04-15-dgu-haksik.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-04-15-dgu-haksik.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2016-04-12-permanent-access-token.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2016-04-12-permanent-access-token.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
+              <first_editor relative-caret-position="0">
                 <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
                 <folding />
               </first_editor>
@@ -95,12 +50,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-04-04-facebook-api.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-04-04-facebook-api.md">
+      <file leaf-file-name="about_eng.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/about_eng.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              <first_editor relative-caret-position="1515">
+                <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -108,69 +63,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-04-01-beautifulsoup.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-04-01-beautifulsoup.md">
+      <file leaf-file-name="about.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                <folding>
-                  <marker date="1516006247000" expanded="true" signature="1396:1484" ph="..." />
-                  <marker date="1516006247000" expanded="true" signature="1418:1484" ph="..." />
-                  <marker date="1516006247000" expanded="true" signature="1447:1484" ph="..." />
-                  <marker date="1516006247000" expanded="true" signature="1464:1484" ph="..." />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016-03-31-pyenv-virtualenv.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-03-31-pyenv-virtualenv.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016-03-29-make-and-load-fixture.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-03-29-make-and-load-fixture.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016-03-28-dic-study.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-03-28-dic-study.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016-03-27-blog-start.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-03-27-blog-start.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              <first_editor relative-caret-position="796">
+                <caret line="101" column="121" lean-forward="false" selection-start-line="94" selection-start-column="1" selection-end-line="101" selection-end-column="121" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -192,8 +90,6 @@
         <option value="$PROJECT_DIR$/_posts/2016-10-18-pf-kakao-haksik-eng.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-18-pf-facebook-haksikbot-eng.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-18-pf-photoblog-eng.md" />
-        <option value="$PROJECT_DIR$/about.md" />
-        <option value="$PROJECT_DIR$/about_eng.md" />
         <option value="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md" />
         <option value="$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app-eng.md" />
         <option value="$PROJECT_DIR$/_tags/blockchain.md" />
@@ -218,6 +114,8 @@
         <option value="$PROJECT_DIR$/_posts/2016-03-29-make-and-load-fixture.md" />
         <option value="$PROJECT_DIR$/_posts/2016-03-28-dic-study.md" />
         <option value="$PROJECT_DIR$/_posts/2016-03-27-blog-start.md" />
+        <option value="$PROJECT_DIR$/about.md" />
+        <option value="$PROJECT_DIR$/about_eng.md" />
       </list>
     </option>
   </component>
@@ -246,7 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,7 +171,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,12 +274,13 @@
       <workItem from="1477379891448" duration="15000" />
       <workItem from="1510719333237" duration="6961000" />
       <workItem from="1515735202646" duration="3240000" />
-      <workItem from="1515989776991" duration="6356000" />
+      <workItem from="1515989776991" duration="6481000" />
+      <workItem from="1524211751732" duration="730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21491000" />
+    <option name="totallyTimeSpent" value="22346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -391,12 +290,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17239584" sideWeight="0.53106797" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17239584" sideWeight="0.53106797" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -573,23 +472,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="45">
             <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="604">
-            <caret line="89" column="21" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -600,7 +482,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -611,18 +492,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/about_eng.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="949">
-            <caret line="91" column="77" lean-forward="false" selection-start-line="91" selection-start-column="77" selection-end-line="91" selection-end-column="77" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -633,7 +502,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="30">
             <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -643,7 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="47" column="136" lean-forward="false" selection-start-line="47" selection-start-column="136" selection-end-line="47" selection-end-column="136" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,7 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,7 +526,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="225">
             <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -671,7 +536,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -682,7 +546,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -693,7 +556,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -704,7 +566,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -715,7 +576,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -726,7 +586,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -737,7 +596,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -748,7 +606,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -759,7 +616,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -775,7 +631,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="90">
             <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -806,7 +661,7 @@
     <entry file="file://$PROJECT_DIR$/_posts/2016-04-12-permanent-access-token.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
+          <first_editor relative-caret-position="0">
             <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             <folding />
           </first_editor>
@@ -814,7 +669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-04-06-crontab-pyenv.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-03-27-blog-start.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="90">
@@ -825,7 +680,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-04-04-facebook-api.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-03-28-dic-study.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-03-29-make-and-load-fixture.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-03-31-pyenv-virtualenv.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="90">
@@ -852,7 +729,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-31-pyenv-virtualenv.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-04-04-facebook-api.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="90">
@@ -863,7 +740,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-29-make-and-load-fixture.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-04-06-crontab-pyenv.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="90">
@@ -874,22 +751,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-28-dic-study.md">
+    <entry file="file://$PROJECT_DIR$/about.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <first_editor relative-caret-position="796">
+            <caret line="101" column="121" lean-forward="false" selection-start-line="94" selection-start-column="1" selection-end-line="101" selection-end-column="121" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-27-blog-start.md">
+    <entry file="file://$PROJECT_DIR$/about_eng.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <first_editor relative-caret-position="1515">
+            <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
             <folding />
           </first_editor>
           <second_editor />

@@ -36,8 +36,8 @@ image: '/files/covers/through_programming.jpg'
 
 ## SKILLS
 
-* Languages: PHP, Java, JSP, Python, Swift, SQL, HTML, CSS
-* Frameworks: Django, Codeigniter
+* Languages: PHP, Java, JSP, Python, Swift, Javascript, SQL, HTML, CSS
+* Frameworks: Django, Codeigniter, Vue.js
 * Servers: Ubuntu, Raspbian
 * Web Servers: Apache Tomcat, Nginx
 * ETC: Vim, Git, TDD, Mercurial
@@ -75,7 +75,7 @@ image: '/files/covers/through_programming.jpg'
     - ETC : Git
     - [Detail](http://throughkim.kr/2016/10/18/pf-photoblog-eng/)
     
- * MailPlug iOS Applicaation
+ * MailPlug iOS Application
     - Developed as project of Linuxwares.inc service
     - Business mail application for iOS users
     - Language/Framework: Swift, PHP/Codeigniter
@@ -84,12 +84,21 @@ image: '/files/covers/through_programming.jpg'
     - ETC: Mercurial, Firebase
     - [AppStore - Mailplug](https://itunes.apple.com/us/app/%EB%A9%94%EC%9D%BC%ED%94%8C%EB%9F%AC%EA%B7%B8/id1253780302)
 
- * Cryptocurrency Price Ticker Application 
+ * Cryptocurrency Price Ticker Application (iOS)
     - Real-time cryptocurrency price ticker information application
     - Language: Swift
     - Library: Alamofire, SwiftyJSON, SnapKit
     - ETC: Xcode, Git
     - [Detail](http://throughkim.kr/2018/01/12/cryptocurrency-premium-app-eng/)
+    
+  * Puddlr Application (iOS)
+      - Developed as project of Linuxwares.inc service
+      - Business messenger Application for iOS users
+      - Language/Framework: Swift, Python/Django, Javascript/Vue.js
+      - DB: PostgreSQL
+      - Server: Ubuntu, Nginx
+      - ETC: Git
+      - [AppStore - Puddlr](https://itunes.apple.com/us/app/%ED%8D%BC%EB%93%A4%EB%9F%AC-be-simple-together/id1211526005?mt=8&uo=4)
       
 ---
 
