@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/_posts/2018-06-27-fullscreen-share-ext.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/files/ios_images/result.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="" />
     <ignored path="throughkim.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -275,12 +271,12 @@
       <workItem from="1515989776991" duration="6481000" />
       <workItem from="1524211751732" duration="945000" />
       <workItem from="1527576953240" duration="8949000" />
-      <workItem from="1530059212958" duration="4292000" />
+      <workItem from="1530059212958" duration="4342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35802000" />
+    <option name="totallyTimeSpent" value="35852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />

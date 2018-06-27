@@ -43,7 +43,7 @@ class EntryViewController : UIViewController {
 
 viewWillAppear 메소드에서 공유 익스텐션에 사용할 ShareViewController를 생성해주고, 
 네비게이션 컨트롤러에 집어넣어 띄워주게 된다. 공유할 데이터, 파일은 self.extensionContext이며, 변수에 담아 사용할 수 있다. 
-특정 조건에 따라 공유 익스텐션의 팝업 여부를 결정 지으려면 이 곳에서 분기처리하면 된다. (메인 앱 로그인 여부에 따라 공유기능 띄우 않기 등)
+특정 조건에 따라 공유 익스텐션의 팝업 여부를 결정 지으려면 이 곳에서 분기처리하면 된다. (메인 앱 로그인 여부에 따라 공유기능 띄우지 않기 등)
 
 
 ## Info.plist 변경
