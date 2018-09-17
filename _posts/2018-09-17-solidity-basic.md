@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Solidity Study (작성중)'
+title: 'Solidity Study'
 author: through.kim
 date: 2018-09-17 13:58
 tags: [blockchain, solidity, dapp]
@@ -165,7 +165,7 @@ contract Purchase {
 }
 ```
 위의 예시 코드에서 Solidity의 modifier 형태를 확인할 수 있다. 
-먼저 modifier를 선언하고, 아래의 abort()함수 선언과정에서 뒤에 붙여주고 있는 것을 확인할 수 있다.
+먼저 `onlySeller()`라는 modifier를 선언하고, 아래의 abort() 함수 선언과정에서 뒤에 붙여주고 있는 것을 확인할 수 있다.
 abort() 함수가 호출되면, 함수를 실행하기 전에 modifier 에 정의된 조건으로 미리 검증을 한 뒤에 실행하는 것으로 이해할 수 있다.
  
 ## Events
