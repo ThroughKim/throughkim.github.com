@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Solidity Study'
+title: 'Solidity Study (작성중)'
 author: through.kim
 date: 2018-09-17 13:58
 tags: [blockchain, solidity, dapp]
