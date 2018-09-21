@@ -60,18 +60,13 @@ Truffle이 정상적으로 설치되었는지 확인하려면 터미널에 `truf
 
 1. Truflle은 현재 디렉토리에서 초기화되므로 우선 개발을 진행할 폴더에 새로운 디렉토리를 만들고 그 폴더 안으로 이동해야 한다.  
 
-~~~
-mkdir pet-shop-tutorial
-
-cd pet-shop-tutorial
-~~~
+        mkdir pet-shop-tutorial
+        cd pet-shop-tutorial
   
 2. Truffle에서는 `pet-shop`이라 불리는 이 튜토리얼을 위해 특별한 [Truffle Box](https://truffleframework.com/boxes)를 만들었다.
 이 Truffle Box에는 기본 프로젝트 구조는 물론이고 유저 인터페이스를 위한 코드도 마련되어 있다. `truffle unbox` 명령어를 사용해 이 Truffle Box를 열어볼 수 있다.
 
-~~~
-truffle unbox pet-shop
-~~~
+        truffle unbox pet-shop
   
 > Note: Truffle은 몇몇 다른 방법으로도 초기화될 수 있다. 또 하나의 유용한 초기화 명령어는 `truffle init`이며, 
 예제 컨트렉트의 내용이 포함되지 않은 빈 프로젝트를 만들어 준다. 더 많은 정보를 원하면 [Creating a project](https://truffleframework.com/docs/truffle/getting-started/creating-a-project)
