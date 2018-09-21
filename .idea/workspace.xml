@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/_posts/2018-09-19-truffle-petshop.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/files/blockchain_images/ganache-initial.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/files/blockchain_images/ganache-migrated.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/_posts/2018-09-17-solidity-basic.md" afterPath="$PROJECT_DIR$/_posts/2018-09-17-solidity-basic.md" />
     </list>
     <ignored path="throughkim.github.com.iws" />
@@ -22,38 +26,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017-09-06-ios-coreml.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2017-09-06-ios-coreml.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="34" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2018-05-29-django-rest.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-05-29-django-rest.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2865">
-                <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="54" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2018-06-27-fullscreen-share-ext.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2018-06-27-fullscreen-share-ext.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-91">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
+              <first_editor relative-caret-position="784">
+                <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="141" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -61,43 +39,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-09-17-solidity-basic.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-09-17-solidity-basic.md">
+      <file leaf-file-name="2018-09-19-truffle-petshop.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2018-09-19-truffle-petshop.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="30">
-                <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+                <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
                 <folding>
-                  <marker date="1537175045872" expanded="true" signature="670:702" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="789:856" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="894:936" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="1065:1140" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="1227:1302" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="1394:1441" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="1500:1632" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="1755:2168" ph="{...}" />
-                  <marker date="1537175045872" expanded="true" signature="1821:1867" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="1928:1966" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2027:2063" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2124:2162" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2162:2168" ph="{...}" />
-                  <marker date="1537175045872" expanded="true" signature="2295:2319" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2508:2550" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2609:2646" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2705:2750" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2847:2936" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="2995:3040" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="3099:3127" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="4137:4161" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="5330:5463" ph="{...}" />
-                  <marker date="1537175045872" expanded="true" signature="5332:5343" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="5509:5549" ph="{...}" />
-                  <marker date="1537175045872" expanded="true" signature="5511:5528" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="5537:5543" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="5899:5907" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="5943:6042" ph="{...}" />
-                  <marker date="1537175045872" expanded="true" signature="5953:5959" ph="/*...*/" />
-                  <marker date="1537175045872" expanded="true" signature="6017:6036" ph="/*...*/" />
+                  <marker date="1537512786197" expanded="true" signature="3817:3834" ph="/*...*/" />
+                  <marker date="1537512786197" expanded="true" signature="4632:4658" ph="/*...*/" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -105,7 +55,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>```solidity</find>
+      <find>퍼블릭</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>```</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,10 +116,11 @@
         <option value="$PROJECT_DIR$/about_eng.md" />
         <option value="$PROJECT_DIR$/_posts/2018-05-29-django-rest-swagger.md" />
         <option value="$PROJECT_DIR$/_posts/2018-05-29-django-rest.md" />
-        <option value="$PROJECT_DIR$/_posts/2018-06-27-fullscreen-share-ext.md" />
         <option value="$PROJECT_DIR$/_tags/solidity.md" />
         <option value="$PROJECT_DIR$/_tags/dapp.md" />
         <option value="$PROJECT_DIR$/_posts/2018-09-17-solidity-basic.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-06-27-fullscreen-share-ext.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-09-19-truffle-petshop.md" />
       </list>
     </option>
   </component>
@@ -181,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,20 +183,13 @@
               <item name="throughkim.github.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="throughkim.github.com" type="462c0819:PsiDirectoryNode" />
               <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="covers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="throughkim.github.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="throughkim.github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="ios_images" type="462c0819:PsiDirectoryNode" />
+              <item name="blockchain_images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,15 +200,15 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/throughkim/Documents/blog/throughkim.github.com/_tags/blockchain.md" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/files/covers" />
-      <recent name="$PROJECT_DIR$/assets/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/files/blockchain_images" />
       <recent name="$PROJECT_DIR$/files/covers" />
       <recent name="$PROJECT_DIR$/files/ios_images" />
       <recent name="$PROJECT_DIR$/files/django_images" />
-      <recent name="$PROJECT_DIR$/files/blockchain_images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/files/covers" />
+      <recent name="$PROJECT_DIR$/assets/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -335,12 +299,13 @@
       <workItem from="1524211751732" duration="945000" />
       <workItem from="1527576953240" duration="8949000" />
       <workItem from="1530059212958" duration="4342000" />
-      <workItem from="1537159782027" duration="9708000" />
+      <workItem from="1537159782027" duration="9720000" />
+      <workItem from="1537335562839" duration="26603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45560000" />
+    <option name="totallyTimeSpent" value="72175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-217" width="1920" height="1080" extended-state="0" />
@@ -407,30 +372,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css" />
-    <entry file="file://$PROJECT_DIR$/../../py_projects/cms/cms/templates/cms/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../py_projects/cms/cms/templates/cms/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-twentycms.markdown" />
-    <entry file="file://$PROJECT_DIR$/authors.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-twenty-cms.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -511,16 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -563,36 +494,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-12-27-ios-notification.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-twenty-cms-eng.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
         </state>
@@ -770,44 +671,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-09-06-ios-coreml.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="34" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-02-07-IGListKit-selected-cell.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="138">
-            <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-05-29-django-rest.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2865">
-            <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="54" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_tags/dapp.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="60">
             <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -818,7 +686,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -829,7 +696,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="45">
             <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -840,7 +706,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -851,11 +716,77 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-06-27-fullscreen-share-ext.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2017-09-06-ios-coreml.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-91">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
+          <first_editor relative-caret-position="244">
+            <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="34" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-05-29-django-rest.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="949">
+            <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="54" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-twenty-cms-eng.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-07-IGListKit-selected-cell.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="84">
+            <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-12-27-ios-notification.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
             <folding />
           </first_editor>
           <second_editor />
@@ -865,39 +796,78 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-09-17-solidity-basic.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <first_editor relative-caret-position="341">
+            <caret line="153" column="39" lean-forward="true" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
             <folding>
-              <marker date="1537175045872" expanded="true" signature="670:702" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="789:856" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="894:936" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="1065:1140" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="1227:1302" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="1394:1441" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="1500:1632" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="1755:2168" ph="{...}" />
-              <marker date="1537175045872" expanded="true" signature="1821:1867" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="1928:1966" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2027:2063" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2124:2162" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2162:2168" ph="{...}" />
-              <marker date="1537175045872" expanded="true" signature="2295:2319" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2508:2550" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2609:2646" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2705:2750" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2847:2936" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="2995:3040" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="3099:3127" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="4137:4161" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="5330:5463" ph="{...}" />
-              <marker date="1537175045872" expanded="true" signature="5332:5343" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="5509:5549" ph="{...}" />
-              <marker date="1537175045872" expanded="true" signature="5511:5528" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="5537:5543" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="5899:5907" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="5943:6042" ph="{...}" />
-              <marker date="1537175045872" expanded="true" signature="5953:5959" ph="/*...*/" />
-              <marker date="1537175045872" expanded="true" signature="6017:6036" ph="/*...*/" />
+              <marker date="1537420973236" expanded="true" signature="5835:5843" ph="/*...*/" />
+              <marker date="1537420973236" expanded="true" signature="5879:5978" ph="{...}" />
+              <marker date="1537420973236" expanded="true" signature="5889:5895" ph="/*...*/" />
+              <marker date="1537420973236" expanded="true" signature="5953:5972" ph="/*...*/" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-06-27-fullscreen-share-ext.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="784">
+            <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="141" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CNAME">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-09-19-truffle-petshop.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+            <folding>
+              <marker date="1537512786197" expanded="true" signature="3817:3834" ph="/*...*/" />
+              <marker date="1537512786197" expanded="true" signature="4632:4658" ph="/*...*/" />
             </folding>
           </first_editor>
           <second_editor />

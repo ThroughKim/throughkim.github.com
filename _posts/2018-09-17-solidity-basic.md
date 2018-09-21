@@ -19,7 +19,7 @@ comments: true
  다음 예시는 [이더리움 공식사이트](https://www.ethereum.org/)에서 제공하는 솔리디티 예문이다. 
  다음 코드를 통해 솔리디티로 작성된 컨트렉트의 전체적인 구조를 파악할 수 있다.
  
- ```solidity
+ ```
 pragma solidity ^0.4.16;
 
 contract TokenERC20 {
@@ -83,20 +83,20 @@ contract TokenERC20 {
 ```
 
 ## Pragma
-```solidity
+```
 pragma solidity ^0.4.18;
 ```
 첫 줄에 나와있는 pragma는 작성된 코드가 Solidity 0.4.18버전을 기반으로 작성되었으며, 그 이후 버전에서 정상 작동 할 수 있다는 것을 의미한다.
 
 ## State Variables
-```solidity
+```
 string public name;
 uint8 public decimals = 18;
 ```
 변수 선언부에 해당한다. 여타 언어와 크게 다르지 않다.
 
 ## mapping
-```solidity
+```
 mapping (address => uint256) public balanceOf;
 mapping (address => mapping (address => uint256)) public allowance;
 ```
@@ -104,7 +104,7 @@ mapping (address => mapping (address => uint256)) public allowance;
 예를들어 위 예문의 `balanceOf`는 address를 키로 가지고, uint256형의 값을 갖고 있는 것으로 해석할 수 있다.
 
 ## Functions
-```solidity
+```
 function TokenERC20(
     uint256 initialSupply,
     string tokenName,
@@ -137,7 +137,7 @@ Solidity의 함수는 public, private 등의 키워드를 사용해 함수의 �
  - view: 해당 함수가 블록체인의 상태를 변경시키지 않음을 의미한다. constant를 대체한다고 볼 수 있다. 
  - pure: 해당 함수가 블록체인의 상태를 변경시키지도 않고, 조회하지도 않음을 의미한다.
 
-```solidity
+```
 function buy() payable returns (uint amount){}
 ```
 위 함수에서 payble은 이더리움을 전송하는 동작이 포함되어 있다면 반드시 붙어야하는 function modifier 이다.
@@ -145,7 +145,7 @@ solidity의 모든 function에서 이더리움 전송하는 동작이 포함되�
 이더리움을 전송하는 기능을 함수에 추가하고자 하면 반드시 payable을 붙여주어야 한다.
 
 ## Modifier
-```solidity
+```
 pragma solidity ^0.4.22;
 
 contract Purchase {
@@ -169,7 +169,7 @@ contract Purchase {
 abort() 함수가 호출되면, 함수를 실행하기 전에 modifier 에 정의된 조건으로 미리 검증을 한 뒤에 실행하는 것으로 이해할 수 있다.
  
 ## Events
-```solidity
+```
 pragma solidity ^0.4.21;
 
 contract SimpleAuction {
