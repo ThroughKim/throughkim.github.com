@@ -31,11 +31,11 @@ dApp에 익숙하지 않은 개발자를 대상으로 하고있다.
 ## 배경
 
 Pete's Pet Shop의 Pete Scandlon은 애완동물 입양을 처리하는 효율적인 방법으로 이더리움을 사용하는데 관심이 있었다.
-상점에는 16마리의 애완동물을 위한 공간이 있으며, 애완동물의 데이터베이스를 가지고 있다. 
+상점에는 16마리의 애완동물을 위한 공간이 있으며, 애완동물의 데이터베이스는 이미 구축되어 있다. 
 [Proof of Concept](https://ko.wikipedia.org/wiki/개념_증명)로 
 Pete는 이더리움 주소와 입양된 애완동물을 연결해주는 dApp을 보고싶어 한다.
 
-웹사이트의 구조와 CSS는 제공될 것이며, 우리가 해야 할 작업은 스마트 컨트렉와 그것을 사용할 프론트엔드 로직 작성이다. 
+웹사이트의 구조와 CSS는 제공될 것이며, 우리가 해야 할 작업은 스마트 컨트렉트 그리고 컨트렉트와 상호작용 할 프론트엔드 로직 작성이다. 
 
 ## 개발환경 구축
 
@@ -44,16 +44,14 @@ Pete는 이더리움 주소와 입양된 애완동물을 연결해주는 dApp을
 - [Node.js & npm](Node.js & npm)
 - [Git](https://git-scm.com/)
  
-설치 한 뒤에 Truffle을 설치하기 위해서는 한 줄의 명령어만 입력해주면 된다.
+설치를 마친 뒤에 Truffle을 설치하기 위해서는 한 줄의 명령어만 입력해주면 된다.
 
-```bash
-npm install -g truffle
-```
+    npm install -g truffle
 
 Truffle이 정상적으로 설치되었는지 확인하려면 터미널에 `truffle version`을 타이핑해보면 된다.
-만약 오류가 보인다면, npm모듈이 path에 제대로 추가되었는지 확인해봐야 한다.
+만약 오류가 보인다면, npm 모듈이 path에 제대로 추가되었는지 확인해봐야 한다.
 
-또한 우리는 스마트 컨트렉트 배포, 앱 개발 및 테스트 실행에 활용할 개인 이더리움 블록체인인 [Ganache](https://truffleframework.com/ganache)를 사용할 것이다.
+또한 우리는 개발용 개인 이더리움 블록체인인 [Ganache](https://truffleframework.com/ganache)를 사용해 스마트 컨트렉트 배포, 앱 개발, 테스트 및 실행을 할 예정이다. 
 다음 주소 - [https://truffleframework.com/ganache](https://truffleframework.com/ganache) 에서 다운로드 받을 수 있다.
 
 ## Truffle Box를 이용해 Truffle 프로젝트 제작
@@ -64,11 +62,12 @@ Truffle이 정상적으로 설치되었는지 확인하려면 터미널에 `truf
         cd pet-shop-tutorial
   
 2. Truffle에서는 `pet-shop`이라 불리는 이 튜토리얼을 위해 특별한 [Truffle Box](https://truffleframework.com/boxes)를 만들었다.
-이 Truffle Box에는 기본 프로젝트 구조는 물론이고 유저 인터페이스를 위한 코드도 마련되어 있다. `truffle unbox` 명령어를 사용해 이 Truffle Box를 열어볼 수 있다.
+이 Truffle Box에는 기본 프로젝트 구조는 물론이고 유저 인터페이스를 위한 코드도 마련되어 있다. 
+`truffle unbox` 명령어를 사용해 이 Truffle Box를 열어볼 수 있다.
 
         truffle unbox pet-shop
   
-> Note: Truffle은 몇몇 다른 방법으로도 초기화될 수 있다. 또 하나의 유용한 초기화 명령어는 `truffle init`이며, 
+> Note: Truffle은 몇몇 다른 방법으로도 초기화할 수 있다. 또 하나의 유용한 초기화 명령어는 `truffle init`이며, 
 예제 컨트렉트의 내용이 포함되지 않은 빈 프로젝트를 만들어 준다. 더 많은 정보를 원하면 [Creating a project](https://truffleframework.com/docs/truffle/getting-started/creating-a-project)
 문서를 참조하면 된다.
 
@@ -76,7 +75,7 @@ Truffle이 정상적으로 설치되었는지 확인하려면 터미널에 `truf
 
 기본적인 Truffle 디렉토리 구조는 다음과 같다.
 
-- `contracts/`: 스마트 컨트렉트를 위한 Solidity 소스 파일이 저장되어있는 폴더이다. 
+- `contracts/`: 스마트 컨트렉트를 위한 Solidity 소스 파일이 저장되는 폴더이다. 
 `Migrations.sol`이라는 중요한 컨트렉트가 여기 안에 들어있다. 이 컨트렉트는 추후에 설명할 것이다.
 
 - `migrations/`: Truffle은 스마트 컨트렉트 배포를 처리하기 위해 마이그레이션 시스템을 사용한다.
@@ -86,11 +85,11 @@ Truffle이 정상적으로 설치되었는지 확인하려면 터미널에 `truf
 
 - `truffle.js`: Truffle 설정 파일
  
- `pet-shop` Truffle Box는 이외에도 몇 개의 폴더가 더 있지만 지금 신경 쓸 내용은 아니다.
+`pet-shop` Truffle Box는 이외에도 몇 개의 폴더가 더 있지만 지금 신경 쓸 내용은 아니다.
  
 ## 스마트 컨트렉트 작성
 
-이제 백엔드 로직과 저장소 역할을 할 스마트 컨트렉트를 작성하면서 dApp 제작을 시작해본다.
+이제 백엔드 로직과 저장소 역할을 하는 스마트 컨트렉트를 작성하면서 dApp 제작을 시작해보자.
 
 1. `contracts/`폴더에 `Adoption.sol`파일을 만든다.
 2. 다음과 같이 내용을 만들어준다.
@@ -111,8 +110,7 @@ contract Adoption {
 ### 변수 세팅
 
 Solidity는 정적타이핑 언어이기 때문에 string, integer, 배열 과 같은 데이터 타입을 미리 정의해주어야 한다.
-Solidity는 address라고 불리는 특이한 데이터 타입을 가지고 있다.
-address는 20바이트의 데이터로 이루어진 이더리움 주소 타입이다.
+Solidity는 address라고 불리는 특이한 데이터 타입을 가지고 있는데, 이것은 이더리움의 주소를 지칭하는 타입이며 20바이트의 데이터로 이루어져 있다.
 이더리움 블록체인 위의 모든 계정과 스마트 컨트렌트는 주소를 가지고 있고, 이 주소를 통해 이더리움을 보내고 받을 수 있다.
 
 1. `contract Adoption {` 라인 다음에 다음 변수를 추가한다.
@@ -123,9 +121,9 @@ address[16] public acopters;
 알아야 할 내용:
 
 - 우리는 `adopters`라는 하나의 변수를 정의했다. 이 변수는 이더리움 주소로 이루어진 배열이다.
-배열은 하나의 타입만 저장 가능하며, 저장할 변수의 갯수는 고정할 수도 아닐 수도 있다.
-지금의 예시에서는 배열에 저장될 타입은 `address`타입이며, 배열의 길이는 16으로 고정했다.
-- `adopters`변수는 public으로 선언되었다. Public 변수는 자동으로 getter 메소드를 가진다.
+배열은 하나의 타입만 저장 가능하며, 배열에 저장할 변수의 갯수는 고정할 수도 그렇지 않을 수도 있다.
+지금의 예시에서 `adopters` 배열에 저장될 데이터 타입은 `address`타입이며, 배열의 길이는 16으로 고정했다.
+- `adopters`변수는 public으로 선언되었다. public 변수는 자동으로 getter 메소드를 가진다.
 그러나 배열의 경우는 getter 메소드에서 키값이 요구되며, 하나의 값만 반환하도록 되어있다.
 추후에 작성할 UI에 배열 전체가 필요하기 때문에, 배열 전체를 반환하는 메소드를 작성할 예정이다.
  
