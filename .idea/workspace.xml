@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-09-19-truffle-petshop.md" afterPath="$PROJECT_DIR$/_posts/backup-2018-09-19-truffle-petshop.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" afterPath="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" />
     </list>
     <ignored path="throughkim.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,12 +22,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="backup-2018-09-19-truffle-petshop.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="backup-2018-09-19-truffle-petshop.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/backup-2018-09-19-truffle-petshop.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="294">
-                <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+              <first_editor relative-caret-position="384">
+                <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-01-12-IGListKit.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="307">
+                <caret line="30" column="75" lean-forward="false" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -71,7 +85,6 @@
         <option value="$PROJECT_DIR$/_posts/2017-03-14-Jwt.md" />
         <option value="$PROJECT_DIR$/_posts/2017-02-07-IGListKit-selected-cell.md" />
         <option value="$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" />
         <option value="$PROJECT_DIR$/_posts/2016-12-27-ios-notification.md" />
         <option value="$PROJECT_DIR$/_posts/2016-12-08-beautifulsoup-korean.md" />
         <option value="$PROJECT_DIR$/_posts/2016-07-11-kakao-haksik.md" />
@@ -94,6 +107,7 @@
         <option value="$PROJECT_DIR$/_posts/2018-09-17-solidity-basic.md" />
         <option value="$PROJECT_DIR$/_posts/2018-06-27-fullscreen-share-ext.md" />
         <option value="$PROJECT_DIR$/_posts/2018-09-19-truffle-petshop.md" />
+        <option value="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" />
       </list>
     </option>
   </component>
@@ -272,7 +286,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76383000" />
+    <option name="totallyTimeSpent" value="76484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -376,7 +390,6 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app-eng.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2017-04-05-swift-study.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2017-03-14-Jwt.md" />
-    <entry file="file://$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-07-11-kakao-haksik.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -473,8 +486,21 @@
     <entry file="file://$PROJECT_DIR$/_posts/backup-2018-09-19-truffle-petshop.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="294">
-            <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <first_editor relative-caret-position="384">
+            <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="307">
+            <caret line="30" column="75" lean-forward="false" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
             <folding />
           </first_editor>
           <second_editor>
