@@ -210,4 +210,4 @@ atom.attack()                           // I have Punch
 atom.move()                             // I can Fly
 ```
 
-클라이언트의 코드와 살행 결과는 AS-IS와 동일하다.
+클라이언트의 코드와 실행 결과는 AS-IS와 동일하다.
