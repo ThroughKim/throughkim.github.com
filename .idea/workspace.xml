@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" afterPath="$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md" afterPath="" />
     </list>
     <ignored path="throughkim.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,12 +37,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-01-12-IGListKit.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-01-12-IGListKit.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2017-01-12-IGListKit.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="307">
                 <caret line="30" column="75" lean-forward="false" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-01-09-linux-14.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-01-09-linux-14.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="435">
+                <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backup-2017-02-02-iglistkit-perform-segue.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/backup-2017-02-02-iglistkit-perform-segue.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -58,6 +88,7 @@
     <findStrings>
       <find>```solidity</find>
       <find>퍼블릭</find>
+      <find>서브클래스이다</find>
     </findStrings>
     <replaceStrings>
       <replace>```</replace>
@@ -286,13 +317,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76484000" />
+    <option name="totallyTimeSpent" value="77008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15" sideWeight="0.46504855" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3577381" sideWeight="0.46504855" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -363,8 +394,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-twenty-cms.md" />
-    <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-photoblog-eng.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-facebook-haksikbot-eng.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-facebook-haksikbot.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-kakao-haksik.md" />
@@ -441,7 +470,6 @@
     <entry file="file://$PROJECT_DIR$/_posts/2017-09-06-ios-coreml.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2018-05-29-django-rest.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-18-pf-twenty-cms-eng.md" />
-    <entry file="file://$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2017-02-07-IGListKit-selected-cell.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-12-27-ios-notification.md" />
     <entry file="file://$PROJECT_DIR$/_posts/2018-01-12-cryptocurrency-premium-app.md" />
@@ -501,6 +529,45 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="307">
             <caret line="30" column="75" lean-forward="false" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-02-02-iglistkit-perform-segue.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-01-09-linux-14.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="435">
+            <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/backup-2017-02-02-iglistkit-perform-segue.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
             <folding />
           </first_editor>
           <second_editor>
