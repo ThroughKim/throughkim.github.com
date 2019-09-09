@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md" afterPath="$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-09-04-swift-design-pattern.md" afterPath="$PROJECT_DIR$/_posts/2019-09-04-swift-design-pattern.md" />
     </list>
     <ignored path="throughkim.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,12 +52,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019-09-04-swift-design-pattern.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2019-09-04-swift-design-pattern.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2019-09-04-swift-design-pattern.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="330">
-                <caret line="22" column="84" lean-forward="false" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+              <first_editor relative-caret-position="270">
+                <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -67,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019-09-09-swift-decorator.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2019-09-09-swift-decorator.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
@@ -186,11 +186,11 @@
         <option value="$PROJECT_DIR$/_posts/2019-09-04-swift-singleton.md" />
         <option value="$PROJECT_DIR$/_posts/2019-09-05-swift-observer.md" />
         <option value="$PROJECT_DIR$/_posts/2019-09-06-swift-command.md" />
-        <option value="$PROJECT_DIR$/_posts/2019-09-04-swift-design-pattern.md" />
         <option value="$PROJECT_DIR$/about.md" />
         <option value="$PROJECT_DIR$/about_eng.md" />
         <option value="$PROJECT_DIR$/_posts/2019-09-04-swift-strategy.md" />
         <option value="$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md" />
+        <option value="$PROJECT_DIR$/_posts/2019-09-04-swift-design-pattern.md" />
       </list>
     </option>
   </component>
@@ -357,12 +357,12 @@
       <workItem from="1537335562839" duration="30594000" />
       <workItem from="1567570524515" duration="14365000" />
       <workItem from="1567736348466" duration="2158000" />
-      <workItem from="1567993596819" duration="2212000" />
+      <workItem from="1567993596819" duration="2278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96039000" />
+    <option name="totallyTimeSpent" value="96105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-187" width="1920" height="1080" extended-state="0" />
@@ -620,19 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-09-04-swift-design-pattern.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="330">
-            <caret line="22" column="84" lean-forward="false" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/backup-2018-09-19-truffle-petshop.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -708,6 +695,19 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="199">
             <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-09-04-swift-design-pattern.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
             <folding />
           </first_editor>
           <second_editor>
