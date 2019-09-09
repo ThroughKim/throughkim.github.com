@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895687b4-99cb-4b4d-9e34-82fdef3e4e73" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md" afterPath="$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md" />
     </list>
     <ignored path="throughkim.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,8 +71,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="255">
-                <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <first_editor relative-caret-position="199">
+                <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -358,12 +357,12 @@
       <workItem from="1537335562839" duration="30594000" />
       <workItem from="1567570524515" duration="14365000" />
       <workItem from="1567736348466" duration="2158000" />
-      <workItem from="1567993596819" duration="2072000" />
+      <workItem from="1567993596819" duration="2212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95899000" />
+    <option name="totallyTimeSpent" value="96039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-187" width="1920" height="1080" extended-state="0" />
@@ -707,8 +706,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-09-09-swift-decorator.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <first_editor relative-caret-position="199">
+            <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor>
