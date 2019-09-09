@@ -46,35 +46,15 @@ image: '/files/covers/through_programming.jpg'
 
 ## PROJECTS
 
- * Twenty Content Management System
-    - Media platform for University students(News, Contest, Notice, Cafeteria, Library)
-    - Developed data analysis tool and content management system
-    - Language/Framework : Python/Django
-    - DB : MySQL, Django ORM
-    - Server : KT uCloud, Naver nCloud / Ubuntu / nginx
-    - ETC : TDD, Git
-    - [Detail](http://throughkim.kr/2016/10/18/pf-twenty-cms-eng/)
-  
+ * Puddlr Application (iOS)
+    - Developed as project of Linuxwares.inc service
+    - Business messenger Application for iOS users
+    - Language/Framework: Swift, Python/Django, Javascript/Vue.js
+    - DB: PostgreSQL
+    - Server: Ubuntu, Nginx
+    - ETC: Git
+    - [AppStore - Puddlr](https://itunes.apple.com/us/app/%ED%8D%BC%EB%93%A4%EB%9F%AC-be-simple-together/id1211526005?mt=8&uo=4)
 
- * Cafeteria Menu Bot in Facebook and KakaoTalk
-    - Developed to make it easier for students to find menus in the school cafeteria
-    - Language/Framework : Python/Django
-    - DB : Sqlite, Django ORM
-    - Server : Naver nCloud / Ubuntu
-    - ETC : Git, Vim
-    - [Detail-Facebook](http://throughkim.kr/2016/10/18/pf-facebook-haksikbot-eng/)
-    - [Detail-Kakao](http://throughkim.kr/2016/10/18/pf-kakao-haksik-eng/)
-  
-  
- * PhotoBlog
-    - Developed as a project of web-programming class
-    - Photo-oriented micro blogs imitating Instagram
-    - Language : Java, JSP
-    - DB : MySQL
-    - Server : Apache Tomcat
-    - ETC : Git
-    - [Detail](http://throughkim.kr/2016/10/18/pf-photoblog-eng/)
-    
  * MailPlug iOS Application
     - Developed as project of Linuxwares.inc service
     - Business mail application for iOS users
@@ -90,15 +70,33 @@ image: '/files/covers/through_programming.jpg'
     - Library: Alamofire, SwiftyJSON, SnapKit
     - ETC: Xcode, Git
     - [Detail](http://throughkim.kr/2018/01/12/cryptocurrency-premium-app-eng/)
-    
-  * Puddlr Application (iOS)
-      - Developed as project of Linuxwares.inc service
-      - Business messenger Application for iOS users
-      - Language/Framework: Swift, Python/Django, Javascript/Vue.js
-      - DB: PostgreSQL
-      - Server: Ubuntu, Nginx
-      - ETC: Git
-      - [AppStore - Puddlr](https://itunes.apple.com/us/app/%ED%8D%BC%EB%93%A4%EB%9F%AC-be-simple-together/id1211526005?mt=8&uo=4)
+
+ * Twenty Content Management System
+    - Media platform for University students(News, Contest, Notice, Cafeteria, Library)
+    - Developed data analysis tool and content management system
+    - Language/Framework : Python/Django
+    - DB : MySQL, Django ORM
+    - Server : KT uCloud, Naver nCloud / Ubuntu / nginx
+    - ETC : TDD, Git
+    - [Detail](http://throughkim.kr/2016/10/18/pf-twenty-cms-eng/)
+
+ * Cafeteria Menu Bot in Facebook and KakaoTalk
+    - Developed to make it easier for students to find menus in the school cafeteria
+    - Language/Framework : Python/Django
+    - DB : Sqlite, Django ORM
+    - Server : Naver nCloud / Ubuntu
+    - ETC : Git, Vim
+    - [Detail-Facebook](http://throughkim.kr/2016/10/18/pf-facebook-haksikbot-eng/)
+    - [Detail-Kakao](http://throughkim.kr/2016/10/18/pf-kakao-haksik-eng/)
+  
+ * PhotoBlog
+    - Developed as a project of web-programming class
+    - Photo-oriented micro blogs imitating Instagram
+    - Language : Java, JSP
+    - DB : MySQL
+    - Server : Apache Tomcat
+    - ETC : Git
+    - [Detail](http://throughkim.kr/2016/10/18/pf-photoblog-eng/)
       
 ---
 
