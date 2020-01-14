@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Arrange Multi-line UILabel's in UIStackView with SnapKit'
+title: 'Arrange Multi-line UILabel in UIStackView with SnapKit'
 author: through.kim
 date: 2020-01-13 16:27
 tags: [study, swift, ios]
