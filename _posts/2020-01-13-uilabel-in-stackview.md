@@ -3,7 +3,7 @@ layout: post
 title: 'Arrange Multi-line UILabel's in UIStackView with SnapKit'
 author: through.kim
 date: 2020-01-13 16:27
-tags: [study, swift]
+tags: [study, swift, ios]
 image: '/files/covers/ios_app.jpg'
 comments: true
 ---
@@ -66,9 +66,6 @@ class ExampleView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-}
-    
 
 }
 ```
