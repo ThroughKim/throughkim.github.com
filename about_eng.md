@@ -19,6 +19,7 @@ image: '/files/covers/through_programming.jpg'
 * Email - [sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)
 * Phone - +82 10-8783-3451
 * Github - [ThroughKim](https://github.com/ThroughKim)
+* LinkedIn - [www.linkedin.com/in/through-kim](https://www.linkedin.com/in/through-kim_)
 * Facebook - [https://www.facebook.com/seulwoo.kim.9](https://www.facebook.com/seulwoo.kim.9)
 * Instagram - [https://www.instagram.com/trough_kim/](https://www.instagram.com/trough_kim/)
 
@@ -27,20 +28,21 @@ image: '/files/covers/through_programming.jpg'
 ## BIOGRAPHY
 
 * 1992.10.15 : Born in Busan, Republic of Korea
-* 2008.03 ~ 2011.02  : Graduated Ulsan High School
+* 2008.03 ~ 2011.02 : Graduated Ulsan High School
 * 2011.03 ~ 2017.02 : Bachelor of Management Information System, Dongguk University
-* 2015.12 ~ 2016.03  : Internship at start-up [Twenty](https://www.facebook.com/withtwenty/)
-* 2016.12 ~ : Working in the Development team, Linuxware.inc
+* 2015.12 ~ 2016.03 : Internship at start-up [Twenty](https://www.facebook.com/withtwenty/)
+* 2016.12 ~ 2019.11 : Working in the Development team, Linuxware.inc
+* 2020.01 ~ : Work as iOS developer, Kakao Enterprise
 
 ---
 
 ## SKILLS
 
-* Languages: PHP, Java, JSP, Python, Swift, Javascript, SQL, HTML, CSS
+* Languages: Swift, Python, PHP , Javascript
 * Frameworks: Django, Codeigniter, Vue.js
 * Servers: Ubuntu, Raspbian
 * Web Servers: Apache Tomcat, Nginx
-* ETC: Vim, Git, TDD, Mercurial
+* ETC: Git, TDD, Mercurial
 
 ---
 
