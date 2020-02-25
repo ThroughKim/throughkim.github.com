@@ -396,7 +396,7 @@ extension ExpressibleByIntegerLiteral {
 ```
 
 ## Usage
-process가 에러 없이 동작했다면 moov atom이 수정된 data를 리턴하고, 그렇지 않을 경우 원본 데이터를 리턴함
+process가 에러 없이 동작했다면 moov atom이 수정된 data를 리턴하고, 그렇지 않을 경우 원본 데이터를 리턴함.
 에러 핸들링 수정할 예정
 
 ```swift
