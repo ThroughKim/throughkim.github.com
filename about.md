@@ -20,6 +20,7 @@ image: '/files/covers/through_programming.jpg'
 * Email - [sulewoo58@gmail.com](mailto:sulewoo58@gmail.com)
 * Phone - +82 10-8783-3451
 * Github - [ThroughKim](https://github.com/ThroughKim)
+* LinkedIn - [www.linkedin.com/in/through-kim](https://www.linkedin.com/in/through-kim_)
 * Facebook - [https://www.facebook.com/seulwoo.kim.9](https://www.facebook.com/seulwoo.kim.9)
 * Instagram - [https://www.instagram.com/trough_kim/](https://www.instagram.com/trough_kim/)
 
@@ -38,11 +39,11 @@ image: '/files/covers/through_programming.jpg'
 
 ## SKILLS
 
-* Languages: PHP, Java, JSP, Python, Swift, Javascript, SQL, HTML, CSS
+* Languages: Swift, Python, PHP , Javascript
 * Frameworks: Django, Codeigniter, Vue.js
 * Servers: Ubuntu, Raspbian
 * Web Servers: Apache Tomcat, Nginx
-* ETC: Vim, Git, TDD, Mercurial
+* ETC: Git, TDD, Mercurial
 
 ---
 
