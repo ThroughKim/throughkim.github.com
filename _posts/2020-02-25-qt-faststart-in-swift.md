@@ -18,7 +18,7 @@ mp4 파일 중 스트리밍이 되지 않는 파일들이 존재하는데, 이�
 
 ## AVAssetExportSession
 애플에서 제공하는 기능으로, 세션에 shouldOptimizeForNetworkUse 값을 true로 주면 moov atom의 위치를 옮겨서 스트리밍이 가능해지도록 만들 수 있다.
-하지만 input과 output이 모두 파일이며, 파일을 write하는데 시간이 걸리기 떄문에 요구하는 성능을 만족시킬 수 없었다.
+하지만 input과 output이 모두 파일이며, 파일을 write하는데 시간이 걸리기 때문에 요구하는 성능을 만족시킬 수 없었다.
 
 ## qtfaststart.c
 C 라이브러리로 byte 단위의 연산을 통해 moov atom을 찾고 이동시켜주는 기능을 제공해준다. 나는 이 라이브러리를 swift로 컨버전하여 사용했다.
