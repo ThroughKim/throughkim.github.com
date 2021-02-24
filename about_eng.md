@@ -48,6 +48,8 @@ image: '/files/covers/through_programming.jpg'
 
 ## PROJECTS
 
+ * KakaoWork, HeyKakao, KakaoHome
+ 
  * Puddlr Application (iOS)
     - Developed as project of Linuxwares.inc service
     - Business messenger Application for iOS users

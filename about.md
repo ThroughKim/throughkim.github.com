@@ -39,15 +39,14 @@ image: '/files/covers/through_programming.jpg'
 
 ## SKILLS
 
-* Languages: Swift, Python, PHP , Javascript
-* Frameworks: Django, Codeigniter, Vue.js
-* Servers: Ubuntu, Raspbian
-* Web Servers: Apache Tomcat, Nginx
-* ETC: Git, TDD, Mercurial
+* Languages: Swift, Python
+* Frameworks: Django, Vue.js
 
 ---
 
 ## PROJECTS
+
+ * 카카오워크, 헤이카카오, 카카오홈
 
  * 퍼들러 앱 (iOS)
     - 리눅스웨어 개발 프로젝트로 제작
